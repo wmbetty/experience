@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>会员资料</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../weUI/weui.min.css">
+    <link rel="stylesheet" href="../css/p_vip_card.css">
+    <link rel="stylesheet" href="../css/receiver.css">
+</head>
+<body class="info_bd">
+<div class="head_cont infor">
+    <img class="info_logo logo_img" src="../images/LOGO.png" alt="">
+    <p class="vip_name infor"><span>明明 |&nbsp;</span><span>45676313</span></p>
+</div>
+<form class="infos_form">
+
+    <div class="weui_cells_tips">必填信息</div>
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">会员姓名</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" id="vip_name" type="text" placeholder="请输入姓名">
+            </div>
+        </div>
+
+        <div class="weui_cell weui_cell_select weui_select_after">
+            <div class="weui_cell_hd">
+                <label class="weui_label">性别</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <select class="weui_select" name="select1" id="sex_put">
+                    <option selected="" value="1">男</option>
+                    <option value="2">女</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="weui_btn_area change_btn_box">
+        <a class="weui_btn weui_btn_primary" href="javascript:" id="subm_btn">提交</a>
+        <a class="weui_btn weui_btn_primary" href="change.html" id="">更换手机号</a>
+
+    </div>
+
+
+</form>
+<script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+<script>
+    $(function(){
+        $("#subm_btn").click(function(){
+            var sex = $("#sex_put").val();
+            var u_name = $("#vip_name").val();
+            if(u_name === ""){
+                $("#vip_name").parent().parent().addClass("weui_cell_warn");
+            }else {
+                $("#vip_name").parent().parent().removeClass("weui_cell_warn");
+            }
+
+//            $.ajax({
+//                type : "post",
+//                url : "{:$post_url}",
+//                data : {
+//                    name : u_name,
+//                    sex : sex
+//                },
+//                dataType : "json",
+//                error : function() {
+//
+//                },
+//                success : function(data) {
+//                    if (data.errcode==0) {
+//                        location.href = "{:$ok_url}";
+//                    } else {
+//                        if (data.errcode == 10010) {
+//                            $("#code_box").addClass("weui_cell_warn");
+//                        } else if (data.errcode == 10000) {
+////                            $("#vip_name").addClass("errputs");
+//                        }
+//                    }
+//                }
+//            });
+
+        });
+
+        $("#vip_name").bind("keyup",function(){
+            $(this).parent().parent().removeClass("weui_cell_warn");
+        });
+    });
+</script>
+</body>
+</html>

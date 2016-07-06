@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>会员卡余额</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../css/p_vip_card.css">
+</head>
+<body>
+<div class="assets_cont">
+    <p class="totals">我的总余额</p>
+    <p class="moneys"><span>￥ 0</span><span class="arrow_dw"></span></p>
+    <div class="details_cont">
+        <span>储值账户</span>
+        <span class="accounts">0.00</span>
+    </div>
+</div>
+<div class="cost_details">
+    <p class="m_details">收支明细</p>
+</div>
+<script src="../js/jquery-2.0.3.min.js"></script>
+<script>
+    $(function(){
+        $(".moneys").click(function(){
+            $(".details_cont").slideToggle(400);
+            $(".arrow_dw").toggleClass("up");
+        });
+    });
+</script>
+</body>
+</html>

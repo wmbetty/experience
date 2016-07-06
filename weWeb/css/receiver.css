@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #eee;
+    font-size: 1rem;
+    font-family: "微软雅黑";
+}
+.phone{
+    color: #04be02;
+}
+h3{font-weight: bold;text-align: center;}
+.your_phone{
+    padding: 5% 0;
+}
+.put_box{
+    background: #fff;
+}
+.put_box .nums{
+    padding: 2% 0;
+}
+.nums.secd{
+    padding:2%;
+    border-top: 1px solid #eee;
+}
+.num_title{
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+}
+.num_title.secd{
+    width: 19%;
+}
+.phone_puts{
+    width: 100%;
+    padding:6% 1%;
+    outline: 0;
+    border: none;
+}
+.phone_puts.secd{width: 60%;}
+.get_code{
+    display:inline-block;
+    width: 34%;
+    background:#85b3ff;border-radius: 6px;padding: 4% 2%;
+    /*text-align: center;*/
+    /*text-decoration: none;*/
+    border: none;
+    color: #fff;
+    outline: none;
+}
+.btn_cont{padding: 5% 2%;}
+.subm_btn{
+    display: block;
+    text-align: center;
+    padding: 5% 0;
+    text-decoration: none;
+    border-radius: 6px;
+    background: #85b3ff;
+    color: #fff;
+}
+.head_cont{
+    background: #ddd3c2;
+    overflow: hidden;
+    padding: 10% 3%;
+}
+.logo_img{width: 90px;height: 90px;border-radius: 50%;overflow: hidden;margin: 0 auto;display: block;}
+.vip_name{
+    padding: 4% 0 0;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.disd{background: #fff;color: #333;border: 1px solid #ccc;}
+/*错误提示样式*/
+.errputs{
+    border: 1px solid red;
+}
+
+.weui_btn_area.change_btn_box{
+    margin: 3.17647059em 15px .3em;
+}
+.weui_btn.chg_get{font-size: 16px;}

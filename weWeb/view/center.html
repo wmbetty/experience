@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>会员卡主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../weUI/weui.min.css">
+    <link rel="stylesheet" href="../css/p_vip_card.css">
+</head>
+<body class="center_bd">
+<div class="get_card_cont center_hd">
+    <img class="logo_img" src="../images/LOGO.png" alt="">
+    <div>
+        <p class="card_tle">小明</p>
+        <p class="sec_tle">12345678</p>
+    </div>
+    <div class="center_code_box">
+        <img src="../images/codes.png" alt="">
+    </div>
+
+    <p class="card_no">1234 5678 4567 9632</p>
+    <div class="icon_box center_icon"><a href="card_details.html"><i class="weui_icon_info_circle detail_icon"></i></a></div>
+</div>
+<div class="details_box cent">
+    <a href="record.html" class="card_details one">
+        <p>
+            <p class="credits_txt">积分</p>
+            <p class="look_dets">0</p>
+        </p>
+    </a>
+    <a href="discount.html" class="card_details one last">
+        <p>
+            <p class="credits_txt">折扣</p>
+            <p class="look_dets">9</p>
+        </p>
+    </a>
+
+    <!--<a href="" class="card_details one">-->
+        <!--<p>-->
+            <!--<p class="credits_txt">优惠券</p>-->
+            <!--<p class="look_dets">查看</p>-->
+        <!--</p>-->
+    <!--</a>-->
+
+    <div class="pay_box">
+        <!--<a href="javascript:;" class="weui_btn weui_btn_plain_primary">快速买单</a>-->
+        <!--<p class="c_pay_intros">买单立享9.00折，积分可抵扣现金</p>-->
+    </div>
+
+</div>
+
+<div class="weui_cells weui_cells_access">
+    <a class="weui_cell cen_cells" href="card_details.html">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>会员卡详情</p>
+        </div>
+    </a>
+</div>
+
+<!--<php>-->
+    <!--if ( !empty($member_card->get('base_info')->get('location_id_list')) ) {-->
+        <!--if ( count($member_card->get('base_info')->get('location_id_list')) > 1 ) {-->
+<!--</php>-->
+<div class="weui_cells weui_cells_access">
+    <a class="weui_cell cen_cells" href="shop_lists.html">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>适用门店</p>
+        </div>
+    </a>
+</div>
+<!--<php>-->
+        <!--} else if ( count($member_card->get('base_info')->get('location_id_list')) == 1 ) {-->
+            <!--$location_id_list = $member_card->get('base_info')->get('location_id_list');-->
+            <!--$shop = $location_id_list[0]->get('shop');-->
+<!--</php>-->
+<div class="out_box">
+    <div class="c_shop_infos">
+        <p>XXX</p>
+        <p>YYY</p>
+    </div>
+    <div class="telephone_box">
+        <img class="tel_img" src="../images/tlephone.png" alt="">
+    </div>
+</div>
+<!--<php>-->
+        <!--}-->
+    <!--}-->
+<!--</php>-->
+
+<div class="weui_cells weui_cells_access cn_main">
+    <a class="weui_cell cen_cells" href="javascript:;" style="display: none;">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>公众号</p>
+        </div>
+        <div class="weui_cell_ft"></div>
+    </a>
+
+<!--<php>-->
+    <!--if ( !empty($member_card->get('custom_cell1_id')) ) {-->
+<!--</php>-->
+    <!--<a class="weui_cell cen_cells" href="{:$member_card->get('custom_cell1')->get('url')}">-->
+        <!--<div class="weui_cell_bd weui_cell_primary">-->
+            <!--<p>{:$member_card->get('custom_cell1')->get('name')}</p>-->
+        <!--</div>-->
+        <!--<div class="weui_cell_ft">{:$member_card->get('custom_cell1')->get('tips')}</div>-->
+    <!--</a>-->
+<!--<php>-->
+    <!--}-->
+<!--</php>-->
+
+<!--<php>-->
+    <!--if ( !empty($member_card->get('custom_cell2_id')) ) {-->
+<!--</php>-->
+<!--<a class="weui_cell cen_cells" href="{:$member_card->get('custom_cell2')->get('url')}">-->
+    <!--<div class="weui_cell_bd weui_cell_primary">-->
+        <!--<p>{:$member_card->get('custom_cell2')->get('name')}</p>-->
+    <!--</div>-->
+    <!--<div class="weui_cell_ft">{:$member_card->get('custom_cell2')->get('tips')}</div>-->
+<!--</a>-->
+<!--<php>-->
+    <!--}-->
+<!--</php>-->
+
+<!--<php>-->
+    <!--if ( !empty($member_card->get('base_info')->get('promotion_url_name')) ) {-->
+<!--</php>-->
+<!--<a class="weui_cell cen_cells" href="{:$member_card->get('base_info')->get('promotion_url')}">-->
+    <!--<div class="weui_cell_bd weui_cell_primary">-->
+        <!--<p>{:$member_card->get('base_info')->get('promotion_url_name')}</p>-->
+    <!--</div>-->
+    <!--<div class="weui_cell_ft">{:$member_card->get('base_info')->get('promotion_url_sub_title')}</div>-->
+<!--</a>-->
+<!--<php>-->
+    <!--}-->
+<!--</php>-->
+
+</div>
+
+<!--<div class="vip_infos">-->
+        <!--<a class="infos_outer" href="{:U('query_balance')}">-->
+            <!--<span></span>-->
+            <!--<span class="r_arrow"></span>-->
+        <!--</a>-->
+
+        <!--<a class="infos_outer" href="{:U('card_details')}">-->
+            <!--<span>会员卡详情</span>-->
+            <!--<span class="r_arrow"></span>-->
+        <!--</a>-->
+        <!--<a class="infos_outer" href="{:U('mycard')}">-->
+            <!--<span>我的卡券</span>-->
+            <!--<span class="r_arrow"></span>-->
+        <!--</a>-->
+        <!--<a class="infos_outer" href="{:U('info')}">-->
+            <!--<span>会员资料</span>-->
+            <!--<span class="r_arrow"></span>-->
+        <!--</a>-->
+        <!--<a class="infos_outer" href="{:U('shop_lists')}">-->
+            <!--<span>适用门店</span>-->
+            <!--<span class="r_arrow"></span>-->
+        <!--</a>-->
+<!--</div>-->
+<!--<php>-->
+    <!--if (!$membership_card->get('in_wx_wallet')) {-->
+<!--</php>-->
+<div class="tb_card">
+    <a href="" class="tong_btn">同步到微信卡包</a>
+    <!--<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+    <!--<script type="text/javascript" src="/Public/static/jquery-2.0.3.min.js"></script>-->
+</div>
+
+<!--<php>-->
+    <!--}-->
+<!--</php>-->
+
+</body>
+</html>
