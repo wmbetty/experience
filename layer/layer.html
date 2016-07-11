@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>开始使用layer</title>
+</head>
+<body>
+
+
+<button id="test1">提示层</button>
+<button id="test2">弹出页面层</button>
+<button id="test3">弹出iframe层</button>
+<button id="test4">弹出loading层</button>
+<button id="test5">弹出tips层</button>
+
+
+<script src="../upload/js/jquery-2.0.3.min.js"></script>
+<script src="layer.js"></script>
+<script>
+    $("#test1").on('click',function(){
+        layer.msg("Hello WMM!",{icon:1});
+        //icon图标（皮肤）
+    });
+
+    $("#test2").on('click',function(){
+        layer.open({
+            type:1,
+            area:['600px','360px'],
+            shadeClose:true,
+            content:'\<\div style="padding:20px;">自定义内容\<\/div>',
+//            offset:'rb'  //右下角
+        });
+    });
+
+    $("#test3").on('click',function(){
+        layer.open({
+            type:2,
+            title:'弹出iframe',
+            maxmin:true,
+            shadeClose:true,//点击遮罩关闭层，
+            closeBtn:2,
+            area:['800px','520px'],
+            content:['../upload/table.html','no'],//不让iframe出现滚动条
+            btn:['yes','no'],
+//            shift:6   //动画：类型0-6
+        });
+    });
+
+    $("#test4").on('click',function(){
+
+        var load = layer.load(1);
+        setTimeout(function(){
+            layer.close(load);
+        },2000);//用setTimeout演示ajax的回调
+    });
+
+    $("#test5").on('click',function(){
+        layer.tips("Hello tips",'#test5');
+    });
+
+</script>
+</body>
+</html>
