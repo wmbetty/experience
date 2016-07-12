@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>angular</title>
+</head>
+<body ng-controller="myCtrl">
+
+<h1>Hello {{ message }}!</h1>
+<h2>Hello {{ clock }}</h2>
+<h2>Hello {{ clock.now }}</h2>
+
+<button ng-click="toggle()">隐藏/显示</button>
+<div ng-show="myVar">
+    <p>名：<input type="text" ng-model="person.firstName"></p>
+    <p>姓：<input type="text" ng-model="person.lastName"></p>
+    <p>姓名：{{ person.firstName + "" + person.lastName }}</p>
+</div>
+
+<script src="js/angular.min.js"></script>
+<script>
+
+    var app = angular.module("myApp",[]);
+    app.controller("myCtrl",function($rootScope){
+        $rootScope.message = "angular js.";
+        $rootScope.person = {
+            firstName:"John",
+            lastName:"Doe"
+        };
+        $rootScope.myVar = false;
+        $rootScope.toggle =function(){
+          console.log('$scope:',$rootScope.myVar);
+            $rootScope.myVar = !$rootScope.myVar;
+        };
+        $rootScope.clock = {
+            now:new Date()
+        }
+        var updateClock = function(){
+            $rootScope.clock.now = new Date();
+        }
+        setInterval(function(){
+            $rootScope.$apply(updateClock);
+        },1000);
+        updateClock();
+    });
+</script>
+</body>
+</html>
