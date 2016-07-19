@@ -1,0 +1,117 @@
+.d_main{
+    margin: 0 auto;
+    width: 1200px;
+    font-size: 14px;
+}
+.c_title{
+    margin: 16px 0 56px 0;
+}
+.c_title a{
+    color: #333;
+}
+.main_cont{
+    border: 1px solid #ccc;
+    background: #fafafa;
+    margin-bottom: 180px;
+}
+.main_h{
+    margin: 20px 30px;
+}
+.l_main{
+    display: inline-block;
+}
+.r_main{
+    float: right;
+}
+.l_main .img_b{
+    float: left;
+    width: 108px;
+    height: 105px;
+    overflow: hidden;
+}
+.l_main .infos{
+    float: left;
+    margin-left: 8px;
+}
+.infos .look,.info_intros .details,.info_intros .details:hover{
+    color: #00afec;
+}
+.info_intros .details{
+    margin-left: 4px;
+}
+.infos .h_passed{
+    color: #33cc33;
+}
+.h_passed .p_icon{
+    display: inline-block;
+    width: 14px;
+    height: 16px;
+    background: url("../images/pass_icon.png") no-repeat;
+    margin-right: 6px;
+}
+.r_main .del_app{
+    display: block;
+    border: none;
+    width: 92px;
+    height: 32px;
+    background: #f24d4d;
+    color: #fff;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin: 14px 20px;
+}
+.info_main .info_tle{
+    background: #ebebeb;
+    height: 46px;
+    line-height: 44px;
+    padding-left: 30px;
+    font-size: 16px;
+    margin: 0;
+}
+.info_main .info_intros,.info_main .inf_relative{
+    height: 46px;
+    line-height: 44px;
+    padding-left: 32px;
+    display: inline-block;
+    border-right: 1px solid #ccc;
+}
+.info_main .info_intros{
+    width: 44%;
+}
+.info_main .inf_relative{
+    width: 18%;
+}
+.inf_relative.oper{
+    border-right: none;
+    text-align: right;
+    width: 14%;
+}
+.inf_relative.main,.info_intros.main{
+    border-right: none;
+}
+.info_main .first_floor{
+    border-bottom:1px solid #ccc;
+}
+.main.descrip{
+    width: 80%;
+}
+.info_tle .edit_btn{
+    color: #00afec;
+    float: right;
+    margin-right: 26px;
+}
+.main.pic{
+    height: 150px;
+}
+.pic .big_pic{
+    display: block;
+    margin: -8px 0 0 26px;
+}
+.base_infos_five{
+    padding-bottom: 32px;
+}
+img.s_img{
+    margin-left: 34px;
+}

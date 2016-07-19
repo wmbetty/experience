@@ -1,0 +1,152 @@
+
+.wel_box{
+    width: 100%;
+    background: #fff;
+    opacity: 0.5;
+    height: 38px;
+    line-height: 36px;
+    margin-top: -36px;
+}
+.wel_box .wel_wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+.wel_wrap .wel_text{float: left;}
+span.al_icon{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background: url("../images/wel.png") no-repeat;
+}
+.wel_wrap .look_more{
+    float: right;
+    margin-right: 26px;
+    color: #333;
+}
+.our_goal{
+    clear: both;
+    width: 1200px;
+    height: 330px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.our_goal li:first-child{
+    margin-left: 0;
+}
+.our_goal li:last-child{
+    margin-right: 0;
+}
+.our_goal li{
+    width: 220px;
+    height: 226px;
+    /*display: inline-block;*/
+    float: left;
+    margin: 0 46px;
+    text-align: center;
+}
+.our_goal li h5{
+    margin: 24px 0 8px;
+}
+.our_goal li img{
+    width: 80px;
+    height: 80px;
+}
+
+/*登录框*/
+.login_box{
+    position: absolute;
+    top:20%;
+    left: 30%;
+    width: 518px;
+    height: 322px;
+    background: #fff;
+    border: 1px solid #ccc;
+    -o-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    z-index: 3;
+}
+.login_box .login_title{
+    font-size: 20px;
+    background: #f4f7f9;
+    height: 50px;
+    line-height: 48px;
+    padding: 0 22px;
+}
+.login_title p{
+    float: left;
+}
+ .close_icon{
+    float: right;
+    width: 16px;
+    height: 16px;
+    background: url("../images/close.png") no-repeat;
+     margin: 12px 0;
+     cursor: pointer;
+}
+ .login_form{
+     width: 364px;
+     margin: 38px auto;
+ }
+ .put_box{
+     height: 96px;
+     border: 1px solid #ccc;
+     -o-border-radius: 6px;
+     -moz-border-radius: 6px;
+     -webkit-border-radius: 6px;
+     border-radius: 6px;
+ }
+ .put_b:first-child{
+     border-bottom: 1px solid #ccc;
+ }
+ .put_box .put_b{
+     height: 46px;
+     line-height: 44px;
+     padding: 0 28px;
+ }
+ .put_b input{
+     border: none;
+     height: 44px;
+     outline: 0;
+ }
+ .put_b span{
+     margin-right: 10px;
+ }
+ .r_box{
+     margin: 10px 0 20px;
+ }
+.r_box  .forget_btn{
+     float: right;
+    color: #00afec;
+ }
+.btn_box a{
+    width: 154px;
+    height: 36px;
+    display: inline-block;
+    text-align: center;
+    line-height: 34px;
+    color: #fff;
+    background: #00afec;
+    -o-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+.btn_box .reg_btn{
+    float: right;
+    background: #f1f1f1;
+    color: #333;
+}
+.login_mask{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    z-index: 2;
+    display: none;
+}

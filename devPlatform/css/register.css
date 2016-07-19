@@ -1,0 +1,181 @@
+.main_c{
+    margin-top:30px ;
+}
+.write_cont{
+    margin-left: 12px;
+}
+.write_cont.l_w{
+    margin-left: -8px;
+}
+.put_box .put_infos{
+    width: 350px;
+    margin-left: 54px;
+}
+.put_box .e_name{
+    margin-left: 24px;
+}
+.put_box .again_put{
+    margin-left: -56px;
+}
+.put_box .verify_code{
+    margin-left: -14px;
+}
+.code_box{
+    margin-left: 50px;
+    padding-top: 36px;
+}
+.code_box img{
+    float: left;
+}
+.code_box p{
+    clear: both;
+    margin-top: 36px;
+}
+.next_b{
+    border-top: 1px solid #ccc;
+    margin-top: 34px;
+}
+.next_b .next_btn{
+    background: #e4e4e4;
+    color: #b1b1b3;
+}
+.form_box .pt{
+    width: 350px;
+    height: 46px;
+}
+.code_box .change_one{
+    margin-left: 8px;
+    line-height: 50px;
+    color: #00afec;
+}
+.code_box .change_one:hover,.mail_again .write_again,.mail_again .send_again{
+    color: #00afec;
+}
+a.xy{
+    color: #44b549;
+}
+.err_info.err_code{
+    margin-top: 18px;
+    margin-bottom: 0;
+}
+.s_circle.two{
+    color: #fff;
+}
+.steps .two_c,.prog.one{
+    background: #00afec;
+}
+.f_main .thank_main{
+    width: 560px;
+    margin: 70px auto 0;
+    padding-bottom: 20px;
+}
+.thank_main .mail_box{
+    float: left;
+    width: 58px;
+    height: 58px;
+    background: #33cc33 url("../images/Mail.png") no-repeat center;
+    -o-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.thank_main .thank_regis{
+    font-size: 16px;
+    line-height: 38px;
+    margin-left: 78px;
+}
+.l_mail{
+    margin-left: 78px;
+    color: #999;
+}
+.login_mail{
+    display: block;
+    background: #00afec;
+    width: 104px;
+    height: 30px;
+    line-height: 28px;
+    color: #fff;
+    text-align: center;
+    margin: 30px 80px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.login_mail:hover,.login_mail:visited{
+    color: #fff;
+    text-decoration: none;
+}
+.mail_again{
+    width: 332px;
+    margin: -10px 0 0 400px;
+}
+.mail_again p{
+    margin: 0;
+    line-height: 20px;
+}
+.mail_again .not_receive{
+    color: #999;
+}
+.f_main{
+    height: 840px;
+}
+.main_c.second{
+    display: none;
+}
+.next_btn.third{
+    background: #00afec;
+    color: #fff;
+}
+.put_infos.rel_name{
+    margin-left: 80px;
+}
+.e_name.p_no{
+    width: 242px;
+    margin-left: 32px;
+}
+.pt.p_code{
+    margin-left: 18px;
+}
+.put_infos.p_use{
+    margin-left: 72px;
+}
+.put_box .get_code{
+    display: inline-block;
+    margin-left: 8px;
+    height: 44px;
+    border: none;
+    width: 102px;
+    background: #e4e4e4;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.main_c.third{
+    display: none;
+}
+.err_info.phone_err{
+    margin-left: 72px;
+}
+.put_box .country{
+    display: inline-block;
+    margin-left: 18px;
+}
+.put_box .province_sel{
+    display: inline-block;
+    margin-left: 10px;
+    width: 70px;
+    height: 24px;
+}
+.detail_add{
+    margin: 16px 0 0 44px;
+    padding-bottom: 20px;
+}
+.detail_add textarea{
+    width: 364px;
+}
+.detail_add .use_c{
+    margin-left: 30px;
+}

@@ -1,0 +1,88 @@
+.main{
+    width: 100%;
+    border-top: 1px solid #d6d6d6;
+    margin-top: 44px;
+}
+.main_cont{
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.create_btn_box{
+    margin: 44px 0 20px;
+}
+.create_btn,.can_create{
+    float: left;
+    width: 132px;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    -o-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+.create_btn,.create_btn:hover{
+    background: #00afec;
+    color: #fff;
+}
+.can_create {
+    width: 160px;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin: 0 0 0 26px;
+}
+.table_box{
+    clear: both;
+    width: 1200px;
+    margin-top: 108px;
+    border: 1px solid #ccc;
+}
+.table_box .t_head{
+    height: 38px;
+    background: #eee;
+    line-height: 36px;
+    text-align: center;
+}
+.a_name{
+    text-align: left;
+    padding-left: 38px;
+    width: 510px;
+}
+.s_logo_box{
+    width: 260px;
+}
+.name_s{
+    float: right;
+    margin: 22px 12px;
+}
+td{
+    height: 38px;
+    line-height: 36px;
+    text-align: center;
+}
+td .operation{
+    color: #00afec;
+}
+.arrow-right {
+    float: left;
+    margin: 8px 10px;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid transparent;  /* 下边框的高 */
+    border-top: 10px solid transparent; /* 上方边框的高 */
+    border-right: 8px solid #ccc; /* 右边框的长度|宽度，以及背景色 */
+    font-size: 0;
+    line-height: 0;
+}
+.arrow_box{
+    position:absolute;left:502px;top:162px;
+}
+.arrow_box .a_out{
+    display:inline-block;width:0;height:0;border-style:solid;border-width:8px;border-color:transparent #ccc transparent transparent;
+}
+.arrow_box .a_inner{
+    display:inline-block;width:0;height:0;border-style:solid;border-width:8px;border-color:transparent #fff transparent transparent;
+    margin-left:-20px;
+}

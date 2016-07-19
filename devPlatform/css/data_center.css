@@ -1,0 +1,31 @@
+.tab_head{
+    height: 50px;
+    border-bottom: 2px solid #d6d6d6;
+}
+.tab_nav{
+    width: 1200px;
+    margin: 0 auto;
+}
+.tab_nav ul{margin: 0;}
+.tab_nav li{
+    width: 110px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+}
+.tab_nav li.l_actived{
+    border-bottom: 3px solid #00afec;
+    color: #00afec;
+}
+.tab_cont{
+    width: 100%;
+    height: 100px;
+    display: none;
+}
+.tab_cont.t_cont_active{
+    display: block;
+}
+.tab_main{
+    clear: both;
+    text-align: center;
+}

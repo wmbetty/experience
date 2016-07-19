@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/admin_center_create.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/admin_center_create.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <title>管理中心-修改网站信息</title>
+</head>
+<body>
+    <div class="login_mask"></div>
+<!--头部开始-->
+    <div class="head">
+        <div class="head_cont">
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a></div>
+            <div class="o_nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="resource_center.html">资源中心</a></li>
+                    <li><a href="admin_center.html" class="n_active">管理中心</a></li>
+                    <li><a href="data_center.html">数据中心</a></li>
+                    <li><a href="account_center.html">账号中心</a></li>
+                </ul>
+            </div>
+            <div class="admin_box">
+                <ul>
+                    <li class=""><a href="#">kimson@gzruixun.com</a>|</li>
+                    <li><a href="#">通知</a><span class="notice_icon"></span>|</li>
+                    <li><a href="#">退出</a>|</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--头部结束-->
+    <div class="main_content">
+        <p class="c_title"><a href="#">管理中心</a> / <a href="#">创建应用</a> / 修改网站信息</p>
+        <div class="main_c">
+            <div class="base_info">
+                <h4>网站信息</h4>
+            </div>
+            <div class="f_main w_main">
+                <form action="" class="form_box edit_box">
+                    <div class="put_box">
+                        <span>授权回调域</span><input class="pt web_name" name="web_name" type="text" value="www.gzruixun.com">
+                        <p class="put_infos editw">请填写开发需要的合法域名，用户使用小微行帐号登录后，只能回调至该域名下的页面</p>
+                    </div>
+                    <div class="put_box">
+                        <span>官网网址</span><input class="pt e_name editw" name="e_name" type="text" value="www.gzruixun.com">
+                        <p class="put_infos editw">请填写网站的官网网址</p>
+                    </div>
+                    <div class="put_box img_boxw">
+                        <span class="w_infos resg">网站信息登记表 扫描件</span>
+                        <div class="up_big_box">
+                            <div class="up_box">
+                                <p class="up_infosw">请下载<a href="#" class="d_wx">《小微行开放平台网站信息登记表》</a>  后填写打印，并盖章后上传扫描件。支持JPG、PNG、 BMP格式，不超过2MB</p>
+                                <input type="file">
+                                <p class="up_img_info">请上传应用水印图片</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input class="next_btn" type="button" value="保存">
+                        <a class="cancle_btn" href="admin_center.html">取消</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot">
+    <p>锐讯小微行 版本所有 广州锐讯</p>
+</div>
+</body>
+</html>

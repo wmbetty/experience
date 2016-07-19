@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/admin_center_create.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/admin_center_create.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <title>管理中心-修改基本信息</title>
+</head>
+<body>
+    <div class="login_mask"></div>
+<!--头部开始-->
+    <div class="head">
+        <div class="head_cont">
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a></div>
+            <div class="o_nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="resource_center.html">资源中心</a></li>
+                    <li><a href="admin_center.html" class="n_active">管理中心</a></li>
+                    <li><a href="data_center.html">数据中心</a></li>
+                    <li><a href="account_center.html">账号中心</a></li>
+                </ul>
+            </div>
+            <div class="admin_box">
+                <ul>
+                    <li class=""><a href="#">kimson@gzruixun.com</a>|</li>
+                    <li><a href="#">通知</a><span class="notice_icon"></span>|</li>
+                    <li><a href="#">退出</a>|</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--头部结束-->
+    <div class="main_content">
+        <p class="c_title"><a href="#">管理中心</a> / <a href="#">修改应用</a> / 修改基本信息</p>
+        <div class="main_c">
+            <div class="base_info">
+                <h4>基本信息</h4>
+            </div>
+            <div class="f_main">
+                <form action="" class="form_box edit_box">
+                    <div class="put_box">
+                        <span>应用名称</span><input class="pt web_name" name="web_name" type="text">
+                        <p class='put_infos edit err_info'>请输入应用名称</p>
+                        <p class="put_infos edit">请注意，名称将在微信登录等操作时被用户看到，需在2到40个字节之间，一个中文占两个字节，一个月只能修改一次</p>
+                    </div>
+                    <div class="put_box">
+                        <span>英文名称</span><input class="pt e_name edit" name="e_name" type="text">
+                        <span class="e_choice">(选填)</span>
+                        <p class="put_infos edit">显示在英文版微信中的名称</p>
+                    </div>
+                    <div class="put_box">
+                        <span class="w_infos">应有简介</span> <textarea class="website_info" name="" id=""></textarea>
+                        <p class='put_infos edit err_a_info'>请输入应用简介</p>
+                        <p class="put_infos edit">最多80字</p>
+                    </div>
+                    <div class="put_box">
+                        <span class="w_infos edit">英文简介<span class="en_choice">(选填)</span></span> <textarea class="w_e edit" name="" id=""></textarea>
+                        <p class="put_infos edit">最多80字</p>
+                    </div>
+                    <div class="put_box img_box">
+                        <span class="w_infos">应用图片</span>
+                        <div class="up_big_box">
+                            <div class="up_box">
+                                <p class="up_infos">请上传应用水印图片  28*28像素，仅支持PNG格式，大小不超过300KB。</p>
+                                <input type="file">
+                                <p class="up_img_info">请上传应用水印图片</p>
+                            </div>
+                            <div class="up_box t">
+                                <p class="up_infos t">请上传应用高清图片  108*108像素，仅支持PNG格式，大小不超过300KB。</p>
+                                <input type="file">
+                                <p class="up_img_info">请上传应用高清图片</p>
+                            </div>
+                        </div>
+                        <div class="templ_box">
+                            <div class="s_example">
+                                <p>参考示例</p>
+                                <img src="images/wx_small.png" alt="">
+                            </div>
+                            <div class="b_example">
+                                <p>参考示例</p>
+                                <img src="images/wx_big.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input class="next_btn" type="button" value="下一步">
+                        <a class="cancle_btn" href="admin_center.html">取消</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot">
+    <p>锐讯小微行 版本所有 广州锐讯</p>
+</div>
+</body>
+</html>

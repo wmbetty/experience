@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/admin_center_create.css">
+    <link rel="stylesheet" href="css/register.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/register.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <title>注册</title>
+</head>
+<body>
+    <div class="login_mask"></div>
+<!--头部开始-->
+    <div class="head">
+        <div class="head_cont">
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a></div>
+        </div>
+    </div>
+    <!--头部结束-->
+    <div class="main_content">
+
+        <!--第一步开始-->
+        <div class="main_c first">
+            <div class="step_box">
+                <div class="steps">
+                    <div class="s_circle"><div><span class="first_c">1</span><p class="write_cont">填写基本信息</p></div><span class="prog"></span></div>
+                    <div class="s_circle"><div><span>2</span><p class="write_cont">邮箱激活</p></div><span class="prog"></span></div>
+                    <div class="s_circle"><div><span>3</span><p class="write_cont l_w">完善开发者资料</p></div></div>
+                </div>
+            </div>
+            <div class="f_main">
+                <form action="" class="form_box">
+                    <div class="put_box">
+                        <span>邮箱</span><input class="pt web_name" name="web_name" type="text">
+                        <p class='put_infos err_info mail'>请输入正确格式的电子邮件</p>
+                        <p class="put_infos">作为登录帐号，填写未被微信开放平台注册、未被微信公 众平台注册、未被微信私人帐号绑定的邮箱</p>
+                    </div>
+                    <div class="put_box">
+                        <span>密码</span><input class="pt e_name pwd" name="e_name" type="text">
+                        <p class='put_infos err_info epwd'>请输入一个长度最少是 6 的字符串</p>
+                        <p class="put_infos">字母、数字或者英文符号，最短6位，区分大小写</p>
+                    </div>
+                    <div class="put_box">
+                        <span class="again_put">再次输入密码</span><input class="pt e_name" name="e_name" type="text">
+                        <p class="put_infos err_info">2次密码输入不一致</p>
+                    </div>
+                    <div class="put_box">
+                        <span class="verify_code">验证码</span><input class="pt e_name" name="e_name" type="text">
+                    </div>
+                    <div class="code_box">
+                        <div>
+                            <img src="images/code.png" alt="验证码">
+                            <a href="#" class="change_one">换一张</a>
+                            <p class="put_infos err_info err_code">验证码错误</p>
+                        </div>
+                        <p><input type="checkbox"><span>我同意并遵守上述的 <a href="#"  class="xy">《微信开放平台开发者服务协议》</a></span></p>
+                    </div>
+                    <div class="next_b">
+                        <input class="next_btn first" type="button" value="下一步">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--第一步结束-->
+
+        <!--第二步开始-->
+        <div class="main_c second">
+            <div class="step_box">
+                <div class="steps">
+                    <div class="s_circle"><div><span class="first_c">1</span><p class="write_cont">填写基本信息</p></div><span class="prog one"></span></div>
+                    <div class="s_circle two"><div><span class="two_c">2</span><p class="write_cont">邮箱激活</p></div><span class="prog"></span></div>
+                    <div class="s_circle"><div><span>3</span><p class="write_cont l_w">完善开发者资料</p></div></div>
+                </div>
+            </div>
+            <div class="f_main t">
+                <div class="thank_main">
+                    <div>
+                        <span class="mail_box"></span>
+                        <p class="thank_regis">感谢注册，确认邮件已发送至你的注册邮箱：<span>xxxxxxxxxx</span></p>
+                        <p class="l_mail">请进入邮箱查看邮件，并激活微信开放平台账号。</p>
+                        <a href="#" class="login_mail">登录邮箱</a>
+                    </div>
+                </div>
+                <div class="mail_again">
+                    <p class="not_receive">没有收到邮件？</p>
+                    <p>1. 请检查邮箱地址是否正确，你可以返回 <a href="#" class="write_again">重新填写</a></p>
+                    <p>2. 检查你的邮箱垃圾箱</p>
+                    <p>3. 若扔未收到确认，请尝试 <a href="#" class="send_again">重新发送</a></p>
+                </div>
+            </div>
+        </div>
+        <!--第二步结束-->
+
+        <!--第三步开始-->
+        <div class="main_c third">
+            <div class="step_box">
+                <div class="steps">
+                    <div class="s_circle"><div><span class="first_c">1</span><p class="write_cont">填写基本信息</p></div><span class="prog one"></span></div>
+                    <div class="s_circle two"><div><span class="two_c">2</span><p class="write_cont">邮箱激活</p></div><span class="prog one"></span></div>
+                    <div class="s_circle"><div><span class="two_c">3</span><p class="write_cont l_w">完善开发者资料</p></div></div>
+                </div>
+            </div>
+            <div class="f_main info">
+                <form action="" class="form_box">
+                    <div class="put_box">
+                        <span>真实姓名</span><input class="pt web_name" name="web_name" type="text">
+                        <p class="put_infos rel_name">请填写真实姓名</p>
+                    </div>
+                    <div class="put_box">
+                        <span>手机号</span><input class="pt e_name p_no" name="e_name" type="text"><input
+                            type="button" value="获取验证码" class="get_code">
+                        <p class='put_infos err_info phone_err'>请填写正确的手机号</p>
+                        <p class="put_infos p_use">请填写常用手机号</p>
+                    </div>
+                    <div class="put_box">
+                        <span class="verify_code">手机验证码</span><input class="pt p_code" name="e_name" type="text">
+                        <p class='put_infos err_info err_code'>验证码输入有误，请请重新获取</p>
+                    </div>
+                    <div class="put_box">
+                        <span>联系地址</span>
+                        <p class='country'>中国</p>
+                        <select name="" id="" class="province_sel">
+                            <option value="0">省份</option>
+                        </select>
+                        <div class="detail_add">
+                            <textarea name="" id=""></textarea>
+                            <p class="use_c">请填写常用地址</p>
+                        </div>
+                    </div>
+                    <div class="next_b">
+                        <input class="next_btn third" type="button" value="完成">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--第三步结束-->
+
+    </div>
+
+    <div class="foot">
+    <p>锐讯小微行 版本所有 广州锐讯</p>
+</div>
+</body>
+</html>

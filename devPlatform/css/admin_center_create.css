@@ -1,0 +1,249 @@
+.main_content{
+    margin: 0 auto;
+    width: 1200px;
+    font-size: 14px;
+}
+.c_title{
+    margin: 16px 0 56px 0;
+}
+.c_title a{
+    color: #333;
+}
+.main_c{
+    background: #fafafa;
+    border: 1px solid #ccc;
+    margin-bottom: 120px;
+}
+.main_c .step_box{
+    background: #f0f0f0;
+    height: 130px;
+    overflow: hidden;
+}
+.step_box .steps{
+    width: 1030px;
+    height: 70px;
+    margin: 34px 136px;
+}
+.steps .s_circle{
+    float: left;
+    width: 33%;
+}
+.s_circle span{
+    display: block;
+    width: 38px;
+    height: 38px;
+    line-height: 36px;
+    color: #fff;
+    margin: 0 0 4px 20px;
+    text-align: center;
+    background: #c2c3c4;
+    -o-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.s_circle .first_c{
+    background: #00afec;
+}
+.s_circle .prog{
+    width: 288px;
+    height: 6px;
+    background: #ccc;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin: 14px 0 0 68px;
+}
+.s_circle div{
+    float: left;
+}
+.s_circle .write_cont{
+    color: #bfbfbf;
+}
+.write_cont.l_w{
+    margin-left: 10px;
+}
+.f_main{
+    background: #fafafa;
+    width: 100%;
+    padding-bottom: 30px;
+}
+.form_box{
+    width: 740px;
+    margin: 40px auto;
+}
+.form_box .pt{
+    display: inline-block;
+    width: 506px;
+    padding-left: 10px;
+    height: 38px;
+    border: 1px solid #ccc;
+    outline: 0;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.form_box .put_box{
+    margin: 10px 0;
+}
+.put_box.img_box{
+    height: 310px;
+    border-bottom:1px solid #ccc ;
+}
+.put_box .web_name{
+    margin-left: 24px;
+}
+.put_box .e_name{
+    margin-left: 54px;
+}
+.form_box textarea{
+    width: 516px;
+    height: 56px;
+    border: 1px solid #ccc;
+    outline: 0;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin-left: 28px;
+}
+div .w_infos{
+    float: left;
+    line-height: 50px;
+}
+textarea.w_e{
+    margin-left: 54px;
+}
+.put_box .up_box{
+    width: 270px;
+    margin-left: 26px;
+    padding-top: 14px;
+}
+.up_box .up_infos{
+    color: #c3c3c3;
+    border-right: 1px solid #ccc;
+    padding-right: 60px;
+}
+.up_infos.t{
+    border-right: 0;
+}
+.templ_box{
+    float: right;
+    margin-right: 226px;
+}
+.up_big_box{
+    display: inline-block;
+}
+.templ_box .s_example{
+    margin: 8px 0;
+    padding-left: 24px;
+}
+.templ_box .b_example{
+    margin: 52px 0 0;
+    border-left: 1px solid #ccc;
+    padding-left: 24px;
+}
+.next_btn{
+    margin: 34px 0 0 110px;
+    display: inline-block;
+    width: 108px;
+    height: 34px;
+    border: 0;
+    background: #00afec;
+    color: #fff;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.cancle_btn{
+    display: inline-block;
+    margin: 34px 0 0 20px;
+    width: 108px;
+    height: 34px;
+    border: 0;
+    background: #f1f1f1;
+    color: #333;
+    text-align: center;
+    line-height: 32px;
+    border: 1px solid #ccc;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.cancle_btn:hover{
+    color: #333;
+}
+.put_box .put_infos{
+    margin-left: 110px;
+    width: 516px;
+    color: #999;
+}
+.put_infos.err_info,.put_infos.err_a_info{
+    color: #e65c5c;
+    display: none;
+}
+.up_box .up_img_info{
+    margin: 4px 0 0 0;
+    color: #e65c5c;
+    display: none;
+}
+.put_box .e_choice{
+    display: block;
+    margin: -6px 12px;
+    color: #999;
+}
+.w_infos .en_choice{
+    display: block;
+    height: 20px;
+    margin: -26px 8px;
+    color: #999;
+}
+/*修改基本信息样式*/
+.base_info{
+    width: 1110px;
+    margin: 38px auto 0;
+}
+.base_info h4{
+    font-size: 14px;
+    font-weight: normal;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+}
+.form_box.edit_box{
+    margin: 40px 0 0 44px;
+}
+.put_box .e_name.edit,.w_e.edit{
+    margin-left:26px;
+}
+.put_infos.edit{
+    margin-left: 80px;
+}
+.website_info{
+    padding-left: 10px;
+}
+.put_infos.editw,.put_infos.editw{
+    margin-left: 96px;
+}
+.pt.e_name.editw{
+    margin-left: 40px;
+}
+.put_box.img_boxw{border-right: 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 70px;
+}
+.up_box .up_infosw{
+    border: none;
+}
+.w_infos.resg{
+    width: 100px;
+}
+.up_infosw .d_wx,.up_infosw .d_wx:hover{
+    color: #15a01e;
+}
+.f_main.w_main{
+    padding-bottom: 70px;
+}

@@ -1,0 +1,77 @@
+p{
+    margin: 0;
+}
+li.n_l{
+    background: #fff;
+}
+.n_l a.n_a{
+    display: inline-block;
+    color: #333;
+}
+.n_main{
+    margin: 0 auto;
+    width: 1200px;
+    font-size: 14px;
+}
+.n_title{
+    margin: 16px 0 56px 0;
+}
+.nmain_content{
+    border: 1px solid #ccc;
+    background: #fafafa;
+    margin-bottom: 180px;
+}
+.nmain_content .main_notice{
+    margin: 48px 36px 0;
+    padding-bottom: 30px;
+}
+.not_ul{
+    margin-top: 6px;
+}
+.not_ul li{
+    float: none;
+    height: 44px;
+    line-height: 42px;
+    border-top: 1px solid #ccc;
+    cursor: pointer;
+}
+.not_ul li:hover{
+    background: #ececec;
+}
+li .n_icon{
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    -o-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #d6d6d6;
+    margin-right: 6px;
+}
+li .arrow_icon{
+    display: inline-block;
+    width:16px;
+    height: 42px;
+    background: url("../images/down_arrow.png") no-repeat center;
+    float: right;
+    margin-right: 8px;
+}
+span.a_up{
+    background: url("../images/up_arrow.png") no-repeat center;
+}
+.arrow_icon.up{
+    background: url("../images/up_arrow.png") no-repeat center;
+}
+li .t_sp{
+    float: right;
+    margin-right: 64px;
+}
+li.nl_active{
+    background: #ececec;
+}
+.not_ul .n_conts{
+    padding-left: 14px;
+    padding-bottom: 10px;
+    margin: 0;
+}
