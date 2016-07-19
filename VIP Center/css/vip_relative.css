@@ -1,0 +1,431 @@
+body{
+    background: #f0eff4;
+}
+.no_pad{padding: 0;}
+.shop_img{
+    display: block;
+    width: 100%;
+    /*height: 20%;*/
+}
+.weui_article.intro_conts{
+    background: #fff;
+    margin-top: 4%;
+}
+.look_all{
+    margin-bottom: 4%;
+}
+.enter_brand{
+    color: #ea5504;
+}
+
+
+/*优惠券中心css*/
+.hd.center_hd{
+    padding: 1em 0;
+}
+.hd.center_hd .page_title{
+    color:#333;
+}
+.center_main_conts{
+    padding: 0 1em;
+}
+.center_inner{
+    /*display: block;*/
+    background: #fff;
+
+}
+.recenter_inner{
+    /*border-radius: 4px;*/
+    margin-bottom: 1.2em;
+    padding: 0 0 4%;
+    /*box-shadow: #ccc 0 0 6px 0;*/
+}
+.weui_media_title{color: #333;}
+.details_link{
+    display: inline-block;
+    width: 40%;
+    color: #00afec;
+    font-size: 18px;
+    /*float: right;*/
+    /*text-align: right;*/
+}
+.center_get_btn{
+    display: block;
+    /*float: right;*/
+    width: 50px;
+    height: 64px;
+    margin-top: -2%;
+    background: url('../vips_center/get_bg.png') no-repeat;
+    text-align: center;
+    color: #fff;
+    padding: 14px 0 0;
+    font-size: 16px;
+}
+input.center_get_btn{
+    width: 100%;
+    border: 0;
+    color: #fff;
+    padding-top: 4px;
+}
+.get_ct{float: right;width: 26%;}
+.center_in_title{
+    font-size: 18px;
+}
+.shops_main_bd.no_rt{margin-right: 0;}
+.operrate_box{
+    /*text-align: right;*/
+}
+.weui_media_desc{
+    margin: 0.6em 0 0;
+}
+
+/*消费记录css*/
+.record_inner{
+    background-color: #30a935;
+    background-repeat: no-repeat;
+    /*background-image: ;*/
+}
+.record_title{
+    color: #fff;
+    font-weight: bold;
+}
+.consume_money{
+    float: right;
+    font-size: 20px;
+}
+.consume_time{
+    width: 26%;
+    color: #fff;
+}
+.card_kinds{float: right;width: 30%;text-align: right;color: #fff100;}
+.consume_kinds{color: #fff;height: 18px;font-size: 18px;}
+.consume_shop{
+    font-size: 20px;
+}
+
+/*我的优惠券css*/
+.my_conts{
+    margin: 1em 0;
+}
+.my_conts.no_mar{margin: 0;}
+.my_card_inner{
+    margin-bottom: 0;
+    border-radius: 4px 4px 0 0;
+}
+.my_card_details{
+    margin-top: 0;
+    border-radius:0 0 6px 6px;
+}
+.details_p{
+    color: #999;
+}
+
+/*会员中心*/
+.shop_img_cont,.shops_main_bd{
+    display: inline-block;
+}
+.shop_outers{
+    width: 100%;
+    padding: 2% 2% 0;
+}
+.shops_img{
+    display: block;
+    width: 66px;
+    height: 66px;
+    /*border-radius: 50%;*/
+    overflow: hidden;
+}
+.shops_main_bd{
+    margin: 0 4%;
+    width: 64%;
+}
+.c.shops_main_bd{
+    width: 42%;
+}
+.center_bd{
+    width: 100%;
+    overflow-x: hidden;
+}
+.logo_img,.center_code_box img{
+    width: 60px;
+    height: 60px;
+}
+p.card_tle,.your_credits{
+    font-size: 20px;
+}
+p.sec_tle，.card_no{
+    font-size: 18px;
+}
+.big_icons{
+    font-size: 14px;
+}
+.center_code_box{
+    margin: -15% 5% 0;
+}
+.get_card_cont{
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+}
+.get_card_cont.center_hd{
+    margin-top: 0;
+    padding: 6% 0 5%;
+
+}
+.big_icon_box,.get_card_cont.center_hd{
+    width: 100%;
+    /*overflow: hidden;*/
+}
+.card_no{top:24%;color: #333;}
+.center_bd{
+    background: #f0eff4;
+}
+.credits_outer{
+    padding: 3% 4% 3% 6%;
+    background: #fff;
+    width: 90%;
+    overflow: hidden;
+    text-align: center;
+}
+.tongb_card{
+    float: right;
+    width: 46%;
+}
+.your_credits{
+    /*float: left;*/
+    line-height: 34px;
+}
+.c_tong_btn{
+    display: block;
+    background: #0eafed;
+    height: 36px;
+    line-height: 36px;
+    /*padding: 0 14%;*/
+    color: #fff;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+.big_icon_box{
+    padding: 6% 0 0;
+    background: #fff;
+    margin: 2% 0 2%;
+}
+.low_box{
+    margin-top: 0;
+}
+.big_icons{
+    display: inline-block;
+    margin: 0 3% 5%;
+    width: 26%;
+    text-align: center;
+}
+.big_icons img{
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+.vip_center_inner{
+    background: #fff;
+    padding: 15px 10px;
+}
+.weui_media_box.vip_center_inner:before{
+    width: 90%;
+}
+
+/*温馨提示css*/
+.tip_bd{
+    background: #f0eff4;
+}
+.code_box{
+    float: left;
+    width: 32%;
+}
+.wx_box{
+    float: right;
+    width: 68%;
+}
+.we_code_img{
+    display: block;
+    width: 98px;
+    height: 98px;
+}
+.tips_title{
+    text-align: center;
+    padding: 8% 16% 20%;
+}
+.sorry_tle{
+    padding: 8% 0 4%;
+}
+.code_outer{
+    padding: 0 5%;
+}
+.code_small_icon{
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-left: 8%;
+}
+.inner_guide{
+    color: #0eafed;
+    margin: -3% -4% 0 0;
+    float: right;
+    width: 72%;
+}
+.black_font{
+    color: #333;
+}
+.code_add_box{
+    margin-top: 30%;
+}
+.error_tle{
+    text-align: center;
+    padding: 8% 8% 20%;
+}
+.confr_btn{
+    display: block;
+    padding: 3% 0;
+    text-align: center;
+    background: #0eafed;
+    color: #fff;
+    margin: 0 auto;
+    width: 40%;
+    border-radius: 4px;
+}
+.center_get{
+    width: 104px;
+    margin: 0 46%;
+    height: 36px;
+    line-height: 34px;
+}
+.weui_media_box.weui_media_appmsg .weui_media_hd.c_shop_logos{
+    width: 80px;
+    height: 80px;
+}
+
+/*我的特权css*/
+.infos_conts li{
+    text-align: justify;
+}
+.infos_left{color: #333;}
+.infos_conts li.rt_li{
+    text-align: right;
+    color: #999;
+}
+.my_teq{
+    text-align: center;
+}
+.inner_details_box{border-top: 1px solid #ccc;padding: 4%;}
+.first_info{
+    padding:3% 4%;
+}
+.te_conts{
+    padding:5% 0 16%;
+}
+
+.weui_media_box.weui_media_text .weui_media_info.m_time_box{
+    font-size: 18px;
+    color: #999;
+}
+
+.weui_media_box.weui_media_text .weui_media_info_meta.weui_media_info_meta_extra{
+    border-left: none;
+}
+
+.weui_media_box.weui_media_appmsg .weui_media_hd.lt_img{
+    margin-right: 0;
+    float: left;
+}
+.weui_media_box.weui_media_appmsg .weui_media_bd.rt_details{
+    margin-right: -20%;
+    float: right;
+}
+.weui_media_box .weui_media_title.cuns_mess{
+    font-size: 20px;
+}
+.messages_p{
+    font-size: 18px;
+}
+.my_card_contanier.mui-scroll-wrapper{
+    top:2%;
+}
+.my_cards_ct{
+    top:10%;
+}
+.mui-content.messages_ct{
+    top:3%;
+}
+.my_card_rt{
+    float: right;
+    width: 60%;
+}
+.hd_tb{
+    text-align: center;
+    padding: 4px 3%;
+    font-size: 14px;
+    background: rgba(51, 148, 50, 0.34);
+}
+.weui_icon_clear{
+    margin-left: 2%;
+    float: right;
+}
+.lt{
+    float: left;
+}
+.bg_bot{
+    border-bottom: 3px solid #00afec;
+}
+.weui_media_box.record_inner:before{width: 90%;}
+@media screen and (min-width: 320px){
+    .c.shops_main_bd{
+        width: 33%;
+    }
+}
+
+@media screen and (min-width: 360px){
+    .center_get{
+        margin: 0 56%;
+    }
+}
+@media screen and (min-width: 370px){
+    .center_get{
+        margin: 0 60%;
+    }
+}
+@media screen and (min-width: 410px){
+    .center_code_box{
+        margin: -12% 5% 0;
+    }
+    .logo_img, .center_code_box img{
+        width: 70px;
+        height: 70px;
+    }
+    .c_tong_btn{
+        font-size: 18px;
+    }
+    .big_icons img{
+        width: 90px;
+        height: 90px;
+    }
+    .logo_img, .center_code_box img{
+        width: 80px;
+        height: 80px;
+    }
+    .card_no{
+        top:20%;
+    }
+    .weui_media_box.weui_media_appmsg .weui_media_hd.c_shop_logos{
+        width: 90px;
+        height: 90px;
+    }
+    .weui_media_box .weui_media_title.center_in_title{
+        font-size: 20px;
+    }
+    .egt_font{
+        font-size: 18px;
+    }
+    .curr_credit{
+        font-size: 22px;
+    }
+}
