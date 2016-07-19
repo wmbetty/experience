@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片轮播</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/mui.min.css">
+
+    <!--App自定义的css-->
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">下方悬浮标题</h1>
+</header>
+<div class="mui-content">
+    <div class="mui-slider" id="slider">
+        <div class="mui-slider-group mui-slider-loop">
+
+            <!--支持循环，需要重复图片节点-->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img class="gallery_img" src="img/Penguins.jpg" />
+                    <p class="mui-slider-title">静静看这世界</p>
+                </a>
+            </div>
+
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img class="gallery_img" src="img/Chrysanthemum.jpg" />
+                    <p class="mui-slider-title">幸福就是活着</p>
+                </a>
+            </div>
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img class="gallery_img" src="img/Hydrangeas.jpg" />
+                    <p class="mui-slider-title">想要一间这样的木屋，静静的喝咖啡</p>
+                </a>
+            </div>
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img class="gallery_img" src="img/Tulips.jpg" />
+                    <p class="mui-slider-title">Color of SIP CBD</p>
+                </a>
+            </div>
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="img/Penguins.jpg" />
+                    <p class="mui-slider-title">静静看这世界</p>
+                </a>
+            </div>
+
+            <!--支持循环，需要重复图片节点-->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img class="gallery_img" src="img/Chrysanthemum.jpg" />
+                    <p class="mui-slider-title">幸福就是活着</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="mui-slider-indicator mui-text-right">
+            <div class="mui-indicator mui-active"></div>
+            <div class="mui-indicator"></div>
+            <div class="mui-indicator"></div>
+            <div class="mui-indicator"></div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="js/mui.min.js"></script>
+<script>
+    var gallery = mui('.mui-slider');
+    gallery.slider({
+        interval:3000//自动轮播周期，若为0则不自动播放，默认为0；
+    });
+</script>
+</body>
+</html>
