@@ -1,0 +1,368 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>APP</title>
+    <link rel="stylesheet" type="text/css" href="css/api.css" />
+    <link rel="stylesheet" type="text/css" href="css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="css/aui-iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="css/aui-slide.css" />
+</head>
+<style type="text/css">
+body { background: #fff;}
+/*重新定义*/
+.aui-list-view { border-radius: 6px;}
+.aui-list-view:after { border-top: 0;}
+.aui-list-view:before { border-top: 0;}
+.aui-grid-sixteen li .aui-iconfont {
+    background: #ff9900;
+    color: #ffffff;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+/*自定义*/
+.icons { margin-top: 15px;}
+.image img { width: 100%}
+p { font-size: 12px; margin-bottom: 5px;}
+.content { font-size: 12px;}
+.aui-iconfont {
+    color: #ffffff;
+}
+.aui-slide-page-line{
+    height: 4px !important;
+}
+
+.aui-nav {
+    background: transparent;
+}
+.aui-nav .aui-bar-tab {
+
+    background: rgba(255,255,255,0.95);
+}
+    .main_cont{
+        padding-bottom: 20%;
+    }
+    .aui-nav.aui-border-t{position: fixed;}
+    img.shop_img{
+        width: 100%;
+        border: 1px solid #ccc;
+    }
+    .title_box{padding: 6px 10px 0;}
+    li.goods_cont{width: 20%;}
+</style>
+<body>
+
+<header class="aui-bar aui-bar-nav aui-bar-warning" style="padding: 6px 0;">
+    <a class="aui-btn aui-btn-warning aui-pull-left">
+        <span class="aui-iconfont aui-icon-location"></span>
+    </a>
+    <div class="aui-searchbar-wrap demo aui-pull-left" id="search" style="width: 70%;background-color: #f1c40f;">
+        <div class="aui-searchbar aui-border-radius">
+            <i class="aui-iconfont aui-icon-search" style="color: #ccc;"></i>
+            <div class="aui-searchbar-text">
+                <input type="text" placeholder="请输入搜索内容" id="search-input">
+            </div>
+            <!--<div class="aui-searchbar-input">-->
+                <!--<form action="javascript:search();">-->
+                    <!--<input type="text" placeholder="请输入搜索内容" id="search-input">-->
+                <!--</form>-->
+            <!--</div>-->
+            <i class="aui-iconfont aui-icon-roundclosefill"></i>
+        </div>
+        <div class="aui-searchbar-cancel aui-text-info">取消</div>
+    </div>
+    <a class="aui-pull-right">
+        <span class="aui-iconfont aui-icon-my"></span>
+    </a>
+</header>
+
+<div class="main_cont">
+    <!--轮播组件-->
+    <div id="aui-slide3">
+        <div class="aui-slide-wrap" >
+            <div class="aui-slide-node bg-dark">
+                <img src="image/l1.png" />
+            </div>
+            <div class="aui-slide-node bg-dark">
+                <img src="image/l2.png" />
+            </div>
+            <div class="aui-slide-node bg-dark">
+                <img src="image/l3.png" />
+            </div>
+            <div class="aui-slide-node bg-dark">
+                <img src="image/l1.png" />
+            </div>
+            <div class="aui-slide-node bg-dark">
+                <img src="image/l2.png" />
+            </div>
+            <div class="aui-slide-node bg-dark">
+                <img src="image/l3.png" />
+            </div>
+        </div>
+        <div class="aui-slide-page-wrap"><!--分页容器--></div>
+    </div>
+
+    <div class="aui-content-padded icons">
+        <ul class="aui-grid-sixteen">
+            <li class="aui-col-xs-3 aui-text-center">
+                <span class="aui-iconfont aui-icon-my"></span>
+                <p>Hello</p>
+            </li>
+            <li class="aui-col-xs-3 aui-text-center">
+                <span class="aui-iconfont aui-icon-emoji"></span>
+                <p>Hello</p>
+            </li>
+            <li class="aui-col-xs-3 aui-text-center">
+                <span class="aui-iconfont aui-icon-pic"></span>
+                <p>Hello</p>
+            </li>
+            <li class="aui-col-xs-3 aui-text-center">
+                <span class="aui-iconfont aui-icon-service"></span>
+                <p>Hello</p>
+            </li>
+            <li class="aui-col-xs-3 aui-text-center">
+                <span class="aui-iconfont aui-icon-service"></span>
+                <p>Hello</p>
+            </li>
+            <li class="aui-col-xs-3 aui-text-center">
+                <span class="aui-iconfont aui-icon-like"></span>
+                <p>Hello</p>
+            </li>
+            <li class="aui-col-xs-3 aui-text-center">
+                <span class="aui-iconfont aui-icon-home"></span>
+                <p>Hello</p>
+            </li>
+            <li class="aui-col-xs-3 aui-text-center">
+                <span class="aui-iconfont aui-icon-mark"></span>
+                <p>Hello</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="aui-content box">
+        <div class="aui-line-x"></div>
+        <div class="title_box">
+            <div class="box-title aui-pull-left">限时抢购</div>
+            <div class="aui-btn aui-pull-right">查看更多</div>
+        </div>
+
+        <ul class="aui-list-view aui-grid-view">
+            <li class="aui-list-view-cell aui-img aui-pull-left goods_cont" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-pull-left goods_cont" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-pull-left goods_cont" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-pull-left goods_cont" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-pull-left goods_cont" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+        </ul>
+        <div class="aui-line-x"></div>
+    </div>
+
+    <div class="aui-content box">
+        <!--<div class="aui-line-x"></div>-->
+        <div class="title_box">
+            <div class="box-title aui-pull-left">海外进口</div>
+            <div class="aui-btn aui-pull-right">查看更多</div>
+        </div>
+
+        <ul class="aui-list-view aui-grid-view">
+
+        </ul>
+        <div class="aui-line-x"></div>
+    </div>
+
+    <div class="aui-content box">
+        <div class="aui-line-x"></div>
+        <div class="title_box">
+            <div class="box-title aui-pull-left">热卖榜</div>
+            <div class="aui-btn aui-pull-right">查看更多</div>
+        </div>
+
+        <ul class="aui-list-view aui-grid-view">
+            <li class="aui-list-view-cell aui-img aui-pull-left goods_cont" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-pull-left goods_cont" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-pull-left goods_cont" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-pull-left goods_cont" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-pull-left goods_cont" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+        </ul>
+        <div class="aui-line-x"></div>
+    </div>
+
+    <div class="aui-content box">
+        <div class="aui-line-x"></div>
+        <div class="title_box">
+            <div class="box-title aui-pull-left">推荐商品</div>
+            <div class="aui-btn aui-pull-right">查看更多</div>
+        </div>
+
+        <ul class="aui-list-view aui-grid-view">
+            <li class="aui-list-view-cell aui-img aui-pull-left goods_cont" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-pull-left goods_cont" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-pull-left goods_cont" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-pull-left goods_cont" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-pull-left goods_cont" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+        </ul>
+        <div class="aui-line-x"></div>
+    </div>
+
+    <div class="aui-content box">
+        <div class="aui-line-x"></div>
+
+        <ul class="aui-list-view aui-grid-view">
+            <li class="aui-list-view-cell aui-img aui-col-xs-3" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-col-xs-3" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-col-xs-3" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-col-xs-3" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+        </ul>
+        <div class="aui-line-x"></div>
+    </div>
+
+    <div class="aui-content box">
+        <div class="aui-line-x"></div>
+        <div class="title_box">
+            <div class="box-title aui-pull-left">猜你喜欢</div>
+            <div class="aui-btn aui-pull-right">查看更多</div>
+        </div>
+
+        <ul class="aui-list-view aui-grid-view">
+            <li class="aui-list-view-cell aui-img aui-col-xs-6" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-col-xs-6" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-col-xs-6" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+            <li class="aui-list-view-cell aui-img aui-col-xs-6" tapmode="" onclick="openGoods()">
+                <img class="aui-img-object shop_img" src="" alt="商品图片">
+
+            </li>
+        </ul>
+        <div class="aui-line-x"></div>
+    </div>
+
+</div>
+
+<footer class="aui-nav aui-border-t" id="aui-footer">
+    <ul class="aui-bar-tab">
+        <li class="active-warning" id="tabbar1" tapmode onclick="randomSwitchBtn(0,'tabbar1')">
+            <span class="aui-iconfont aui-icon-home"></span>
+            <p>首页</p>
+        </li>
+        <li id="tabbar2" tapmode onclick="randomSwitchBtn(1,'tabbar2')">
+            <span class="aui-iconfont aui-icon-sort"></span>
+            <p>分类</p>
+        </li>
+        <li id="tabbar3" tapmode onclick="randomSwitchBtn(2,'tabbar3')">
+            <span class="aui-iconfont aui-icon-cart"></span>
+            <p>购物车</p>
+        </li>
+        <li id="tabbar4" tapmode onclick="randomSwitchBtn(3,'tabbar4');askAdd();">
+            <span class="aui-iconfont aui-icon-my"></span>
+            <p>我的高尚生活</p>
+        </li>
+    </ul>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="script/api.js" ></script>
+<script type="text/javascript" src="script/aui-slide.js"></script>
+<script type="text/javascript">
+    var slide3 = new auiSlide({
+        container:document.getElementById("aui-slide3"),
+        // "width":300,
+        "height":180,
+        "speed":500,
+        "autoPlay": 2500, //自动播放
+        "loop":true,
+        "pageShow":true,
+        "pageStyle":'line',
+        'dotPosition':'center'
+    })
+
+    function askAdd(){
+        api.openWin({
+            name:'my',
+            url:'html/my.html',
+            delay:300
+        })
+    }
+    function closeWin(){
+        api.closeWin({});
+    }
+
+
+    // 随意切换按钮
+    function randomSwitchBtn(index,name) {
+
+        $api.removeCls($api.dom('#aui-footer li.active-warning'),'active-warning');
+        $api.addCls($api.byId(''+name+''),'active-warning');
+//
+    }
+
+</script>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>找回密码</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <style>
+        body{background: #fff;}
+        .aui-input-row{
+            width: 90%;
+            margin: 0 auto;
+        }
+        .aui-btn-row:after{border-bottom: none;}
+        .aui-btn.confir_btn{width: 80%;}
+        input::-webkit-input-placeholder {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="aui-bar aui-bar-nav aui-bar-warning">
+        <a class="aui-pull-left" onclick="close_myaccount()">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-title">找回密码</div>
+    </header>
+
+    <section class="aui-content">
+
+        <div class="aui-form">
+            <div class="aui-input-row">
+                <!--<i class="aui-input-addon aui-iconfont aui-icon-mobilefill aui-text-warning"></i>-->
+                <input type="text" id="mobile" class="aui-input" placeholder="手机号"/>
+            </div>
+            <div class="aui-input-row">
+                <input type="number" class="aui-input" id="code" placeholder="验证码"/>
+                <span class="aui-input-addon">
+                    <div class="aui-btn" id="sendVerify" status="1" tapmode>获取验证码</div>
+                </span>
+            </div>
+
+            <div class="aui-input-row">
+                <!--<i class="aui-input-addon aui-iconfont aui-icon-lock aui-text-warning"></i>-->
+                <input type="password" id="password" class="aui-input" placeholder="新密码"/>
+            </div>
+            <div class="aui-input-row">
+                <!--<i class="aui-input-addon aui-iconfont aui-icon-lock aui-text-warning"></i>-->
+                <input type="password" id="password2" class="aui-input" placeholder="确认密码"/>
+            </div>
+            <div class="aui-btn-row">
+                <div class="aui-btn aui-btn-warning confir_btn" tapmode onclick="">确认</div>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript">
+
+    function close_myaccount(){
+        api.closeWin({});
+    }
+
+    function showPic(){
+        $api.append($api.dom("body"),'<div class="aui-mask"></div>');
+        $api.removeCls($api.dom(".aui-dialog.aui-hidden"),"aui-hidden");
+        api.sendEvent({
+            name: 'dialogEvent',
+            extra: {type:'show'}
+        });
+    }
+
+//    打开管理收货地址
+    function addrs(){
+        api.openWin({
+            name:'addr',
+            url:'addrs.html',
+            delay:300
+        })
+    }
+
+    function cancel(){
+        $api.remove($api.dom(".aui-mask"));
+        $api.addCls($api.dom(".aui-dialog"),"aui-hidden");
+        api.sendEvent({
+            name: 'dialogEvent',
+            extra: {type:'hidden'}
+        });
+
+    }
+
+    function confirm(){
+        $api.remove($api.dom(".aui-mask"));
+        $api.addCls($api.dom(".aui-dialog"),"aui-hidden");
+        api.sendEvent({
+            name: 'dialogEvent',
+            extra: {type:'hidden'}
+        });
+
+    }
+
+</script>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>我的账户</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <style>
+    .my-header {
+        background: #3bafda;
+        position: relative;
+    }
+    #header {
+        position: relative;
+        padding: 10px 0;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+        vertical-align: center;
+        margin-bottom: 0;
+    }
+    #header img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+    .my-info p.nickname {
+        margin-top: 5px;
+        color: #ffffff;
+        font-size: 18px;
+    }
+    .aui-list-view-cell {
+        line-height: 26px;
+    }
+    .aui-list-view i.aui-iconfont{color: #999;}
+    </style>
+</head>
+
+<body>
+
+
+
+    <!--<section class="aui-content my-header" id="header">-->
+        <!--<div class="my-info">-->
+            <!--<img src="../image/noavatar.gif" id="avatar" />-->
+            <!--<p class="nickname" id="nickname"></p>-->
+        <!--</div>-->
+    <!--</section>-->
+
+    <header class="aui-bar aui-bar-nav aui-bar-warning">
+        <a class="aui-pull-left" onclick="close_myaccount()">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-title">我的账户</div>
+    </header>
+
+    <section class="aui-content">
+        <ul class="aui-list-view">
+            <li class="aui-list-view-cell">
+               头像 <i class="aui-iconfont aui-icon-myfill aui-pull-right" onclick="showPic()"></i>
+            </li>
+            <li class="aui-list-view-cell">
+                <span class="aui-pull-left">昵称</span>
+                <span class="aui-pull-right">betty</span>
+            </li>
+            <li class="aui-list-view-cell" tapmode onclick="addrs()">
+                <a class="aui-arrow-right">收货地址管理</a>
+            </li>
+            <li class="aui-list-view-cell" tapmode>
+                <a class="aui-arrow-right">实名认证</a>
+            </li>
+            <li class="aui-list-view-cell" tapmode onclick="findPwd()">
+                <a class="aui-arrow-right">修改密码</a>
+            </li>
+            <li class="aui-list-view-cell" tapmode onclick="openWin('my_to_helper_win')">
+                <a class="aui-arrow-right">修改支付密码</a>
+            </li>
+            
+        </ul>
+        <div class="aui-dialog aui-hidden" id="dialog">
+            <div class="aui-dialog-header">编辑头像</div>
+            <div class="aui-dialog-body aui-text-left">
+                你好
+            </div>
+            <div class="aui-dialog-footer">
+                <div class="aui-dialog-btn aui-text-danger" tapmode onclick="cancel()">取消</div>
+                <div class="aui-dialog-btn aui-text-info" tapmode onclick="confirm()">确定</div>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript">
+
+    function close_myaccount(){
+        api.closeWin({});
+    }
+
+    function showPic(){
+        $api.append($api.dom("body"),'<div class="aui-mask"></div>');
+        $api.removeCls($api.dom(".aui-dialog.aui-hidden"),"aui-hidden");
+        api.sendEvent({
+            name: 'dialogEvent',
+            extra: {type:'show'}
+        });
+    }
+
+//    打开管理收货地址
+    function addrs(){
+        api.openWin({
+            name:'addr',
+            url:'addrs.html',
+            delay:300
+        })
+    }
+
+//    找回密码
+    function  findPwd(){
+        api.openWin({
+            name:'pwd',
+            url:'findPwd.html',
+            delay:300
+        })
+    }
+
+    function cancel(){
+        $api.remove($api.dom(".aui-mask"));
+        $api.addCls($api.dom(".aui-dialog"),"aui-hidden");
+        api.sendEvent({
+            name: 'dialogEvent',
+            extra: {type:'hidden'}
+        });
+
+    }
+
+    function confirm(){
+        $api.remove($api.dom(".aui-mask"));
+        $api.addCls($api.dom(".aui-dialog"),"aui-hidden");
+        api.sendEvent({
+            name: 'dialogEvent',
+            extra: {type:'hidden'}
+        });
+
+    }
+
+</script>
+</html>

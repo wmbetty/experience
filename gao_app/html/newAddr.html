@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>添加新地址</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <style>
+        .aui-input-row,.aui-list-view-cell{
+            width: 100%;
+            /*margin: 0 auto;*/
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: #333;
+        }
+
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: #333;
+        }
+
+        input::-webkit-input-placeholder {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="aui-bar aui-bar-nav aui-bar-warning">
+        <a class="aui-pull-left" onclick="close_myaccount()">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-title">添加新地址</div>
+        <a class="aui-pull-right">保存</a>
+    </header>
+
+    <section class="aui-content">
+        <div class="aui-form">
+            <div class="aui-input-row">
+                <!--<i class="aui-input-addon aui-iconfont aui-icon-mobilefill aui-text-warning"></i>-->
+                <input type="text" id="mobile" class="aui-input" placeholder="收货人"/>
+            </div>
+            <div class="aui-input-row">
+                <input type="number" class="aui-input" id="code" placeholder="联系电话"/>
+
+            </div>
+
+            <div class="aui-list-view-cell" tapmode>
+                <a class="aui-arrow-right">所在地区</a>
+            </div>
+
+            <div class="aui-list-view-cell" tapmode>
+                <a class="aui-arrow-right">街道</a>
+            </div>
+
+            <div class="aui-input-row">
+                <!--<i class="aui-input-addon aui-iconfont aui-icon-lock aui-text-warning"></i>-->
+                <input type="password" id="" class="aui-input" placeholder="详细地址"/>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript">
+    function close_myaccount(){
+        api.closeWin({});
+    }
+
+</script>
+</html>

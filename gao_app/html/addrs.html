@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>管理收货地址</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <style>
+        body{background: #fff;}
+        .aui-list-view-cell p{color: #333;}
+        .aui-checkbox{margin: 8px 15px 0 2px;width: 22px;height: 22px;}
+        .aui-list-view-cell:after{border-bottom: none;}
+        .rece_infos{
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 4px;
+        }
+        .aui-list-view-cell{
+            border: 1px solid #ccc;
+            margin: 16px 12px 8px;
+        }
+        .aui-list-view{padding: 6px 0 18px;}
+        .aui-btn-block{
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="aui-bar aui-bar-nav aui-bar-warning">
+        <a class="aui-pull-left" onclick="close_myaccount()">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-title">管理收货地址</div>
+    </header>
+
+    <section class="aui-content">
+        <div class="">
+            <ul class="aui-list-view aui-in">
+                <li class="aui-list-view-cell">
+                    <div class="rece_infos">
+                        <p>张三</p>
+                        <p>广东省广州市123街道</p>
+                    </div>
+                    <div class="">
+                        <span class="aui-pull-left">
+                            <input class="aui-pull-left aui-checkbox" type="checkbox">
+                            <span class="aui-checkbox-name">默认地址</span>
+                        </span>
+                        <span class="aui-pull-right aui-checkbox-name">删除</span>
+                        <span class="aui-pull-right aui-checkbox-name">编辑</span>
+                    </div>
+                </li>
+
+                <li class="aui-list-view-cell">
+                    <div class="rece_infos">
+                        <p>张三</p>
+                        <p>广东省广州市123街道</p>
+                    </div>
+                    <div class="">
+                        <span class="aui-pull-left">
+                            <input class="aui-pull-left aui-checkbox" type="checkbox">
+                            <span class="aui-checkbox-name">默认地址</span>
+                        </span>
+                        <span class="aui-pull-right aui-checkbox-name">删除</span>
+                        <span class="aui-pull-right aui-checkbox-name">编辑</span>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+        <a href="#" class="aui-btn aui-btn-warning aui-btn-block" onclick="add_new();">添加新地址</a>
+    </section>
+
+</body>
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript">
+
+    function close_myaccount(){
+        api.closeWin({});
+    }
+
+   function add_new(){
+       api.openWin({
+           name:'newaddr',
+           url:'newAddr.html',
+           delay:300
+       })
+   }
+
+</script>
+</html>
