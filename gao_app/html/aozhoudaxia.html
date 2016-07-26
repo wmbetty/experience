@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>澳洲大虾</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+
+    <style>
+        .aui-searchbar{width: 50%;border-radius: 0;}
+        .aui-content .search_cont{width: 80%;margin: -6px auto 0;}
+        .aui-searchbar-wrap{background-color: #ccc;}
+        .aui-content.search_outer{background-color: #ccc;height: 30%;}
+        .sort_icon{color: #fff;}
+        .my-header{padding: 14px 0 6px;}
+    </style>
+</head>
+
+<body>
+
+<header class="aui-bar aui-bar-nav aui-bar-warning my-header">
+    <a class="aui-pull-left" onclick="close_myaccount()">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+</header>
+<div class="aui-content search_outer">
+
+    <div class="search_cont">
+        <div class="aui-searchbar-wrap demo focus aui-pull-right" id="search">
+            <span class="aui-pull-left"><i class="aui-iconfont sort_icon"></i></span>
+            <div class="aui-searchbar aui-border-radius" tapmode="" onclick="doSearch()">
+                <i class="aui-iconfont aui-icon-search"></i>
+                <div class="aui-searchbar-text">请输入搜索内容</div>
+                <div class="aui-searchbar-input">
+                    <form action="javascript:search();">
+                        <input type="text" placeholder="龙虾" id="search-input">
+                    </form>
+                </div>
+                <i class="aui-iconfont aui-icon-roundclosefill" tapmode="" onclick="clearInput()"></i>
+            </div>
+            <!--<div class="aui-searchbar-cancel aui-text-info" tapmode="" onclick="cancelSearch()">取消</div>-->
+        </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript">
+
+    function close_myaccount(){
+        api.closeWin({});
+    }
+
+    function doSearch(){
+        $api.addCls($api.dom(".aui-searchbar-wrap"),"focus");
+        $api.dom('.aui-searchbar-input input').focus();
+    }
+
+    function clearInput(){
+        $api.val($api.byId("search-input"),'');
+    }
+
+    function search(){
+        var content = $api.val($api.byId("search-input"));
+        if(content){
+            api.alert({
+                title: '搜索提示',
+                msg: '您输入的内容为：'+content
+            });
+        }else{
+            api.alert({
+                title: '搜索提示',
+                msg: '您没有输入任何内容'
+            });
+        }
+    }
+
+</script>
+
+</body>
+</html>

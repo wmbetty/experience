@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>产品规格</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <style>
+        body{background: #fff;}
+        .my-header {
+            padding-top: 20px;
+        }
+        .aui-list-view-cell {
+            line-height: 26px;
+        }
+        .aui-list-view i.aui-iconfont{color: #999;}
+        .aui-user-view-cell.shop_name:after{border-bottom: none;}
+        .aui-user-view.shop_box{margin-bottom: 0;}
+        .aui-list-view:after{border-top:none;}
+        .aui-tab{width: 86%;}
+        .aui-tab-nav{background-color: #f1c40f;}
+        .tab_cont li a{display: block;}
+        .tab_cont li a.active{border-bottom: 2px solid orange;height: 100%;}
+        .thumb > img{width: 100%;}
+        .price-info{padding: 0 14px;}
+        p{color: #333;}
+        .price{font-size: 20px;}
+        .aui-user-view-cell .aui-img-body span.dt_sp{font-size: 14px;}
+        .dt_sp.card{
+            width: 66px;
+            border: 1px solid #ccc;
+            padding: 4px 6px 2px;
+            border-radius: 6px;
+        }
+        .aui-user-view-cell .aui-img-body span.gray_ft{color: #999;}
+        .gray_ft{color: #999;}
+        .pay_ways{margin-left: 22%;}
+        .aui-nav .aui-bar-tab{width: 70%;}
+        .aui-btn.pay_btn{margin: 12px 6px;}
+        .size_box{margin: 72px 0 130px;}
+        .close_icon{
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .aui-content{margin-bottom: 0;}
+        .left_parent{
+            position: relative;
+            width: 80%;
+            height: 66px;
+        }
+        .img_container{
+            position: absolute;
+            width: 48%;
+            height: 100px;
+            top: -34px;
+            left: 6%;
+            background: #fff;
+        }
+        .prod_imgp{
+            display: block;
+            width: 88%;
+            height: 80px;
+            margin: 10px auto;
+        }
+        .guige_cont{
+            padding: 0 20px;
+        }
+        /*.main_conts{margin-bottom: 120px;}*/
+        .small_tag{padding: 8px;}
+        .tag_cont{
+            margin: 14px 0;
+        }
+        .p_mgbt{margin-bottom: 30px;}
+        .aui-border-t:after{border: none;}
+        .pay_btn_out{
+            padding: 0 20px;
+            margin: 110px 0 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="aui-bar aui-bar-nav aui-bar-warning my-header">
+        <a class="aui-pull-left" onclick="close_myaccount()">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-tab aui-tab-warning aui-pull-right">
+            <ul class="aui-tab-nav tab_cont" id="tabCont">
+                <li><a href="#" class="active">商品</a></li>
+                <li><a href="#">详情</a></li>
+            </ul>
+        </div>
+    </header>
+
+<div class="aui-content main_conts">
+    <div id="slider" class="swipe">
+        <ul class="swipe_cont aui-list-view aui-clearfix foot_main">
+
+            <li class="li_list">
+                <div>
+                    <section class="aui-content thumb">
+                        <img src="../image/demo3.png">
+                    </section>
+                    <section class="aui-content">
+                        <div class="aui-pull-left left_parent">
+                            <div class="img_container">
+                                <img src="../image/prod_img.png" class="prod_imgp" alt="">
+                            </div>
+                            <div class="aui-pull-right">
+                                <p>￥99.99</p>
+                                <span class="gray_ft">商品编号123123</span>
+                            </div>
+                            <!--价钱-->
+                        </div>
+                        <div class="aui-pull-right"><span class="aui-iconfont close_icon">&#xe646;</span></div>
+                    </section>
+
+                    <section class="aui-content aui-clearfix guige_cont">
+                        <p>规格</p>
+                        <div class="tag_cont">
+                            <p class="p_mgbt"><span class="aui-border small_tag">1000g</span></p>
+                            <p class="p_mgbt"><span class="aui-border small_tag">1000g3斤装</span></p>
+                        </div>
+
+                    </section>
+
+                    <section class="guige_cont nums">
+                        <div class="aui-pull-left">
+                            <p>数量</p>
+                        </div>
+                        <div class="aui-counter aui-warning aui-pull-right">
+                            <div class="aui-counter-minus" onclick="cutone()"></div>
+                            <input class="aui-counter-input num" type="text" value="1">
+                            <div class="aui-counter-plus" onclick="addone();"></div>
+                        </div>
+                    </section>
+
+                    <div class="aui-clearfix pay_btn_out">
+                        <div class="aui-pull-right"><a href="" class="aui-btn aui-btn-warning">立即购买</a></div>
+                    </div>
+
+                </div>
+            </li>
+
+            <li class="li_list">
+                <p>2</p>
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+
+</body>
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript" src="../script/zepto_min.js"></script>
+<script type="text/javascript" src="../script/touchslider.js"></script>
+<script type="text/javascript">
+
+    function close_myaccount(){
+        api.closeWin({});
+    }
+
+    var tabct='tabCont';
+    var mslide='slider';
+    //    var mtitle='emtitle';
+    //    arrdiv = 'arrdiv';
+
+    var as=document.getElementById(tabct).getElementsByTagName('a');
+
+    var tt=new TouchSlider({id:mslide,'auto':'-1',fx:'ease-out',
+        direction:'left',speed:200,timeout:2000,'before':function(index){
+            var as=document.getElementById(this.tabct).getElementsByTagName('a');
+            as[this.p].className='';
+            as[index].className='active';
+            this.p=index;
+            var txt=as[index].innerText;
+//            $("#"+this.tabct).parent().find('.emtitle').text(txt);
+            var txturl=as[index].getAttribute('href');
+            var turl=txturl.split('#');
+        }});
+
+    tt.tabct = tabct;
+    tt.p = 0;
+    //console.dir(tt); console.dir(tt.__proto__);
+    for(var i=0;i<as.length;i++){
+        (function(){
+            var j=i;
+            as[j].tt = tt;
+            as[j].onclick=function(){
+                this.tt.slide(j);
+                return false;
+            }
+        })();
+    }
+
+    //数量加1
+
+    var numput = document.getElementsByClassName("num")[0];
+    var num = parseInt($api.val(numput));// dom元素
+
+    function addone(){
+        num = num + 1;
+        $api.val(numput,""+num+"");//
+    }
+
+    //    数量减一
+    //
+    function cutone(){
+        var cut = document.getElementsByClassName("aui-counter-minus")[0];
+
+        if(num <= 0){
+            $api.addCls(cut, 'aui-disabled');
+            return ;
+        }else {
+            num = num - 1;
+            $api.val(numput,""+num+"");//
+        }
+    }
+
+</script>
+</html>

@@ -1,0 +1,18 @@
+
+/*box-163css*/
+.out_cont{ width:100%; position:relative; height:360px;margin-bottom:20px; float:left;}
+/*swipe*/
+.swipe{ width:100%; float:left;overflow: hidden; visibility: visible; position: relative; height:260px;}
+.swipe_cont{position:relative; -webkit-transition: left 600ms ease-out;  width:100%; left:0;}
+.li_list{width:100%;position:relative; float: left; vertical-align: top;background: #ccc;}
+
+/*page*/
+.tab_cont{ text-align:left; background:#f3f3f3; height:38px; line-height:38px; width:100%;display:-webkit-box;}
+.tab_cont li{-webkit-box-flex:1; font-size:18px; display:block; color:#000; height:38px; line-height:38px; text-align:center; }
+.tab_cont li a{ color:#000; display:block; height:38px;}
+.tab_cont a.active{color:#f1c40f;border-bottom:1px solid #f1c40f;}
+
+.go_btn{margin: 6px auto 12px auto;height: 34px;width: 92%;border: 1px solid #B9B9B9;text-align: center;line-height: 34px;font-size: 16px;
+    background: -webkit-gradient(linear,0 0,0 100%,from(whiteSmoke),to(#E3E3E3));background: -moz-linear-gradient(top,whiteSmoke,#E3E3E3);
+    -webkit-border-radius: 3px;border-radius: 3px; display:block; float:left; margin-left:2.5%;}
+.go_btn em{ font-style:normal; cursor:pointer;}

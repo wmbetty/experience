@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>商品分类</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-flex.css" />
+</head>
+<style type="text/css">
+body { background: #fff;}
+/*重新定义*/
+.aui-list-view.category_ul{background-color: #ccc;}
+/*.aui-list-view { border-radius: 6px;}*/
+.aui-list-view:after { border-top: 0;}
+.aui-list-view:before { border-top: 0;}
+.aui-grid-sixteen li .aui-iconfont {
+    background: #ff9900;
+    color: #ffffff;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+/*自定义*/
+.icons { margin-top: 15px;}
+.image img { width: 100%}
+p { font-size: 12px; margin-bottom: 5px;}
+.content { font-size: 12px;}
+.aui-iconfont {
+    color: #ffffff;
+}
+.aui-slide-page-line{
+    height: 4px !important;
+}
+
+.aui-nav {
+    background: transparent;
+}
+.aui-nav .aui-bar-tab {
+
+    background: rgba(255,255,255,0.95);
+}
+    .main_cont{
+        padding-bottom: 20%;
+    }
+    .aui-nav.aui-border-t{position: fixed;}
+    img.shop_img{
+        width: 100%;
+        border: 1px solid #ccc;
+    }
+    .title_box{margin-top: 6px;}
+    li.goods_cont{width: 20%;}
+    .category_ul li{padding: 12px 4px;text-align: center;}
+.demo-box {
+    height: auto;
+    /*overflow-y: auto;*/
+    /*-webkit-overflow-scrolling: touch;*/
+}
+.demo-box::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+}
+    .aui-flex-item-3.aui-border-r{background-color: #ccc;}
+    p.cate_title{padding: 0 12px;color: #333;}
+</style>
+<body>
+
+<header class="aui-bar aui-bar-nav aui-bar-warning" style="padding: 14px 0 6px;">
+
+    <a class="aui-pull-left" onclick="close_myaccount()">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+
+    <div class="aui-searchbar-wrap demo" id="search" style="width: 80%;background-color: #f1c40f;margin: 0 auto;">
+        <div class="aui-searchbar aui-border-radius">
+            <div class="aui-searchbar-text">
+                <input type="text" placeholder="请输入搜索内容" id="search-input">
+            </div>
+            <i class="aui-iconfont aui-icon-search" style="color: #ccc;"></i>
+
+        </div>
+    </div>
+</header>
+
+<div class="main_cont">
+
+
+
+
+
+    <div class="aui-content box">
+        <!--<div class="aui-line-x"></div>-->
+        <div class="title_box">
+
+
+            <div class="aui-content aui-clearfix">
+                <div class="aui-flex-col">
+                    <div class="aui-flex-item-3 aui-border-r">
+                        <ul class="aui-list-view demo-box category_ul" id="cate" style="margin-bottom: 0;">
+                            <li class="aui-list-view-cell aui-bg-warning">推荐</li>
+                            <li class="aui-list-view-cell">食品</li>
+                            <li class="aui-list-view-cell">户外运动</li>
+                            <li class="aui-list-view-cell">女装</li>
+                            <li class="aui-list-view-cell">男装</li>
+                            <li class="aui-list-view-cell">母婴</li>
+                            <li class="aui-list-view-cell">生鲜</li>
+                            <li class="aui-list-view-cell">箱包</li>
+                        </ul>
+                    </div>
+                    <div class="aui-flex-item-9 demo-box">
+                        <ul class="aui-list-view aui-grid-view">
+                            <p class="cate_title">推荐</p>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-4">
+                                <img class="aui-img-object" src="../image/demo4.png">
+
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-4">
+                                <img class="aui-img-object" src="../image/demo3.png">
+
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-4">
+                                <img class="aui-img-object" src="../image/demo1.png">
+
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-4">
+                                <img class="aui-img-object" src="../image/demo2.png">
+                                >
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-4">
+                                <img class="aui-img-object" src="../image/demo1.png">
+
+                            </li>
+                        </ul>
+                        <ul class="aui-list-view aui-grid-view">
+                            <p class="cate_title">进口食品</p>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-4">
+                                <img class="aui-img-object" src="../image/demo2.png">
+
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-4">
+                                <img class="aui-img-object" src="../image/demo2.png">
+
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-4">
+                                <img class="aui-img-object" src="../image/demo2.png">
+
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-4">
+                                <img class="aui-img-object" src="../image/demo2.png">
+
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-4">
+                                <img class="aui-img-object" src="../image/demo2.png">
+
+                            </li>
+                        </ul>
+                        <ul class="aui-list-view aui-grid-view">
+                            <p class="cate_title">休闲食品</p>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-4">
+                                <img class="aui-img-object" src="../image/demo2.png">
+
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-4">
+                                <img class="aui-img-object" src="../image/demo2.png">
+
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-4">
+                                <img class="aui-img-object" src="../image/demo2.png">
+
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-4">
+                                <img class="aui-img-object" src="../image/demo2.png">
+
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-4">
+                                <img class="aui-img-object" src="../image/demo2.png">
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--<div class="aui-line-x"></div>-->
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript">
+
+    function close_myaccount(){
+        api.closeWin({});
+    }
+
+    apiready = function () {
+        api.parseTapmode();
+        var demo = $api.domAll("#cate li");
+        for(var i in demo){
+            $api.addEvt(demo[i], 'click', function(){
+                $api.removeCls($api.dom("#cate li.aui-bg-warning"),'aui-bg-warning');
+                $api.addCls(this,'aui-bg-warning');
+            });
+        }
+    }
+
+</script>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>我的账户</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <style>
+        .my-header {
+            /*background: #c4c2c3;*/
+            position: relative;
+        }
+        #header {
+            position: relative;
+            padding: 20px 24px 76px 10px;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+            vertical-align: center;
+            margin-bottom: 0;
+        }
+        img.my_pic{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .rt_box{padding-left: 12px;}
+        p.ft_cr{color: #777;}
+        .ft_dark{color: #333;}
+        .ft_lineh{line-height: 64px;}
+        .mar_box{margin: 26px 10px 10px;}
+        .my_services{margin: 20px 0;}
+        .my_order_box{padding: 20px 4px 12px 14px;}
+        .ft_six{font-size: 16px;}
+        .ft_four{font-size: 0.8rem;}
+        .w_six{width: 78%;padding-bottom: 20px;}
+        .aui-btn.my_btn{
+            padding: 6px 0;
+            height: 40px;
+            line-height: 26px;
+            margin: 0 6px 8px 0;
+            width: 23%;
+        }
+        .pad_bt{padding-bottom: 36px;}
+        @media screen and (min-width:375px){
+            .ft_four{font-size: 0.9rem;}
+            .my_order_box{padding: 20px 10px 12px 14px;}
+        }
+    </style>
+</head>
+<body>
+
+    <section class="aui-content my-header aui-bg-warning" id="header">
+        <div class="my-info">
+            <a class="aui-pull-left" onclick="close_myaccount()">
+                <span class="aui-iconfont aui-icon-left"></span>
+            </a>
+            <p class="aui-pull-right ft_cr">
+                <span>设置</span>
+                <span>消息</span>
+            </p>
+            <div class="aui-clearfix">
+                <div class="aui-pull-left">
+                    <img class="aui-pull-left my_pic" src="../image/my_pic.png" alt="我的头像">
+                    <div class="aui-pull-right rt_box">
+                        <h1>用户名</h1>
+                        <p class="ft_dark">会议等级</p>
+                        <p class="ft_dark">地址</p>
+                    </div>
+                </div>
+                <div class="aui-pull-right ft_lineh">积分</div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="aui-content aui-clearfix">
+        <div class="aui-border mar_box my_order_box">
+            <p class="ft_dark ft_six">我的订单</p>
+            <div class="my_services">
+                <span class="ft_four">未付款|</span>
+                <span class="ft_four">待配送|</span>
+                <span class="ft_four">全部订单|</span>
+                <span class="ft_four">待评价|</span>
+                <span class="ft_four">售后服务|</span>
+            </div>
+        </div>
+
+        <div class="aui-border mar_box my_order_box">
+            <p class="ft_dark ft_six">我的资产</p>
+            <div class="my_services w_six">
+                <p class="aui-col-xs-4 aui-text-center">余额</p>
+                <p class="aui-col-xs-4 aui-text-center">经验值</p>
+                <p class="aui-col-xs-4 aui-text-center">积分</p>
+            </div>
+        </div>
+
+        <div class="aui-padded-10">
+            <a href="" class="aui-col-xs-3 aui-btn aui-btn-warning my_btn">我的收藏</a>
+            <a href="" class="aui-col-xs-3 aui-btn aui-btn-warning my_btn" onclick="myfoot()">购物足迹</a>
+            <a href="" class="aui-col-xs-3 aui-btn aui-btn-warning my_btn">特价商品</a>
+            <a href="" class="aui-col-xs-3 aui-btn aui-btn-warning my_btn">客服中心</a>
+            <a href="" class="aui-col-xs-3 aui-btn aui-btn-warning my_btn">帮助与反馈</a>
+        </div>
+
+        <div class="pad_bt">
+            <div class="aui-border mar_box my_order_box">
+                <p class="ft_dark ft_six">猜你喜欢</p>
+                <div class="my_services w_six">
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript">
+
+    function close_myaccount(){
+        api.closeWin({});
+    }
+
+    function myfoot(){
+        api.openWin({
+            name:'cart',
+            url:'myfootprint.html',
+            delay:300
+        })
+    }
+
+</script>
+</html>

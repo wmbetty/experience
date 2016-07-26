@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>国家馆</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/hot.css" />
+    <script type="text/javascript" src="../script/zepto_min.js"></script>
+    <script type="text/javascript" src="../script/touchslider.js"></script>
+
+    <style>
+        .tab_cont{padding: 0;}
+        .aui-title{color: #333;}
+        .title_addr{color: #fff;font-size: 13px;}
+        .swipe_cont.foot_main li{padding: 0 10px;}
+        .my-header{padding: 14px 0 6px;}
+        .swipe_cont.foot_main.aui-list-view:after{border-top:none;}
+    </style>
+</head>
+
+<body>
+
+<header class="aui-bar aui-bar-nav aui-bar-warning my-header">
+    <a class="aui-pull-left" onclick="close_myaccount()">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">全球美食</div>
+</header>
+
+<div id="main">
+
+    <div class="out_cont">
+        <div class="aui-content">
+            <div class="aui-tab aui-tab-warning">
+                <ul class="aui-tab-nav tab_cont" id="tabCont">
+                    <li><a href="" class="active">全部</a></li>
+                    <li><a href="#">亚洲</a></li>
+                    <li><a href="#">欧洲</a></li>
+                    <li><a href="#">美洲</a></li>
+                    <li><a href="#">其他</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="slider" class="swipe">
+            <ul class="swipe_cont aui-list-view aui-clearfix foot_main">
+
+                    <li class="aui-list-view-cell aui-img aui-counter-list">
+                        <!--数据列表-->
+                      <div class="out_list">
+                          <img class="aui-img-object aui-pull-left" src="../image/demo5.png">
+                          <div class="aui-img-body">
+                              iphone7
+                              <div class="aui-counter-box" style="width: 84%;">
+                                  <div class="aui-pull-left aui-text-default">
+                                      ¥ 88元
+                                  </div>
+                                  <div class="aui-pull-right">
+                                      <span class="aui-badge aui-badge-warning" style="padding: 3px 9px;">1 <br>No</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                        <div>
+                            <img class="aui-img-object aui-pull-left" src="../image/demo5.png">
+                            <div class="aui-img-body">
+                                iphone7
+                                <div class="aui-counter-box" style="width: 84%;">
+                                    <div class="aui-pull-left aui-text-default">
+                                        ¥ 88元
+                                    </div>
+                                    <div class="aui-pull-right">
+                                        <span class="aui-badge aui-badge-warning" style="padding: 3px 9px;">1 <br>No</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--列表结束-->
+                    </li>
+
+
+                <!--<li class="li_list">-->
+                    <!--<p>1</p>-->
+                <!--</li>-->
+                <li class="li_list">
+                    <p>2</p>
+                </li>
+                <li class="li_list">
+                    <p>3</p>
+                </li>
+                <li class="li_list">
+                    <p>4</p>
+                </li>
+                <li class="li_list">
+                    <p>555</p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript">
+
+    function close_myaccount(){
+        api.closeWin({});
+    }
+
+    var tabct='tabCont';
+    var mslide='slider';
+//    var mtitle='emtitle';
+//    arrdiv = 'arrdiv';
+
+    var as=document.getElementById(tabct).getElementsByTagName('a');
+
+    var tt=new TouchSlider({id:mslide,'auto':'-1',fx:'ease-out',
+        direction:'left',speed:200,timeout:2000,'before':function(index){
+            var as=document.getElementById(this.tabct).getElementsByTagName('a');
+            as[this.p].className='';
+            as[index].className='active';
+            this.p=index;
+            var txt=as[index].innerText;
+//            $("#"+this.tabct).parent().find('.emtitle').text(txt);
+            var txturl=as[index].getAttribute('href');
+            var turl=txturl.split('#');
+        }});
+
+    tt.tabct = tabct;
+    tt.p = 0;
+    //console.dir(tt); console.dir(tt.__proto__);
+    for(var i=0;i<as.length;i++){
+        (function(){
+            var j=i;
+            as[j].tt = tt;
+            as[j].onclick=function(){
+                this.tt.slide(j);
+                return false;
+            }
+        })();
+    }
+</script>
+
+</body>
+</html>

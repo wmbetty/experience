@@ -8,27 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../css/aui.css" />
     <style>
     .my-header {
-        background: #3bafda;
-        position: relative;
-    }
-    #header {
-        position: relative;
-        padding: 10px 0;
-        width: 100%;
-        bottom: 0;
-        text-align: center;
-        vertical-align: center;
-        margin-bottom: 0;
-    }
-    #header img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-    }
-    .my-info p.nickname {
-        margin-top: 5px;
-        color: #ffffff;
-        font-size: 18px;
+        padding-top: 20px;
     }
     .aui-list-view-cell {
         line-height: 26px;
@@ -38,21 +18,11 @@
 </head>
 
 <body>
-
-
-
-    <!--<section class="aui-content my-header" id="header">-->
-        <!--<div class="my-info">-->
-            <!--<img src="../image/noavatar.gif" id="avatar" />-->
-            <!--<p class="nickname" id="nickname"></p>-->
-        <!--</div>-->
-    <!--</section>-->
-
-    <header class="aui-bar aui-bar-nav aui-bar-warning">
+    <header class="aui-bar aui-bar-nav aui-bar-warning my-header">
         <a class="aui-pull-left" onclick="close_myaccount()">
             <span class="aui-iconfont aui-icon-left"></span>
         </a>
-        <div class="aui-title">我的账户</div>
+        <div class="aui-title" onclick="my_sub()">我的账户</div>
     </header>
 
     <section class="aui-content">
@@ -121,6 +91,15 @@
         api.openWin({
             name:'pwd',
             url:'findPwd.html',
+            delay:300
+        })
+    }
+
+//    我的账户子页面
+    function my_sub(){
+        api.openWin({
+            name:'sub',
+            url:'my_sub.html',
             delay:300
         })
     }

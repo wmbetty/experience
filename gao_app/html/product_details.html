@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>产品详情</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <style>
+        body{background: #e5e3e4;}
+        /*.aui-content{background-color: #fff;}*/
+        .my-header {
+            padding-top: 20px;
+        }
+        .aui-list-view-cell {
+            line-height: 26px;
+        }
+        .aui-list-view i.aui-iconfont{color: #999;}
+        .aui-user-view-cell.shop_name:after{border-bottom: none;}
+        .aui-user-view.shop_box{margin-bottom: 0;}
+        .aui-list-view:after{border-top:none;}
+        .aui-tab{width: 86%;}
+        .aui-tab-nav{background-color: #f1c40f;}
+        .tab_cont li a{display: block;}
+        .tab_cont li a.active{border-bottom: 2px solid orange;height: 100%;}
+        .thumb > img{width: 100%;}
+        .price-info{padding: 0 14px;}
+        p{color: #333;}
+        .price{font-size: 20px;}
+        .aui-user-view-cell .aui-img-body span.dt_sp{font-size: 14px;}
+        .dt_sp.card{
+            width: 66px;
+            border: 1px solid #ccc;
+            padding: 4px 6px 2px;
+            border-radius: 6px;
+        }
+        .aui-user-view-cell .aui-img-body span.gray_ft{color: #999;}
+        .pay_ways{margin-left: 22%;}
+        .aui-nav .aui-bar-tab{width: 70%;}
+        .aui-btn.pay_btn{margin: 12px 6px;}
+        .size_box{margin: 72px 0 130px;}
+        .wht_bg{background-color: #fff;}
+    </style>
+</head>
+
+<body>
+    <header class="aui-bar aui-bar-nav aui-bar-warning my-header">
+        <a class="aui-pull-left" onclick="close_myaccount()">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-tab aui-tab-warning aui-pull-right">
+            <ul class="aui-tab-nav tab_cont" id="tabCont">
+                <li><a href="#" class="active">商品</a></li>
+                <li><a href="#">详情</a></li>
+            </ul>
+        </div>
+    </header>
+
+<div class="aui-content">
+    <div id="slider" class="swipe">
+        <ul class="swipe_cont aui-list-view aui-clearfix foot_main">
+
+            <li class="li_list">
+                <div class="wht_bg">
+                    <section class="aui-content thumb">
+                        <img src="../image/demo3.png">
+                        <div class="price-info">
+                            <p>精品牛肉100克</p>
+                            <p>特价上市</p>
+                            <span class="price">¥ <strong>88.88</strong></span>
+
+
+                            <!--<div class="aui-pull-right">-->
+                                <!--<p style="text-decoration:line-through">原价：66.66 元</p>-->
+                                <!--<p>2016件已售</p>-->
+                            <!--</div>-->
+                        </div>
+                    </section>
+
+                    <section class="aui-content">
+                        <ul class="aui-user-view">
+                            <li class="aui-user-view-cell aui-img wht_bg">
+                                <div class="aui-img-body aui-arrow-right">
+                                   <span class="dt_sp gray_ft">促销</span> <span class="dt_sp card">优惠券</span> <span class="dt_sp">满99减50</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="aui-content size_box">
+                        <ul class="aui-user-view">
+                            <li class="aui-user-view-cell aui-img wht_bg">
+                                <div class="aui-img-body aui-arrow-right">
+                                    <span class="dt_sp gray_ft">规格</span> <span class="dt_sp">100克</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="aui-content size_box">
+                        <ul class="aui-user-view">
+                            <li class="aui-user-view-cell aui-img wht_bg">
+                                <div class="aui-img-body aui-arrow-right">
+                                    <span class="dt_sp gray_ft">最近门店</span> <span class="dt_sp">天河大厦133号</span>
+                                    <p class="pay_ways">在线支付</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+
+                </div>
+            </li>
+
+            <li class="li_list">
+                <p>2</p>
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+
+    <footer class="aui-nav aui-border-t" id="aui-footer">
+        <ul class="aui-bar-tab aui-pull-left">
+            <li class="" id="tabbar1">
+                <span class="aui-iconfont">&#xe6ff;</span>
+                <p>客服</p>
+            </li>
+            <li id="tabbar2">
+                <span class="aui-iconfont">&#xe669;</span>
+                <p>收藏</p>
+            </li>
+            <li id="tabbar3">
+                <span class="aui-iconfont aui-icon-cart"></span>
+                <p>购物车</p>
+            </li>
+        </ul>
+        <div class="aui-pull-right aui-btn aui-btn-warning pay_btn">立即购买</div>
+    </footer>
+
+
+
+</body>
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript" src="../script/zepto_min.js"></script>
+<script type="text/javascript" src="../script/touchslider.js"></script>
+<script type="text/javascript">
+
+    function close_myaccount(){
+        api.closeWin({});
+    }
+
+    var tabct='tabCont';
+    var mslide='slider';
+    //    var mtitle='emtitle';
+    //    arrdiv = 'arrdiv';
+
+    var as=document.getElementById(tabct).getElementsByTagName('a');
+
+    var tt=new TouchSlider({id:mslide,'auto':'-1',fx:'ease-out',
+        direction:'left',speed:200,timeout:2000,'before':function(index){
+            var as=document.getElementById(this.tabct).getElementsByTagName('a');
+            as[this.p].className='';
+            as[index].className='active';
+            this.p=index;
+            var txt=as[index].innerText;
+//            $("#"+this.tabct).parent().find('.emtitle').text(txt);
+            var txturl=as[index].getAttribute('href');
+            var turl=txturl.split('#');
+        }});
+
+    tt.tabct = tabct;
+    tt.p = 0;
+    //console.dir(tt); console.dir(tt.__proto__);
+    for(var i=0;i<as.length;i++){
+        (function(){
+            var j=i;
+            as[j].tt = tt;
+            as[j].onclick=function(){
+                this.tt.slide(j);
+                return false;
+            }
+        })();
+    }
+</script>
+</html>

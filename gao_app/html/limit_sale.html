@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>限时抢购</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <style>
+        body{background: #fff;}
+        .my-header {
+            padding-top: 20px;
+        }
+        .aui-list-view-cell {
+            line-height: 26px;
+        }
+        .aui-list-view i.aui-iconfont{color: #999;}
+        .aui-user-view-cell.shop_name:after{border-bottom: none;}
+        .aui-user-view.shop_box{margin-bottom: 0;}
+        .aui-list-view:after{border-top:none;}
+        div.zj_btn{width: 49%;height: 44px;line-height: 42px;}
+        .aui-content.ft_hd{padding-top: 6px;}
+        .aui-bg-warning.zj_btn{color: #fff;}
+    </style>
+</head>
+
+<body>
+    <header class="aui-bar aui-bar-nav aui-bar-warning my-header">
+        <a class="aui-pull-left" onclick="close_myaccount()">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-title">限时抢购</div>
+        <a href="" class="aui-pull-right">取消</a>
+    </header>
+
+    <section class="aui-content ft_hd">
+        <div>
+            <div class="aui-pull-left aui-bg-warning zj_btn aui-text-center">立即抢购</div>
+            <div class="aui-pull-right aui-bg-default zj_btn aui-text-center">即将抢购</div>
+        </div>
+
+        <ul class="aui-list-view aui-clearfix foot_main">
+
+            <li class="aui-list-view-cell aui-img aui-counter-list">
+                <img class="aui-img-object aui-pull-left" src="../image/demo5.png">
+                <div class="aui-img-body">
+                    iphone7
+                    <div class="aui-counter-box">
+                        <div class="aui-pull-left aui-text-default" style="width: 50%;">
+                            ¥ 88元
+                            <div class="aui-progress aui-progress-sm">
+                                <div class="aui-progress-bar" style="width: 30%;line-height: 10px;">30%</div>
+                            </div>
+                        </div>
+                        <div class="aui-pull-right">
+                            <a href="" class="aui-btn aui-btn-warning">立即抢购</a>
+                            <p>已抢去100件</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+
+        <ul class="aui-list-view aui-clearfix foot_main" style="display: none;">
+
+            <li class="aui-list-view-cell aui-img aui-counter-list">
+                <img class="aui-img-object aui-pull-left" src="../image/demo5.png">
+                <div class="aui-img-body">
+                    iphone7
+                    <div class="aui-counter-box">
+                        <div class="aui-pull-left aui-text-default" style="width: 50%;">
+                            ¥ 88元
+                        </div>
+                        <div class="aui-pull-right">
+                            <a href="" class="aui-btn aui-btn-warning">立即抢购</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+
+    </section>
+
+</body>
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript" src="../script/jquery-2.0.3.min.js" ></script>
+<script type="text/javascript">
+
+    function close_myaccount(){
+        api.closeWin({});
+    }
+    function closeTips(){
+        $api.remove($api.byId("tips"));
+    }
+
+    $(".zj_btn").each(function(index){
+        $(this).click(function(){
+            $(this).toggleClass("aui-bg-warning").siblings(".zj_btn").toggleClass("aui-bg-warning");
+            $(".foot_main").eq(index).show().siblings(".foot_main").hide();
+        });
+    });
+
+
+</script>
+</html>

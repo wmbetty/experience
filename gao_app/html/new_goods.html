@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>新品上架</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-flex.css" />
+</head>
+<style type="text/css">
+    body { background: #fff;}
+    /*重新定义*/
+    .aui-list-view { border-radius: 6px;}
+    .aui-list-view:after { border-top: 0;}
+    .aui-list-view:before { border-top: 0;}
+    .aui-grid-sixteen li .aui-iconfont {
+        background: #ff9900;
+        color: #ffffff;
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        border-radius: 50%;
+        font-size: 20px;
+    }
+    /*自定义*/
+    .icons { margin-top: 15px;}
+    .image img { width: 100%}
+    p { font-size: 12px; margin-bottom: 5px;}
+    .content { font-size: 12px;}
+    .aui-iconfont {
+        color: #ffffff;
+    }
+    .aui-slide-page-line{
+        height: 4px !important;
+    }
+
+    .aui-nav {
+        background: transparent;
+    }
+    .aui-nav .aui-bar-tab {
+
+        background: rgba(255,255,255,0.95);
+    }
+        .main_cont{
+            padding-bottom: 20%;
+        }
+        .aui-nav.aui-border-t{position: fixed;}
+        img.shop_img{
+            width: 100%;
+            border: 1px solid #ccc;
+        }
+        .title_box{padding: 6px 10px 0;}
+        li.goods_cont{width: 20%;}
+        .category_ul li{padding: 12px 10px;}
+    .demo-box {
+        height: 300px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .demo-box::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+    }
+    .my-header{
+        padding-top: 20px;
+    }
+    .aui-img-body{text-align: left;}
+    .aui-img-body p{color: #333;}
+    p.orgin{color: #999;}
+</style>
+<body>
+
+<header class="aui-bar aui-bar-nav aui-bar-warning my-header">
+    <a class="aui-pull-left" onclick="close_myaccount()">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">新品上架</div>
+</header>
+
+<div class="main_cont">
+    <!--轮播组件-->
+    <div id="aui-slide3">
+        <div class="aui-slide-wrap" >
+            <div class="aui-slide-node bg-dark">
+                <img src="../image/l1.png" />
+            </div>
+            <div class="aui-slide-node bg-dark">
+                <img src="../image/l2.png" />
+            </div>
+            <div class="aui-slide-node bg-dark">
+                <img src="../image/l3.png" />
+            </div>
+            <div class="aui-slide-node bg-dark">
+                <img src="../image/l1.png" />
+            </div>
+            <div class="aui-slide-node bg-dark">
+                <img src="../image/l2.png" />
+            </div>
+            <div class="aui-slide-node bg-dark">
+                <img src="../image/l3.png" />
+            </div>
+        </div>
+        <div class="aui-slide-page-wrap"><!--分页容器--></div>
+    </div>
+
+<div class="aui-content">
+    <ul class="aui-list-view aui-grid-view">
+        <li class="aui-list-view-cell aui-img aui-col-xs-6">
+            <img class="aui-img-object" src="../image/demo4.png">
+            <div class="aui-img-body">
+                <p>原味橙汁</p>
+                <p>500ml/瓶</p>
+                <p>￥18</p>
+                <p class="orgin">英国</p>
+            </div>
+        </li>
+        <li class="aui-list-view-cell aui-img aui-col-xs-6">
+            <img class="aui-img-object" src="../image/demo3.png">
+            <div class="aui-img-body">
+                <p>原味橙汁</p>
+                <p>500ml/瓶</p>
+                <p>￥18</p>
+                <p class="orgin">英国</p>
+            </div>
+        </li>
+        <li class="aui-list-view-cell aui-img aui-col-xs-6">
+            <img class="aui-img-object" src="../image/demo1.png">
+            <div class="aui-img-body">
+                <p>原味橙汁</p>
+                <p>500ml/瓶</p>
+                <p>￥18</p>
+                <p class="orgin">英国</p>
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+</body>
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript" src="../script/aui-slide.js"></script>
+<script type="text/javascript">
+    var slide3 = new auiSlide({
+        container:document.getElementById("aui-slide3"),
+        // "width":300,
+        "height":180,
+        "speed":500,
+        "autoPlay": 2500, //自动播放
+        "loop":true,
+        "pageShow":true,
+        "pageStyle":'line',
+        'dotPosition':'center'
+    })
+
+    function close_myaccount(){
+        api.closeWin({});
+    }
+
+</script>
+</html>

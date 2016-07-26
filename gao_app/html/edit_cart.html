@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <style>
+        body{background: #fff;}
+        .my-header {
+            padding-top: 20px;
+        }
+        .aui-list-view-cell {
+            line-height: 26px;
+        }
+        .aui-list-view i.aui-iconfont{color: #999;}
+        .aui-user-view-cell.shop_name:after{border-bottom: none;}
+        .aui-user-view.shop_box{margin-bottom: 0;}
+        .aui-list-view:after{border-top:none;}
+        .aui-list-view .aui-img-object.aui-pull-left.good_img{
+            max-width: none;
+            width: 90px;
+            height: 90px;
+            margin-right: 10px;
+        }
+        .aui-nav.aui-border-t{position: fixed;padding: 10px 0 0;}
+        .aui-checkbox.all_check{margin:8px 6px;}
+        .aui-btn.edit_inner_btn{
+            padding: 6px 0;
+            width: 22%;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="aui-bar aui-bar-nav aui-bar-warning my-header">
+        <a class="aui-pull-left" onclick="close_myaccount()">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-title">购物车</div>
+        <a href="" class="aui-pull-right">完成</a>
+    </header>
+
+    <section class="aui-content">
+            <ul class="aui-user-view shop_box">
+                <li class="aui-user-view-cell aui-img shop_name">
+                    <!--<img class="aui-img-object aui-pull-left" src="../../../image/demo3.png">-->
+                    <div class="aui-img-body">
+                        <span>商店名</span>
+                        <p class="aui-ellipsis-1">共售出888件</p>
+                    </div>
+                </li>
+            </ul>
+
+        <ul class="aui-list-view">
+
+            <li class="aui-list-view-cell aui-img aui-counter-list">
+                <input class="aui-pull-left aui-radio aui-radio-warning" type="radio" name="demo" checked="">
+                <img class="aui-img-object aui-pull-left good_img" src="../image/demo5.png">
+                <div class="aui-img-body">
+                    iphone7
+                    <div class="aui-counter-box">
+                        <div>
+                            <select style="padding: 0;">
+                                <option value="">规格：100g</option>
+                            </select>
+                        </div>
+                        <div class="aui-pull-left aui-text-default">
+                            <p>¥ 88元</p>
+                        </div>
+                        <div class="aui-counter aui-warning aui-pull-right">
+                            <div class="aui-counter-minus" onclick="cutone()"></div>
+                            <input class="aui-counter-input num" type="text" value="1">
+                            <div class="aui-counter-plus" onclick="addone();"></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+
+    </section>
+
+    <footer class="aui-nav aui-border-t" id="aui-footer">
+        <div>
+            <div class="aui-col-xs-3">
+                <input class="aui-checkbox all_check" type="checkbox">
+                <div class="aui-checkbox-name">全选</div>
+            </div>
+            <div class="aui-col-xs-3 aui-btn aui-btn-warning edit_inner_btn">分享</div>
+            <div class="aui-col-xs-3 aui-btn aui-btn-warning edit_inner_btn">移入关注</div>
+            <div class="aui-col-xs-3 aui-btn aui-btn-warning edit_inner_btn">删除</div>
+
+        </div>
+    </footer>
+
+</body>
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript">
+
+    function close_myaccount(){
+        api.closeWin({});
+    }
+    function closeTips(){
+        $api.remove($api.byId("tips"));
+    }
+//数量加1
+
+    var numput = document.getElementsByClassName("num")[0];
+    var num = parseInt($api.val(numput));// dom元素
+
+    function addone(){
+        num = num + 1;
+        $api.val(numput,""+num+"");//
+    }
+
+//    数量减一
+//
+    function cutone(){
+        var cut = document.getElementsByClassName("aui-counter-minus")[0];
+
+        if(num <= 0){
+            $api.addCls(cut, 'aui-disabled');
+            return ;
+        }else {
+            num = num - 1;
+            $api.val(numput,""+num+"");//
+        }
+    }
+
+</script>
+</html>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/aui.css" />
     <link rel="stylesheet" type="text/css" href="css/aui-iconfont.css" />
     <link rel="stylesheet" type="text/css" href="css/aui-slide.css" />
+    <link rel="stylesheet" type="text/css" href="css/aui-flex.css" />
 </head>
 <style type="text/css">
 body { background: #fff;}
@@ -53,10 +54,21 @@ p { font-size: 12px; margin-bottom: 5px;}
     }
     .title_box{padding: 6px 10px 0;}
     li.goods_cont{width: 20%;}
+    .category_ul li{padding: 12px 10px;}
+.demo-box {
+    height: 300px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.demo-box::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+}
 </style>
 <body>
 
-<header class="aui-bar aui-bar-nav aui-bar-warning" style="padding: 6px 0;">
+<header class="aui-bar aui-bar-nav aui-bar-warning" style="padding: 14px 0 6px;">
     <a class="aui-btn aui-btn-warning aui-pull-left">
         <span class="aui-iconfont aui-icon-location"></span>
     </a>
@@ -66,11 +78,7 @@ p { font-size: 12px; margin-bottom: 5px;}
             <div class="aui-searchbar-text">
                 <input type="text" placeholder="请输入搜索内容" id="search-input">
             </div>
-            <!--<div class="aui-searchbar-input">-->
-                <!--<form action="javascript:search();">-->
-                    <!--<input type="text" placeholder="请输入搜索内容" id="search-input">-->
-                <!--</form>-->
-            <!--</div>-->
+
             <i class="aui-iconfont aui-icon-roundclosefill"></i>
         </div>
         <div class="aui-searchbar-cancel aui-text-info">取消</div>
@@ -147,7 +155,7 @@ p { font-size: 12px; margin-bottom: 5px;}
         <div class="aui-line-x"></div>
         <div class="title_box">
             <div class="box-title aui-pull-left">限时抢购</div>
-            <div class="aui-btn aui-pull-right">查看更多</div>
+            <div class="aui-btn aui-pull-right" onclick="limit_sale()">查看更多</div>
         </div>
 
         <ul class="aui-list-view aui-grid-view">
@@ -179,20 +187,102 @@ p { font-size: 12px; margin-bottom: 5px;}
         <!--<div class="aui-line-x"></div>-->
         <div class="title_box">
             <div class="box-title aui-pull-left">海外进口</div>
-            <div class="aui-btn aui-pull-right">查看更多</div>
+            <!--<div class="aui-btn aui-pull-right">查看更多</div>-->
+
+            <div class="aui-content aui-clearfix">
+                <div class="aui-line-x"></div>
+                <div class="aui-flex-col">
+                    <div class="aui-flex-item-3 aui-border-r">
+                        <ul class="aui-list-view demo-box category_ul" id="cate" style="margin-bottom: 0;">
+                            <li class="aui-list-view-cell aui-bg-warning">分类一</li>
+                            <li class="aui-list-view-cell">分类二</li>
+                            <li class="aui-list-view-cell">分类三</li>
+                            <li class="aui-list-view-cell">分类四</li>
+                            <li class="aui-list-view-cell">分类五</li>
+                            <li class="aui-list-view-cell">分类六</li>
+                            <li class="aui-list-view-cell">分类七</li>
+                            <li class="aui-list-view-cell">分类八</li>
+                            <li class="aui-list-view-cell">分类九</li>
+                            <li class="aui-list-view-cell">分类十</li>
+                        </ul>
+                    </div>
+                    <div class="aui-flex-item-9 demo-box">
+                        <ul class="aui-list-view aui-grid-view">
+                            <li class="aui-list-view-cell aui-img aui-col-xs-6">
+                                <img class="aui-img-object" src="../image/demo4.png">
+                                <div class="aui-img-body">
+                                    图文列表
+                                </div>
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-6">
+                                <img class="aui-img-object" src="../image/demo3.png">
+                                <div class="aui-img-body">
+                                    图文列表
+                                </div>
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-6">
+                                <img class="aui-img-object" src="../image/demo1.png">
+                                <div class="aui-img-body">
+                                    图文列表
+                                </div>
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-6">
+                                <img class="aui-img-object" src="../image/demo2.png">
+                                <div class="aui-img-body">
+                                    图文列表
+                                </div>
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-6">
+                                <img class="aui-img-object" src="../image/demo1.png">
+                                <div class="aui-img-body">
+                                    图文列表
+                                </div>
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-6">
+                                <img class="aui-img-object" src="../image/demo2.png">
+                                <div class="aui-img-body">
+                                    图文列表
+                                </div>
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-6">
+                                <img class="aui-img-object" src="../image/demo2.png">
+                                <div class="aui-img-body">
+                                    图文列表
+                                </div>
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-6">
+                                <img class="aui-img-object" src="../image/demo2.png">
+                                <div class="aui-img-body">
+                                    图文列表
+                                </div>
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-6">
+                                <img class="aui-img-object" src="../image/demo2.png">
+                                <div class="aui-img-body">
+                                    图文列表
+                                </div>
+                            </li>
+                            <li class="aui-list-view-cell aui-img aui-col-xs-6">
+                                <img class="aui-img-object" src="../image/demo2.png">
+                                <div class="aui-img-body">
+                                    图文列表
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <ul class="aui-list-view aui-grid-view">
-
-        </ul>
-        <div class="aui-line-x"></div>
+        <!--<div class="aui-line-x"></div>-->
     </div>
 
     <div class="aui-content box">
         <div class="aui-line-x"></div>
         <div class="title_box">
             <div class="box-title aui-pull-left">热卖榜</div>
-            <div class="aui-btn aui-pull-right">查看更多</div>
+            <div class="aui-btn aui-pull-right" onclick="hotSale()">查看更多</div>
         </div>
 
         <ul class="aui-list-view aui-grid-view">
@@ -312,15 +402,15 @@ p { font-size: 12px; margin-bottom: 5px;}
             <span class="aui-iconfont aui-icon-home"></span>
             <p>首页</p>
         </li>
-        <li id="tabbar2" tapmode onclick="randomSwitchBtn(1,'tabbar2')">
+        <li id="tabbar2" tapmode onclick="randomSwitchBtn(1,'tabbar2');category();">
             <span class="aui-iconfont aui-icon-sort"></span>
             <p>分类</p>
         </li>
-        <li id="tabbar3" tapmode onclick="randomSwitchBtn(2,'tabbar3')">
+        <li id="tabbar3" tapmode onclick="randomSwitchBtn(2,'tabbar3');cart();">
             <span class="aui-iconfont aui-icon-cart"></span>
             <p>购物车</p>
         </li>
-        <li id="tabbar4" tapmode onclick="randomSwitchBtn(3,'tabbar4');askAdd();">
+        <li id="tabbar4" tapmode onclick="randomSwitchBtn(3,'tabbar4');myAccount();">
             <span class="aui-iconfont aui-icon-my"></span>
             <p>我的高尚生活</p>
         </li>
@@ -344,13 +434,60 @@ p { font-size: 12px; margin-bottom: 5px;}
         'dotPosition':'center'
     })
 
-    function askAdd(){
+//    我的账户
+    function myAccount(){
         api.openWin({
             name:'my',
-            url:'html/my.html',
+            url:'html/login.html',
             delay:300
         })
     }
+
+//    购物车
+    function cart(){
+        api.openWin({
+            name:'cart',
+            url:'html/cart.html',
+            delay:300
+        })
+    }
+
+//    限时抢购
+    function limit_sale(){
+        api.openWin({
+            name:'cart',
+            url:'html/limit_sale.html',
+            delay:300
+        })
+    }
+
+//    热卖榜
+function hotSale(){
+    api.openWin({
+        name:'cart',
+        url:'html/hot_sale.html',
+        delay:300
+    })
+}
+
+//    分类
+    function category(){
+        api.openWin({
+            name:'cart',
+            url:'html/Category.html',
+            delay:300
+        })
+    }
+
+
+    function openGoods(){
+        api.openWin({
+            name:'cart',
+            url:'html/prod_standard.html',
+            delay:300
+        })
+    }
+
     function closeWin(){
         api.closeWin({});
     }
@@ -362,6 +499,17 @@ p { font-size: 12px; margin-bottom: 5px;}
         $api.removeCls($api.dom('#aui-footer li.active-warning'),'active-warning');
         $api.addCls($api.byId(''+name+''),'active-warning');
 //
+    }
+
+    apiready = function () {
+        api.parseTapmode();
+        var demo = $api.domAll("#cate li");
+        for(var i in demo){
+            $api.addEvt(demo[i], 'click', function(){
+                $api.removeCls($api.dom("#cate li.aui-bg-warning"),'aui-bg-warning');
+                $api.addCls(this,'aui-bg-warning');
+            });
+        }
     }
 
 </script>
