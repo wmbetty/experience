@@ -15,8 +15,19 @@
 //    }
 //};
 
+var webpack = require("webpack");
+
+var config = {
+    entry: [
+        'webpack-dev-server/client?http://127.0.0.1:8000',
+        'webpack/hot/dev-server',
+        './src/main.js'
+    ],
+};
+
 module.exports = {
     entry: './src/app.js',
+
     output: {
         path: './bin',
         filename: 'app.bundle.js',
@@ -27,5 +38,20 @@ module.exports = {
             exclude: /node_modules/,
             loader: 'babel-loader',
         }]
-    }
+    },
+
+    module: {
+        loaders: [
+            { test: /\.css$/, loader: "style!css" }
+        ]
+    },
+
+    plugins:[
+        new webpack.ProvidePlugin({
+            $:"jquery",
+            jQuery:"jquery",
+            "window.jQuery":"jquery"
+        })
+    ]
+
 }

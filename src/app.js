@@ -2,13 +2,15 @@
  * Created by Lenovo on 2016/7/27.
  */
 require ('babel-polyfill');
-require ('./cats.js');
+//require ('src/cats.js');
 require('jquery') ;
+//require('test.js') ;
 
-var $ = window.jQuery;
+
+//var $ = window.jQuery;
 
 $('<h1>Cats</h1>').appendTo('body');
-const ul = $('<ul></ul>').appendTo('body');
-for (cat in cats) {
-    $('<li></li>').text(cat).appendTo(ul);
+ ul = $('<ul></ul>').appendTo('body');
+for (var i=0;i<3;i++) {
+    $('<li></li>').text("hello").appendTo(ul);
 }
