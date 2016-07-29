@@ -58,5 +58,8 @@
     "url": "https://github.com/wmbetty/web_mobile/issues"
   },
   "homepage": "https://github.com/wmbetty/web_mobile#readme",
+  "bin": {
+    "wmm": "app.bundle.js"
+  },
   "description": ""
 }
