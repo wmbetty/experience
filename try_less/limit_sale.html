@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>限时抢购</title>
+    <link rel="stylesheet" type="text/css" href="aui.css" />
+    <link rel="stylesheet/less" href="limit.less">
+</head>
+
+<body>
+    <header class="aui-bar aui-bar-nav my-header">
+        <a class="aui-pull-left" onclick="close_myaccount()">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-title">限时抢购</div>
+        <a href="" class="aui-pull-right share_btn"></a>
+    </header>
+
+    <section class="aui-content ft_hd">
+        <div>
+            <div class="aui-pull-left aui-bg-warning zj_btn aui-text-center coming">正在进行</div>
+            <div class="aui-pull-right zj_btn aui-text-center s_bt" style="background-color:#d9d9d9;">即将开始</div>
+        </div>
+        <!--<div class="aui-text-center limit_time_ct">-->
+            <!--<p>距结束倒计时<span class="aui-text-warning">02 : 56 : 08</span></p>-->
+        <!--</div>-->
+
+        <ul class="aui-list-view aui-clearfix foot_main">
+
+            <div class="aui-text-center limit_time_ct">
+                <p>距结束倒计时<span class="aui-text-warning">02 : 56 : 08</span></p>
+            </div>
+
+            <li class="aui-list-view-cell aui-img aui-counter-list">
+                <img class="aui-img-object aui-pull-left" src="limit1.png">
+                <div class="aui-img-body">
+                    <p style="color: #333;">创德可微波耐热玻璃饭盒</p>
+                    <p class="aui-text-warning">满50减10</p>
+                    <div class="aui-counter-box">
+                        <div class="aui-pull-left aui-text-default" style="width: 50%;">
+                            <span class="aui-text-warning">¥ 99.9</span> <span style="text-decoration:line-through;color: #999;">￥99.9</span>
+                            <div class="aui-progress aui-progress-sm">
+                                <div class="aui-progress-bar" style="width: 30%;line-height: 10px;">30%</div>
+                            </div>
+                        </div>
+                        <div class="aui-pull-right">
+                            <a href="" class="aui-btn aui-btn-warning">立即抢购</a>
+                            <p class="aui-text-warning">已抢去100件</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+
+        <ul class="aui-list-view aui-clearfix foot_main" style="display: none;">
+            <div class="aui-text-center limit_time_ct">
+                <p>距开始倒计时<span class="aui-text-warning">01 : 00 : 08</span></p>
+            </div>
+            <li class="aui-list-view-cell aui-img aui-counter-list">
+                <img class="aui-img-object aui-pull-left" src="limit1.png">
+                <div class="aui-img-body">
+                    <p style="color: #333;">创德可微波耐热玻璃饭盒</p>
+                    <p class="aui-text-warning">满50减10</p>
+                    <div class="aui-counter-box">
+                        <div class="aui-pull-left aui-text-default" style="width: 50%;">
+                            <span class="aui-text-warning">¥ 98.9</span> <span style="text-decoration:line-through;color: #999;">￥99.9</span>
+                            <!--<div class="aui-progress aui-progress-sm">-->
+                                <!--<div class="aui-progress-bar" style="width: 30%;line-height: 10px;">30%</div>-->
+                            <!--</div>-->
+                        </div>
+                        <div class="aui-pull-right">
+                            <a href="" class="aui-btn aui-btn-warning">立即抢购</a>
+                            <!--<p class="aui-text-warning">已抢去990件</p>-->
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+
+    </section>
+
+</body>
+<script type="text/javascript" src="api.js" ></script>
+<script type="text/javascript" src="jquery-2.0.3.min.js" ></script>
+<script src="less.min.js"></script>
+<script type="text/javascript">
+
+    function close_myaccount(){
+        api.closeWin({});
+    }
+    function closeTips(){
+        $api.remove($api.byId("tips"));
+    }
+
+//    tab切换
+    $(".zj_btn").each(function(index){
+        $(this).click(function(){
+
+            $(this).toggleClass("aui-bg-warning").siblings(".zj_btn").toggleClass("aui-bg-warning");
+            if($(".s_bt").hasClass("aui-bg-warning")){
+                $(".coming").addClass("aui-bg-default");
+            }
+
+            $(".foot_main").eq(index).show().siblings(".foot_main").hide();
+        });
+    });
+
+    $(".coming").click(function(){
+        $(this).removeClass("aui-bg-default");
+    });
+
+
+</script>
+</html>
