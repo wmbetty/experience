@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script src="https://cdn.wilddog.com/sdk/js/2.1.2/wilddog.js"></script>
+<script src="https://cdn.wilddog.com/sdk/js/2.1.2/wilddog-sync.js"></script>
+<script src = "https://cdn.wilddog.com/sdk/js/2.1.2/wilddog-auth.js"></script>
+
+<!--<script>-->
+    <!--var config = {-->
+        <!--syncURL: "https://xszin20161027.wilddogio.com" //输入节点 URL-->
+    <!--};-->
+    <!--wilddog.initializeApp(config);-->
+    <!--var ref = wilddog.sync().ref();-->
+
+    <!--ref.set({-->
+        <!--"messageboard":{-->
+            <!--"message1":{-->
+                <!--"content" : "Wilddog, Cool!",-->
+                <!--"presenter" : "Betty"-->
+            <!--}-->
+        <!--}-->
+    <!--});-->
+
+    <!--// snapshot 里面的数据会一直和云端保持同步-->
+    <!--ref.on("value", function(snapshot) {-->
+        <!--console.log(snapshot.val());-->
+    <!--});-->
+    <!--// 如果你只想监听一次，那么你可以使用 once()-->
+    <!--ref.once("value").then(function(snapshot){-->
+        <!--console.info(snapshot.val());-->
+    <!--}).catch(function(err){-->
+        <!--console.error(err);-->
+    <!--})-->
+
+<!--</script>-->
+
+<script>
+    var config = {
+        authDomain: "xszin20161027.wilddog.com"
+    }
+    wilddog.initializeApp(config);
+
+    wilddog.auth().createUserWithEmailAndPassword(email,pwd)
+            .then(function (user) {
+                console.info("user created.", user);
+            }).catch(function (err) {
+        console.info("create user failed.", err);
+    });
+
+</script>
+
+</body>
+</html>
