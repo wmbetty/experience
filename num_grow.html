@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery实现数字增长效果</title>
+</head>
+<body>
+
+<div class="helloweb">0%</div>
+
+<script src="weWeb/js/jquery-2.0.3.min.js"></script>
+<script>
+    var txt = $(".helloweb");
+    (function(){
+        var v = parseInt(txt.html());
+        if(v < 80){
+            txt.html(++ v +'%');
+            setTimeout(arguments.callee,100);//每100毫秒增长一次
+        };
+    })();
+</script>
+</body>
+</html>
