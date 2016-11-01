@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>接入微信支付申请表</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="css/apply.css">
+</head>
+<body>
+<div class="head_cont">
+	<div class="conts one">
+		<img src="images/wx_pay.png" alt="">
+		<span class="w_pay">微信支付 |</span>
+		<span>优惠派</span>
+	</div>
+	<div class="conts two">
+		<h2>接入微信支付申请表</h2>
+		<p>填写相关信息并提交，我们将在两个工作日内与您联系</p>
+	</div>
+</div>
+<form class="infos_form">
+	<div>
+		<p>联系人姓名 *</p>
+		<input class="infos_put" required name="contacts" id="contacts" type="text"/>
+	</div>
+	<div>
+		<p>联系人手机号码 *</p>
+		<input class="infos_put" required name="reg_phone" id="reg_phone" type="text"/>
+	</div>
+	<div>
+		<p>店铺名称 *</p>
+		<input class="infos_put" required name="shop_name" id="shop_name" type="text"/>
+	</div>
+	<div>
+		<p>品牌名称</p>
+		<input class="infos_put" required name="brand" id="brand" type="text"/>
+	</div>
+	<div>
+		<p>行业 *</p>
+		<select class="infos_put" name="categories" id="categories">
+			<option value="-1">请选择</option>
+			<option value="餐饮">餐饮</option>
+			<option value="服装">服装</option>
+			<option value="酒店">酒店</option>
+			<option value="百货/超市">百货/超市</option>
+			<option value="其它">其它</option>
+		</select>
+	</div>
+	<div>
+		<p>详细地址 *</p>
+		<textarea class="infos_put" required name="address" id="address"></textarea>
+	</div>
+	<div>
+		<p>备注</p>
+		<input class="infos_put" name="leave_word" id="leave_word" type="text"/>
+	</div>
+</form>
+<div>
+	<a href="javascript:;" onclick="submit()" class="subm_btn">提交</a>
+</div>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/App/script/jquery.cookie.js"></script>
+
+<script type="application/javascript">
+	function submit ()
+	{
+		var contacts = $("#contacts").val();
+		var reg_phone = $("#reg_phone").val();
+		var shop_name = $("#shop_name").val();
+		var brand = $("#brand").val();
+		var categories = $("#categories").val();
+		var address = $("#address").val();
+		var leave_word = $("#leave_word").val();
+
+		if(contacts == '') {
+			document.getElementById('contacts').focus();
+			alert('请输入联系人名称');return false;
+		}
+
+		if(reg_phone == '') {
+			document.getElementById('reg_phone').focus();
+			alert('请输入联系人手机号码');return false;
+		} else {
+			var patrn = /^(1(([34578][0-9])|(47)|[8][01256789]))\d{8}$/;
+			if (! patrn.exec($.trim(reg_phone))) {
+				alert("手机号码格式错误");
+				document.getElementById('reg_phone').focus();
+				return false;
+			}
+		}
+
+		if(shop_name == ''){
+			document.getElementById('shop_name').focus();
+			alert('请输入店铺名称');return false;
+		}
+
+		if(categories == '' || categories == -1) {
+			document.getElementById('categories').focus();
+			alert('请选择行业');return false;
+		}
+
+		if(address == ''){
+			alert('请输入详细地址');return false;
+		}
+
+		$.post("{:U('join')}",
+			{
+				'contacts': contacts,
+				'reg_phone': reg_phone,
+				'shop_name': shop_name,
+				'brand': brand,
+				'categories': categories,
+				'address': address,
+				'leave_word': leave_word
+			},
+			function (data) {
+				if (data == '1') {
+					alert('提交成功, 我们会快联系您！');
+					setTimeout(function () {
+						window.location.href = "{:U('index', array('join'=>'yes'))}";
+					}, 300);
+				} else {
+					alert('操作失败,请稍后再试');
+				}
+		});
+	}
+</script>
+
+</body>
+</html>
