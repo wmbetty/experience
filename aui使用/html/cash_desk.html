@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>登录 | 收银台</title>
+    <link rel="stylesheet" href="../css/demo.css">
+    <link rel="stylesheet" href="../css/loaders.css">
+    <link rel="stylesheet" href="../css/aui.css">
+    <link rel="stylesheet" href="../css/login_change.css">
+    <link rel="stylesheet" href="../css/cash_desk.css">
+
+
+
+</head>
+<body>
+
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-btn aui-pull-left">
+        <img class="img-top" src="../images/upay_icon.png" alt="" />
+    </a>
+    <p class="aui-pull-left">
+        我的收银台
+    </p>
+    <!--<div class="aui-title">顶部导航栏</div>-->
+    <div class="aui-pull-right">
+        <div>
+            <div class="aui-pull-left">
+                <p>天河：<span class="uaccount">wmm</span>&nbsp;<span>|</span></p>
+            </div>
+            <div class="aui-pull-left">
+                <a href="#">退出</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--主体内容-->
+<div class="minwidth mar-top">
+    <a href="javascript:;" class="pull-right d-title text-center">订单详情</a>
+    <div class="clear order-cont">
+        <div class="pull-left half-cont bd-rt">
+            <div>
+                <a href="javascript:;" class="pull-right rfresh"></a>
+            </div>
+            <div class="clear h-border">
+                <table class="text-center" cellspacing="0" cellpadding="0">
+                    <thead>
+                    <tr class="hd-tr">
+                        <th>订单号</th>
+                        <th>订单时间</th>
+                        <th>核对码</th>
+                        <th>金额</th>
+                        <th>订单状态</th>
+
+                    </tr>
+                    </thead>
+                    <tbody class="o_datas">
+                        <tr class="sub-tr">
+                            <td>
+                                546456630
+                            </td>
+                            <td>
+                                2016/10/20 16:26
+                            </td>
+                            <td>
+                                123456789
+                            </td>
+                            <td>50</td>
+                            <td>未付款</td>
+                        </tr>
+                        <tr class="sub-tr">
+                            <td>
+                                546456630
+                            </td>
+                            <td>
+                                2016/10/20 16:26
+                            </td>
+                            <td>
+                                123456789
+                            </td>
+                            <td>50</td>
+                            <td>未付款</td>
+                        </tr>
+
+                        <!--<tr class="no_datas text-center">-->
+                            <!--<td></td>-->
+                            <!--<td></td>-->
+                            <!--<td>暂无收款</td>-->
+                            <!--<td></td>-->
+                            <!--<td></td>-->
+                        <!--</tr>-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="pull-left half-cont sd-cont">
+            <div class="money-ocont">
+                <span class="pull-left put-info">输入金额</span>
+                <input type="text" placeholder="|" value="" class="money-put pull-right" id="moneyPut" readonly>
+                <!--<span class="pull-right">￥</span>-->
+            </div>
+            <div class="calculate-cont">
+                <div class="pull-left calcu-num-cont">
+                    <a href="javascript:;" class="pull-left text-center calcu-num" data-key="97">1</a>
+                    <a href="javascript:;" class="pull-left text-center calcu-num" data-key="98">2</a>
+                    <a href="javascript:;" class="pull-left text-center calcu-num no-mg-rt" data-key="99">3</a>
+                    <a href="javascript:;" class="pull-left text-center calcu-num" data-key="100">4</a>
+                    <a href="javascript:;" class="pull-left text-center calcu-num" data-key="101">5</a>
+                    <a href="javascript:;" class="pull-left text-center calcu-num no-mg-rt" data-key="102">6</a>
+                    <a href="javascript:;" class="pull-left text-center calcu-num" data-key="103">7</a>
+                    <a href="javascript:;" class="pull-left text-center calcu-num" data-key="104">8</a>
+                    <a href="javascript:;" class="pull-left text-center calcu-num no-mg-rt" data-key="105">9</a>
+                    <a href="javascript:;" class="pull-left text-center calcu-num no-mg-btom" data-key="96">0</a>
+                    <a href="javascript:;" class="pull-left text-center calcu-num no-mg-btom" data-key="##">00</a>
+                    <a href="javascript:;" class="pull-left text-center calcu-num no-mg-rt no-mg-btom" data-key="110">.</a>
+                </div>
+
+                <div class="pull-left calcu-oper-cont">
+                    <a href="javascript:;" class="num-clear"><span class="numclose_icon"></span></a>
+                    <a href="javascript:;" class="num-confirm text-center">确定</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">广州锐讯信息技术有限公司</div>
+
+<div class="aui-dialog aui-hidden" id="dialog">
+    <div class="aui-dialog-header">扫描支付码</div>
+    <div class="aui-dialog-body aui-text-left">
+       <div>
+           <div class="err-cont">
+               <i class="aui-iconfont sao_after">&#xe646;</i>
+               <p class="pay_err_info">收款失败！</p>
+           </div>
+
+           <div class="succ-cont">
+               <i class="aui-iconfont sao_after">&#xe645;</i>
+               <p class="pay_err_info">收款成功！</p>
+           </div>
+
+           <div class="paying-cont">
+               <div class="loader">
+                   <div class="loader-inner ball-beat">
+                       <div></div>
+                       <div></div>
+                       <div></div>
+                   </div>
+               </div>
+               <p class="pay_err_info">等待收款...</p>
+           </div>
+
+
+           <div class="aui-col-xs-6 code-container">
+               <img class="sm-img" src="../images/sao.png" alt="">
+               <!--<i class="aui-iconfont pay_after_succ">&#xe645;</i>-->
+           </div>
+           <div class="aui-col-xs-6 code-cont">
+               <input type="text" class="m-put" value="">
+           </div>
+       </div>
+        <!--<div class="aui-clearfix aui-text-center">-->
+            <!--<p class="s-info">扫描客户支付码</p>-->
+        <!--</div>-->
+
+    </div>
+    <div class="aui-dialog-footer">
+        <!--<a href="javascript:;" class="aui-dialog-btn" id="dlodCancle">取消</a>-->
+        <!--<a href="javascript:;" class="aui-dialog-btn act" id="dlogConfirm">确定</a>-->
+        <a href="javascript:;" class="aui-btn aui-btn-block aui-btn-outlined close-btn">取消</a>
+
+    </div>
+</div>
+
+
+<!--错误提示-->
+<div class="aui-toast" style="display:none" id="errer">
+    <i class="aui-iconfont aui-icon-close"></i>
+    <div class="aui-toast-content aui-toast-content-errer"></div>
+</div>
+
+<!--刷新loading-->
+<div class="aui-toast load_icon"  style="display:none" id="loading">
+    <div class="aui-toast-loading"></div>
+    <div class="aui-toast-content">刷新中</div>
+</div>
+
+
+<script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+<!--<script src="../js/zepto_min.js"></script>-->
+<script src="../js/api.js"></script>
+<script src="../js/upay.js"></script>
+
+<script>
+    var temp= $("#dialog").is(":visible");//是否可见
+    if(!temp){
+        order_amount();
+    }else {
+
+    }
+
+</script>
+</body>
+</html>

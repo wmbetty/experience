@@ -1,0 +1,153 @@
+
+body{
+    position: relative;
+}
+.content.content-change{
+	background: url("../images/u_bg.png") no-repeat;
+    min-height: 720px;
+}
+.footer{
+   position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    /*border-top: 1px solid #ccc;*/
+}
+.content-login{
+ width: 390px;
+    height: 390px;
+    background: #fff;
+}
+.inner-cont{
+    width: 74%;
+    margin: 0 auto;
+}
+.code-title{
+    font-size: 18px;
+    /*margin-left: 150px;*/
+    /*margin-left: 56px;*/
+    margin-left: -4px;
+}
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+.inner-head{
+    display: block;
+    height: 54px;
+}
+.text-center{
+    text-align: center;
+}
+.cont-ht{
+    height: 50px;
+}
+.ph-title{
+    float: right;
+    margin: 12px 10px 0 0;
+    width: 80px;
+    height: 40px;
+    background: url("../images/out_box.png") no-repeat;
+    background-size: 100%;
+    color: #00a0e9;
+    line-height: 34px;
+    text-align: center;
+}
+.qrcode_img{
+    display: block;
+    margin: 0 auto 30px;
+    /*width: 150px;*/
+    /*height: 150px;*/
+}
+.text-warning{
+    color: #ea5504;
+}
+.text-info{
+    color: #00a0e9;
+}
+a.text-info{
+    color: #57bdf1;
+}
+.agree-cont{
+    margin: 16px 0;
+}
+.p_img{
+    display: block;
+    cursor: pointer;
+    margin: 4px 6px 0 0;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+.content-login ul{
+    padding: 30px 16px 0;
+}
+.content-login li div{
+    border: 1px solid #fff;
+}
+.content-login li input:focus,.content-login li input{
+    border: 1px solid #ccc;
+    width: 58%;
+    padding-left: 6px;
+}
+.btn{
+    width: 30%;
+    line-height: 40px;
+    border-radius: 0;
+    border: none;
+    font-size: 16px;
+
+}
+.bg-warning,.btn.bg-warning:hover{
+    color: #fff;
+    background: #ea5504;
+}
+.bg-info,.btn.bg-info:hover{
+    color: #fff;
+    background: #00afec;
+}
+.hide{
+    display: none;
+}
+.text-right{
+    text-align: right;
+}
+a.mbtn{
+    display: block;
+    width: 90px;
+    height: 36px;
+    line-height: 36px;
+    margin: 8px auto;
+    background: #00afec;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+}
+.ball-scale-multiple{
+    display: none;
+}
+.ball-scale-multiple > div{
+    background: #EA5404;
+    left: 42%;
+    top: 26px;
+}
+.pay_after_succ{
+    font-size: 1.8rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+    background: #36cd36;
+    margin-right: 6px;
+
+}
+.logining{
+    display: none;
+}
