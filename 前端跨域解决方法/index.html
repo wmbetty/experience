@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>1.同源策略如下：</h1>
+<table>
+    <thead>
+        <tr>
+            <th>URL</th>
+            <th>说明</th>
+            <th>是否允许通信</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <p>http://www.a.com/a.js</p>
+                <p>http://www.a.com/b.js</p>
+            </td>
+            <td>同一域名下</td>
+            <td>允许</td>
+        </tr>
+        <tr>
+            <td>
+                <p>http://www.a.com/lab/a.js </p>
+                <p>http://www.a.com/script/b.js</p>
+            </td>
+            <td>同一域名下不同文件夹</td>
+            <td>允许</td>
+        </tr>
+        <tr>
+            <td>
+                <p>http://www.a.com:8000/a.js </p>
+                <p>http://www.a.com/b.js</p>
+            </td>
+            <td>同一域名，不同端口</td>
+            <td>不允许</td>
+        </tr>
+        <tr>
+            <td>
+                <p>http://www.a.com/a.js </p>
+                <p>https://www.a.com/b.js</p>
+            </td>
+            <td>同一域名，不同协议</td>
+            <td>不允许</td>
+        </tr>
+        <tr>
+            <td>
+                <p>http://www.a.com/a.js </p>
+                <p>http://70.32.92.74/b.js</p>
+            </td>
+            <td>域名和域名对应ip</td>
+            <td>不允许</td>
+        </tr>
+        <tr>
+            <td>
+                <p>http://www.a.com/a.js </p>
+                <p>http://script.a.com/b.js</p>
+            </td>
+            <td>主域相同，子域不同</td>
+            <td>不允许</td>
+        </tr>
+        <tr>
+            <td>
+                <p>http://www.a.com/a.js </p>
+                <p>http://a.com/b.js</p>
+            </td>
+            <td>同一域名，不同二级域名（同上）</td>
+            <td>不允许（cookie这种情况下也不允许访问）</td>
+        </tr>
+        <tr>
+           <td>
+               <p>http://www.cnblogs.com/a.js </p>
+               <p>http://www.a.com/b.js</p>
+           </td>
+            <td>不同域名</td>
+            <td>不允许</td>
+        </tr>
+    </tbody>
+</table>
+<div>
+    <p>特别注意两点：</p>
+    <p style="color: red;">第一， 如果是协议和端口造成的跨域问题“前台”是无能为力的，</p>
+    <p style="color: red;">第二： 在跨域问题上，域仅仅是通过“URL的首部”来识别而不会去尝试判断相同的ip地址对应着两个域或两个域是否在同一个ip上。</p>
+    <p>“URL的首部”指window.location.protocol +window.location.host，也可以理解为“Domains, protocols and ports must match”。</p>
+</div>
+<h1>2.前端解决跨域问题</h1>
+<p>1> document.domain + iframe (只有在主域相同的时候才能使用该方法)</p>
+<p>1) 在www.a.com/a.html中：</p>
+<div>
+    <p>document.domain = 'a.com';</p>
+    <p>var ifr = document.createElement('iframe');</p>
+    <p>ifr.src = 'http://www.script.a.com/b.html';</p>
+    <p>ifr.display = none;</p>
+    <p>document.body.appendChild(ifr);</p>
+    <p>ifr.onload = function(){</p>
+    <p>var doc = ifr.contentDocument || ifr.contentWindow.document;</p>
+    <p>//在这里操作doc，也就是b.html</p>
+    <p>ifr.onload = null;</p>
+    <p>};</p>
+</div>
+<p>2) 在www.script.a.com/b.html中：</p>
+<p>document.domain = 'a.com';</p>
+<p>2> 动态创建script</p>
+<p>这个没什么好说的，因为script标签不受同源策略的限制。</p>
+<p>function loadScript(url, func) {</p>
+<p>  var head = document.head || document.getElementByTagName('head')[0];</p>
+<p>  var script = document.createElement('script');</p>
+<p>  script.src = url;</p>
+<p>  script.onload = script.onreadystatechange = function(){</p>
+<p>  if(!this.readyState || this.readyState=='loaded' || this.readyState=='complete'){</p>
+<p>     func();</p>
+<p>     script.onload = script.onreadystatechange = null;</p>
+<p>  }</p>
+<p> };</p>
+<p> head.insertBefore(script, 0);</p>
+<p>}</p>
+<p>window.baidu = {</p>
+<p>  sug: function(data){</p>
+<p>     console.log(data);</p>
+<p>  }</p>
+<p> }</p>
+<p>loadScript('http://suggestion.baidu.com/su?wd=w',function(){console.log('loaded')});</p>
+<p>//我们请求的内容在哪里？</p>
+<p>//我们可以在chorme调试面板的source中看到script引入的内容</p>
+<a href="http://www.tuicool.com/articles/ENZbEvi">跨域解决方法（全）</a>
+</body>
+</html>
