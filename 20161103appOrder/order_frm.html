@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no" />
+	<title>订单查询</title>
+	<link rel="stylesheet" type="text/css" href="../auiUsing/css/aui.css"/>
+	<link rel="stylesheet" type="text/css" href="order.css"/>
+
+	<style>
+
+	</style>
+</head>
+<body class="body">
+<div id="wrap" class="aui-content">
+	<div class="order-title">
+		<input type="text" class="code-put" placeholder="请输入确认码">
+		<a href="javascript:;" class="aui-btn aui-btn-warning" id="queryBtn">查询</a>
+	</div>
+	<div class="aui-content od-cont">
+		<!--数据列表-->
+		<!--<div class="od-list">-->
+			<!--<p><span class="o-title">订单号：</span><span>20220</span></p>-->
+			<!--<p><span class="o-title">订单时间：</span><span>25525</span></p>-->
+			<!--<p><span class="o-title">订单金额：</span><span>￥2552</span></p>-->
+			<!--<p><span class="o-title">订单信息：</span><span>4555441</span></p>-->
+		<!--</div>-->
+	</div>
+
+</div>
+
+<!--加载loading-->
+<div class="aui-toast load_icon"  style="display:none" id="loading">
+	<div class="aui-toast-loading"></div>
+	<div class="aui-toast-content">查询中</div>
+</div>
+
+<!--错误提示-->
+<div class="aui-dialog aui-hidden" id="dialog">
+	<div class="aui-dialog-header">请输入确认码</div>
+</div>
+
+</body>
+<script src="../auiUsing/js/api.js"></script>
+<script type="text/javascript" src="../auiUsing/js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="order_frm.js"></script>
+
+</html>

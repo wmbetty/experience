@@ -1,0 +1,28 @@
+input.code-put{
+    width: 72%;
+}
+.order-title{
+    padding: 4% 6% 0;
+    border-bottom: 1px solid #ddd;
+}
+.aui-dialog{
+    padding: 4% 0 6%;
+}
+.aui-btn{
+    padding: 10px 20px 8px;
+    margin-top: -4px;
+}
+.o-title{
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+.od-list{
+    padding: 4% 6%;
+    margin-bottom: 8px;
+    background: #fff;
+}
+.od-list p{
+    color: #333;
+    /*margin-bottom: 6px;*/
+}
