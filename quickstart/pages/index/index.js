@@ -22,5 +22,13 @@ Page({
         userInfo:userInfo
       })
     })
-  }
+  },
+
+});
+
+// 跳转页面
+wx.navigateTo({
+  url: 'pages/home/home'
 })
+
+
