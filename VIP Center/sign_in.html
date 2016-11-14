@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>会员签到</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="css/sign.css">
+
+</head>
+<body class="sign-body">
+
+<div class="main-cont">
+    <div class="sign-hd">
+        <img class="pull-left s-logo" src="images/sign_in/sign_logo.png" alt="">
+        <div class="pull-left">
+            <p class="sign-font">连续签到 <span class="red-font sign-week">0</span> 周</p>
+            <p class="sign-font">共签到 <span class="red-font sign-day">0</span> 天</p>
+            <p class="sign-font">积分 <span class="red-font sign_credits">0</span> 分</p>
+        </div>
+        <div class="pull-right">
+            <a href="javascript:;" class="stone-cont"><img class="s-stone" src="images/sign_in/sign_stone.png" alt=""></a>
+        </div>
+        <span class="clear"></span>
+    </div>
+    <div class="pull-right sign-cont">
+        <div class="talk-cont"></div>
+        <div class="bird-cont"><a href="javascript:;" class="stone-cont bird-container"><img class="bird-img" src="images/sign_in/close_raven.png" alt=""></a></div>
+    </div>
+
+</div>
+
+<!--已签到弹窗提示-->
+<div class="hide s-mask"></div>
+<div class="hide had-sign-info">
+    <p class="alert-info">您已签到！</p>
+</div>
+
+<!--loading-->
+<div class="loading_cont hide"></div>
+<img src="images/sign_in/loading.gif" class="loading" alt="">
+
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+
+<!--<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+<script src="js/sign.js"></script>
+<script type="text/javascript">
+
+
+</script>
+
+</body>
+</html>
