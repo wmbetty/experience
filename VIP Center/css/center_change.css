@@ -1,0 +1,106 @@
+.get_card_cont.center_hd{
+    background: #fff;position: relative;
+    padding: 3% 0 5%;
+    height: 18em;
+}
+.card_container{
+    background: #00bf63;
+    width: 86%;
+    margin: 0 auto 4%;
+    height: 80%;
+    padding: 4% 4% 0;
+    border-radius: 12px;
+}
+.center_code_box img{
+    width: 36px;
+    height: 36px;
+}
+.card_no{color: #fff;top: 65%;}
+.credit_ul{
+    height: 3em;
+}
+.credit_li{
+    text-align: center;
+    float: left;
+    width: 33%;
+    height: 100%;
+    font-size: 1rem;
+    border-right:1px solid #ddd;
+}
+.credit_li:last-child{
+    border-right: none;
+}
+.weui_media_box.weui_media_appmsg .weui_media_hd.c_shop_logos{
+    width: 100px;
+}
+.egt_font{
+    color: #00bf63;margin-top:8px;float: left;
+}
+p.gray_font{color: #999;}
+.get_cuppon_btn{
+    float: right;line-height: 32px;color: #ea5504;font-size: 1rem;
+}
+.rt_arrow{
+   float: right;
+    width: 10px;
+    height: 18px;
+    background: url("../images/get_arrow.png") no-repeat right;
+    background-size: 100%;
+    margin: 7px 0 0 4px;
+}
+.rt_info_cont{
+    float: left;
+    width: 66%;
+}
+p.card_tle{
+    font-size: 1.4rem;
+}
+p.sec_tle{font-size: 1rem;}
+.vip_center_inner{
+    padding: 10px;
+}
+.weui_media_box:before{
+    left: 12px;
+}
+.big_icons{
+    position: relative;
+}
+.notice_icon{
+    position: absolute;
+    background: red;
+    top: 0;
+    right: 20px;
+    padding: 3px 6px;
+    font-size: 12px;
+    line-height: 1;
+    color: #fff;
+    border-radius: 100px;
+}
+
+
+/*适应iPhone5小屏*/
+@media screen and (max-width: 320px){
+    .get_card_cont.center_hd{
+        height: 14em;
+    }
+    .rt_info_cont{
+        width: 62%;
+    }
+    p.card_tle{
+        font-size: 1rem;
+    }
+    p.sec_tle{
+        font-size: 0.9rem;
+    }
+    .notice_icon{right: 12px;}
+
+}
+/*适应6plus大屏*/
+@media screen and (min-width: 414px){
+    .rt_info_cont{
+        width: 70%;
+    }
+    .egt_font{
+        font-size: 0.9rem;
+    }
+}

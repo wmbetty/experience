@@ -9,6 +9,29 @@
     <link rel="stylesheet" href="css/mui.min.css">
     <link rel="stylesheet" href="css/example.css">
     <link rel="stylesheet" href="css/vip_relative.css">
+    <link rel="stylesheet" href="css/center_change.css">
+
+    <style>
+
+        .weui_media_box.weui_media_appmsg .weui_media_hd.c_shop_logos{width: 92px;}
+        .center_main_conts{padding: 0 0.5em;}
+        input.cget_btn{
+            display: inline-block;
+            padding: 0;
+            border: 0;
+            font-size: 0.9rem;
+            line-height: 2em;
+            color: #EA5504;
+        }
+        .rt_arrow{
+            margin: 5px 0 0 0;
+        }
+
+        @media screen and (max-width: 320px){
+            .get_cuppon_btn{font-size: 0.9rem;}
+        }
+    </style>
+
 </head>
 <body class="activate_bd">
 
@@ -54,13 +77,14 @@
             mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count>2)); //参数为true代表没有更多数据了。
             for(var i=0;i<20;i++){
                 count++;
-                var box = $("<div class='weui_media_box weui_media_appmsg center_inner no_pad'></div>");
-                var child = '<div class="shop_outers"><div class="weui_media_hd shop_img_cont lt c_shop_logos">' +
-                        '<img class="weui_media_appmsg_thumb" ' +
+                var box = $("<div class='weui_media_box weui_media_appmsg vip_center_inner'></div>");
+                var child = '<div class="" style="width: 100%;"><div style="float: left;" class="weui_media_hd c_shop_logos">' +
+                        '<img class="weui_media_appmsg_thumb full_img" ' +
                         'src="vips_center/stores.png" alt="商家logo"></div>' +
-                        '<div class="weui_media_bd shops_main_bd c no_rt"><h3 class="weui_media_title">' +
-                        '<span class="consume_shop">小北店</span></h3><p class="egt_font">肯德基</p></div><div class="get_ct">' +
-                        '<input type="button"  class="center_get_btn" value="领取"/></div></div>'
+                        '<div class="weui_media_bd rt_info_cont"><h3 class="weui_media_title center_in_title">' +
+                        '某某优惠券</h3><p class="gray_font">适用店：<span>优衣库</span></p><div><p class="egt_font">数量剩余：' +
+                        '<span>120</span></p><a href="javascript:;" class="get_cuppon_btn"><input class="cget_btn" type="button" value="领优惠券"/>' +
+                        '<span class="rt_arrow"></span></a></div></div></div>';
                 box.html(child);
 
                 $(".center_main_conts").append(box);

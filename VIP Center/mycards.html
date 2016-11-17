@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的优惠券</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/example.css">
+    <link rel="stylesheet" href="css/vip_relative.css">
+    <link rel="stylesheet" href="css/center_change.css">
+    <style>
+
+        .weui_media_box.weui_media_appmsg .weui_media_hd.c_shop_logos{width: 92px;}
+        .center_main_conts{padding: 0 0.5em;}
+        input.cget_btn{
+            display: inline-block;
+            padding: 0;
+            border: 0;
+            font-size: 0.9rem;
+            line-height: 2em;
+            color: #EA5504;
+        }
+        .rt_arrow{
+            margin: 5px 0 0 0;
+        }
+
+        @media screen and (max-width: 320px){
+            .get_cuppon_btn{font-size: 0.9rem;}
+        }
+    </style>
+
+</head>
+<body class="activate_bd">
+
+<div class="navbar">
+    <div class="bd" style="height: 100%;">
+        <div class="weui_tab">
+            <div class="weui_navbar">
+                <div class="weui_navbar_item bg_bot ft">
+                    未使用
+                </div>
+                <div class="weui_navbar_item weui_bar_item_on sd">
+                    已使用
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="weui_tab_bd">
+    <div id="pullrefresh" class="mui-content mui-scroll-wrapper my_cards_ct">
+        <div class="mui-scroll">
+            <div class="weui_panel_bd center_main_conts">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+
+<script type="text/javascript">
+
+    var used = 0;
+    var record_total = 0;
+    var current_total = 0;
+
+    $(function(){
+
+        $(".sd").click(function(){
+            $(this).addClass("had_use");
+            $(".center_main_conts").html("");
+        });
+
+        $(".ft").click(function(){
+            $(".sd").removeClass("had_use");
+            $(".center_main_conts").html("");
+        });
+
+        $(".weui_navbar_item").each(function(index){
+            $(this).click(function(){
+
+                if (used == 0) used = 1;
+                else used = 0;
+
+                record_total = 0;
+                current_total = 0;
+
+
+                $(this).toggleClass("weui_bar_item_on").siblings().toggleClass("weui_bar_item_on");
+                $(this).toggleClass("bg_bot").siblings().toggleClass("bg_bot");
+
+                $(".my_conts").eq(index).show().siblings(".my_conts").hide();
+
+                pullupRefresh();
+            });
+        });
+    });
+
+    mui.init({
+        pullRefresh : {
+            container:"#pullrefresh",
+            up : {
+                height:50,
+                contentrefresh : "正在加载...",
+                contentnomore:'没有更多数据了',
+                callback :pullupRefresh ,
+            },
+        }
+    });
+
+    var count = 0;
+    function pullupRefresh() {
+        setTimeout(function() {
+
+                mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count>2)); //参数为true代表没有更多数据了。
+                for(var i=0;i<20;i++){
+                    count++;
+                    var box = $("<div class='weui_media_box weui_media_appmsg vip_center_inner'></div>");
+                    var child = '<div class="" style="width: 100%;"><div style="float: left;" class="weui_media_hd c_shop_logos">' +
+                            '<img class="weui_media_appmsg_thumb full_img" ' +
+                            'src="vips_center/stores.png" alt="商家logo"></div>' +
+                            '<div class="weui_media_bd rt_info_cont"><h3 class="weui_media_title center_in_title">' +
+                            '某某优惠券</h3><p class="gray_font">适用店：<span>优衣库</span></p><div><p class="egt_font">数量剩余：' +
+                            '<span>120</span></p><a href="javascript:;" class="get_cuppon_btn"><input class="cget_btn" type="button" value="立即使用"/>' +
+                            '<span class="rt_arrow"></span></a></div></div></div>';
+                    box.html(child);
+
+                    $(".center_main_conts").append(box);
+
+
+
+                }
+
+        }, 1500);
+    }
+
+    if (mui.os.plus) {
+        mui.plusReady(function() {
+            setTimeout(function() {
+                mui('#pullrefresh').pullRefresh().pullupLoading();
+            }, 1000);
+
+        });
+    } else {
+        mui.ready(function() {
+            mui('#pullrefresh').pullRefresh().pullupLoading();
+        });
+    }
+
+    function getCard(card_id, code){
+        // location.href = "/index.php?s=/Card/UserCenter/use_coupon/card_id/"+card_id+".html";
+        location.href = "/index.php?s=/Card/UserCenter/qrcode/membership_number/"+code+".html";
+    }
+
+</script>
+</body>
+</html>

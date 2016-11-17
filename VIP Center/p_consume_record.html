@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>消费记录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/example.css">
+    <link rel="stylesheet" href="css/vip_relative.css">
+    <link rel="stylesheet" href="css/center_change.css">
+    <style>
+
+        .weui_media_box.weui_media_appmsg .weui_media_hd.c_shop_logos{width: 92px;}
+        .center_main_conts{padding: 0 0.5em;}
+        input.cget_btn{
+            display: inline-block;
+            padding: 0;
+            border: 0;
+            font-size: 0.9rem;
+            line-height: 2em;
+            color: #EA5504;
+        }
+        .rt_arrow{
+            margin: 5px 0 0 0;
+        }
+        .consume_time{color: #333;}
+
+        @media screen and (max-width: 320px){
+            .get_cuppon_btn{font-size: 0.9rem;}
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div id="pullrefresh" class="mui-content mui-scroll-wrapper my_card_contanier">
+    <div class="mui-scroll">
+        <div class="weui_panel_bd center_main_conts">
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+    pullupRefresh();
+
+});
+
+    mui.init({
+        pullRefresh : {
+            container:"#pullrefresh",
+            up : {
+                height:50,
+                contentrefresh : "正在加载...",
+                contentnomore:'没有更多数据了',
+                callback :pullupRefresh ,
+            },
+//
+
+        }
+
+
+    });
+
+
+    var record_total = 0;
+    var current_total = 0;
+    var count = 0;
+    function pullupRefresh() {
+
+        setTimeout(function() {
+            mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count>2)); //参数为true代表没有更多数据了。
+            for(var i=0;i<20;i++){
+                count++;
+                var box = $("<div class='weui_media_box weui_media_appmsg vip_center_inner'></div>");
+                var child = '<div class="" style="width: 100%;"><div style="float: left;" class="weui_media_hd c_shop_logos">' +
+                        '<img class="weui_media_appmsg_thumb full_img" ' +
+                        'src="vips_center/stores.png" alt="商家logo"></div>' +
+                        '<div class="weui_media_bd rt_info_cont"><h3 class="weui_media_title center_in_title">' +
+                        '某某优惠券</h3><p class="gray_font">适用店：<span>优衣库</span></p><p class="weui_media_desc"><span class="consume_time">255225</span></p><div></div></div></div>';
+                box.html(child);
+
+                $(".center_main_conts").append(box);
+
+
+
+            }
+
+        }, 1500);
+
+//        setTimeout(function() {
+//            $.ajax({
+//                type:"post",
+//                dataType:"json",
+//                url:"/index.php?s=/Card/UserCenter/getPaidRecord/offset/"+current_total,
+//                error:function(){
+//
+//                },
+//                success:function(data){
+//
+//                    record_total = data.total;
+//
+////                    if (current_total >= record_total) {
+////                        return;
+////                    };
+//
+//                    $(data.data).each(function(i,it) {
+////
+//                        current_total ++;
+//
+////                        var box = $("<div class='weui_media_box weui_media_appmsg recenter_inner record_inner'></div>");
+////                        var child = '<div class="shop_outers"><div class="weui_media_hd shop_img_cont">' +
+////                                '<img class="weui_media_appmsg_thumb shops_img full_img" ' +
+////                                'src="__PUBLIC__/card/images/vips_center/stores.png" alt="商家logo"></div>' +
+////                                '<div class="weui_media_bd shops_main_bd"><h3 class="weui_media_title record_title">' +
+////                                '<span class="consume_shop">'+it.shop_name+'</span>' +
+////                                '<span class="consume_money">￥ '+it.amount+'</span></h3>' +
+////                                '<p class="weui_media_desc"><span class="consume_time">'+it.paytime+'</span></p></div></div>';
+//                        box.html(child);
+//
+//                        $(".center_main_conts").append(box);
+//
+//
+//                    });
+//
+//                    mui('#pullrefresh').pullRefresh().endPullupToRefresh(current_total >= record_total); //参数为true代表没有更多数据了。
+//
+//
+//                }
+//            });
+//
+//        }, 1500);
+    }
+
+if (mui.os.plus) {
+    mui.plusReady(function() {
+        setTimeout(function() {
+            mui('#pullrefresh').pullRefresh().pullupLoading();
+        }, 1000);
+
+    });
+} else {
+    mui.ready(function() {
+        mui('#pullrefresh').pullRefresh().pullupLoading();
+    });
+}
+
+
+</script>
+
+</html>
