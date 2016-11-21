@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<title>微信收款</title>
+	<link rel="stylesheet" type="text/css" href="css/api.css"/>
+	<link rel="stylesheet" type="text/css" href="css/aui.css"/>
+	<link rel="stylesheet" type="text/css" href="css/aui-win.css"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style_pay.css"/>
+	<style>
+		body {
+		}
+		.coldiv_right img {
+			width: 55%;
+		}
+	</style>
+</head>
+<body>
+<div class="aui-toast" style="display:none" id="default">
+	<i class="aui-iconfont aui-icon-check"></i>
+	<div class="aui-toast-content">收款成功</div>
+</div>
+<!--<header class="aui-bar aui-bar-nav aui-bar-dark" style="padding-top:25px;">
+	<a class="aui-pull-left" tapmode onclick="history.go(-1)">
+		<span class="aui-iconfont aui-icon-left active-danger"></span>
+	</a>
+	<div class="aui-title">微信收款</div>
+</header>-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 col-md-12 coldiv">
+			<div class="coldiv_right"><img src="images/youzhifu.png" alt=""></div>
+			<div class="coldiv_left">
+				<p class="coldiv_no1" style="margin:0px" id="pay_shop_name"></p>
+				<p class="coldiv_no2" style="margin:0px">微信支付特约商户</p>
+			</div>
+		</div>
+	</div>
+	<div class="row rowdiv row_row">
+		<div class="rowdiv rowdiv-12">
+			<div contenteditable="false" class="rowdiv input-group row_row_no">&nbsp;&nbsp;请输入消费金额</div>
+			<div style="float: left">
+				<span style="line-height: 65px">￥</span><span id="conts"></span><span id="sa" style="font-size: 1.3em">|</span>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-md-12 roe-md-bababa">
+			<div class="left bababa-d1">--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</div>
+			<div class="left bababa-dc">优支付&nbsp;|&nbsp;支付有惊喜</div>
+			<div class="left bababa-d1">--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</div>
+		</div>
+	</div>
+</div>
+<div class="row" id="input_div" style="background: #FFFFFF;display: block; ">
+	<div class="roe_ul" style="width: 100%;left:0; bottom:0;">
+		<div class="roe_ul_no1">
+			<ul style="margin: 0px; padding: 0px">
+				<li class="texts">1</li>
+				<li class="texts">2</li>
+				<li class="texts">3</li>
+				<li class="texts">4</li>
+				<li class="texts">5</li>
+				<li class="texts">6</li>
+				<li class="texts">7</li>
+				<li class="texts">8</li>
+				<li class="texts">9</li>
+				<li class="hide_input-group"><img src="images/wei4.png" alt="" width="45px"></li>
+				<li class="texts">0</li>
+				<li class="texts">.</li>
+			</ul>
+		</div>
+		<div class="roe_ul_no2">
+			<ul class="ul_no2">
+				<li class="ul_no2_del"><img src="images/wei3.png" alt="" width="45px"></li>
+			</ul>
+			<div class="roe_ul_no2_aff" id="wqjs" tapmode onclick="wx_pay_scan()">
+				<div style="hidden:30px; line-height: 60px;">&nbsp;</div>
+				<p>开始扫码</p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="js/api.js"></script>
+<!--<script type="text/javascript" src="{:ADDON_PUBLIC_PATH}/script/jquery-1.9.1.js"></script>-->
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+
+	wx.config({
+		//debug: true,
+		appId: '<?php echo $signPackage["appId"];?>',
+		timestamp: '<?php echo $signPackage["timestamp"]; ?>',
+		nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+		signature: '<?php echo $signPackage["signature"];?>',
+		jsApiList: [
+			'scanQRCode'
+		]
+	});
+
+
+</script>
+<script type="text/javascript">
+
+
+	$(function () {
+		//店名
+		$("#pay_shop_name").text(localStorage.getItem('shop_name'));
+		var w = document.documentElement.clientWidth;
+		var h = document.documentElement.clientHeight;
+		/*alert(w);
+		 alert(h);*/
+		if (w <= 320 && h <= 420) {
+			var con = h * 0.5;
+			$(".container-fluid").height('atuo');
+			$(".coldiv").height(con * 0.3);
+			$(".coldiv").css('margin-top', '5px')
+			$(".coldiv_right img").width((h * 0.6) * 0.25);
+			$(".coldiv_no1").css('font-size', '1.2em');
+			$(".coldiv_no2").css('font-size', '1em');
+			$(".row_row").css('margin', '10px auto');
+			$(".row_row").css('line-height', '49px');
+			$(".rowdiv-12").css('height', '49px');
+			$(".bababa-dc").css('font-size', '1em');
+		}
+		/*$(document).scrollTop(document.documentElement.clientHeight+188+60);*/
+		// 打开键盘
+		$(".rowdiv-12").click(function () {
+			$(document).scrollTop(document.documentElement.clientHeight + 188 + 60);
+			$("#input_div").fadeIn();
+		})
+		// 收起键盘
+		$(".hide_input-group").click(function () {
+			$("#input_div").fadeOut();
+		})
+		// 假光标事件
+		setInterval(function () {
+			var sa = $("#sa").text();
+			if (sa) {
+				$("#sa").text('');
+			} else {
+				$("#sa").text('|');
+			}
+		}, 500);
+
+		var ins = 0;
+		// 点击数字触发
+		$('.texts').bind("touchstart click", function (e) {
+			var conts = $("#conts").text();
+			// 判断是否已经有小数点
+			if (conts.indexOf('.') > 0) {
+				// 已经有小数点的再输入小数点的就不给输入
+				if ($(this).text() != '.') {
+					// 两位小数
+					if (ins < 2) {
+						$(".row_row_no").width($(".row_row_no").width() - 12);
+						$("#conts").text($("#conts").text() + $(this).text());
+						$("#wqjs").addClass('roe_ul_no2_aff2').removeClass('roe_ul_no2_aff');
+					}
+					ins = (ins >= 2) ? ins = 2 : ins = ins + 1;
+				}
+			} else {
+				// 2016/07/22添加 针对值为 0. 删除小数据点后的出现021的bug
+				if(conts == '0' && $(this).text() !='.'){
+					//alert("0开头的不可以再输入数字,请输入小数点");
+					return;
+				}
+				if (conts.length == 0 && $(this).text() == '.') {
+					$("#conts").text('0' + $(this).text());// 判断第一次输入的值 如果等于小数点 就小数点前加0
+					$(".row_row_no").width($(".row_row_no").width() - 24);
+					$("#wqjs").addClass('roe_ul_no2_aff2').removeClass('roe_ul_no2_aff');
+				} else if (conts.length == 0 && $(this).text() == '0') {
+					$("#conts").text($(this).text() + '.');// 判断第一次输入的值 如果等于0 就0后面加小数点
+					$(".row_row_no").width($(".row_row_no").width() - 24);
+					$("#wqjs").addClass('roe_ul_no2_aff2').removeClass('roe_ul_no2_aff');
+				} else {
+					if (conts.length < 6) {
+						$("#conts").text($("#conts").text() + $(this).text());
+						$(".row_row_no").width($(".row_row_no").width() - 12);
+						$("#wqjs").addClass('roe_ul_no2_aff2').removeClass('roe_ul_no2_aff');
+					}
+				}
+			}
+			var e = e || window.event;
+			e.preventDefault();
+		});
+
+		// 删除时触发
+		$('.ul_no2_del').bind("touchstart click", function (e) {
+			var e = e || window.event;
+			e.preventDefault();
+			var str = $("#conts").text();
+			if (str.length > 0) {
+				ins = (ins == 0) ? ins = 0 : ins = ins - 1;
+				var res = str.substring(0, str.length - 1);
+				$(".row_row_no").width($(".row_row_no").width() + 12);
+				$("#conts").text(res)
+			} else {
+				$("#wqjs").addClass('roe_ul_no2_aff');
+				$("#wqjs").removeClass('roe_ul_no2_aff2');
+			}
+		});
+	})
+	function close_self () {
+		api.closeWin();
+	}
+	//开始扫码
+	function wx_pay_scan () {
+		var amount = $("#conts").text();
+		if (amount <= 0) {
+			alert('请输入大于0的数字')
+
+			return false;
+		}
+		
+		var payurl = "{$payrequesturl}" + "/index.php/Home/Index/micro_pay_server";		//"http://pay.wxhang.cn/index.php/Home/Index/micro_pay_server"
+		wx.scanQRCode({
+			needResult: 1,
+			scanType: ["qrCode", "barCode"],
+			success: function (res) {
+				var result = res.resultStr;
+				if (result) {
+					// 重新扫码,次数置0
+					query_num = 0;
+					var auth_code = result;
+					//localStorage.tag = 13;
+					var mchid = '<?php echo $mchid;?>';
+
+					var amount = $("#conts").text();
+					if (auth_code == '') {
+						alert('扫码失败, 请重试');
+						return;
+					}													
+									
+					var tag = localStorage.tag;					//门店id
+					var sub_mchid = localStorage.sub_mchid; 	//门店所属商户id
+					var payeeid = localStorage.payee_id;		//收银员id
+					var agent_id = localStorage.agent_id;		//门店所属代理商id
+					var saleman_id = localStorage.saleman_id;	//门店所属代理商的业务员id
+					var shop_name = localStorage.shop_name;		//门店名
+					var mch_name = localStorage.mch_name;		//商户名称					   
+					var agent_name = localStorage.agent_name;	//代理商名称
+					var sale_name = localStorage.sale_name;		//业务员名称								
+					
+					//localStorage.tag：门店shop表ID
+					$.ajax({
+						type: "POST",
+						url: payurl,
+						data: "auth_code=" + auth_code + "&amount=" + amount + "&tag=" + tag + "&sub_mchid="+ sub_mchid + "&payeeid=" + payeeid + '&agent_id=' + agent_id + '&saleman_id=' + saleman_id + '&shop_name=' + shop_name + '&mch_name=' + mch_name + '&agent_name=' + agent_name + '&sale_name=' + sale_name ,
+						dataType: "jsonp",
+						jsonp: "callback",
+						jsonpCallback: "flightHandler",
+						success: function (data) {
+							//alert('msg = '+data.msg + ' code = '+data.code + ' requestNo = '+ data.requestNo + ' orderNo = ' + data.orderNo);							
+							if(data.code == 0) {
+								alert('收款成功');
+							}
+							else if(data.code == 1) {
+								alert('正在等待用户确认付款,请勿关闭页面');
+								// 过5秒查询一下订单
+								setTimeout("query_order('" + data.requestNo + "','" + data.orderNo + "','" + data.orderDate + "')", 5000);
+							}
+							else {
+								alert(data.msg);
+							}
+							/*if (msg.msg == '等待用户付款') {
+								alert('正在等待用户确认付款,请勿关闭页面');
+								// 过5秒查询一下订单
+								setTimeout("query_order('" + msg.trade_id + "')", 5000);
+							} else if (msg.msg == '付款成功') {
+								alert('收款成功');
+							} else if (msg.msg == '付款码已过期') {
+								alert('付款码已过期');
+							} else if (msg.msg == '无效的付款码') {
+								alert('无效的付款码');
+							} else {
+								alert('msg_in'+JSON.stringify(msg))
+							}*/
+						},
+						error: function (msg) {
+							alert('请求失败'+JSON.stringify(msg))
+						}
+					});
+				}
+			}
+		});
+		// 扫描二维码，返回二维码信息
+
+
+	}
+	//查询次数
+	query_num = 0;
+	// 查询订单
+	function query_order (requestNo,orderNo,orderDate) {
+		var queryurl = "{$payrequesturl}" + "/index.php/Home/Index/query_order_pub";		//"http://pay.wxhang.cn/index.php/Home/Index/query_order_pub"
+		$.ajax({
+			type: "POST",
+			url: queryurl,
+			data: "requestNo=" + requestNo + "&orderNo=" + orderNo + "&orderDate=" + orderDate + "&sub_mchid="+localStorage.getItem("sub_mchid") + "&type=public",
+			dataType: "jsonp",
+			jsonp: "callback",
+			jsonpCallback: "flightHandler",
+			success: function (data) {
+				//alert('msg = '+data.msg + ' code = '+data.code + ' requestNo = '+ data.requestNo + ' orderNo = ' + data.orderNo);
+				
+				if(data.code == 0) {
+					query_num = 0;
+					alert('收款成功');
+				}
+				else {
+					if (query_num < 20) {						
+						setTimeout("query_order('" + data.requestNo + "','" + data.orderNo + "','" + data.orderDate + "')", 3000);
+						query_num ++;
+					} else {
+						alert('收款超时');
+					}
+				}			
+				
+				/*alert('msg_out'+JSON.stringify(data));
+
+				if (data.msg == '数据提取成功') {
+					if (data.msg == '付款成功') {
+						alert('付款成功');
+
+					} else if (data.msg == '用户取消付款') {
+						alert('用户取消付款');
+
+					} else {
+						alert("正在等待用户确认付款");
+					}
+
+					// 过3秒查询一下订单,共查20次
+					if (query_num < 20) {
+
+						setTimeout("query_order('" + data.trade_id + "')", 3000);
+						query_num ++;
+					} else {
+						alert('付款超时');
+					}
+				}*/
+			},
+			error: function (data) {
+				if (data.msg == '收款成功') {
+					alert('收款成功');
+				}else{
+					 alert('查询失败：'+typeof(data));
+				}
+			}
+		});
+	}
+</script>
+</html>

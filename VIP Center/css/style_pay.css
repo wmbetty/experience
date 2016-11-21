@@ -1,0 +1,160 @@
+body{
+			background: #efefef;
+			overflow-x: hidden;
+		}
+		.container-fluid{
+			text-align: center;
+		}
+		.coldiv{
+			margin-top: 20px;
+		}
+		.coldiv_right{
+			text-align: right;
+			float: left;
+			width: 40%;
+			margin: 0px auto
+		}
+		.coldiv_right img{
+			 border-radius: 70px;
+		}
+		.coldiv_left{
+			text-align: left;
+			float: left; 
+			margin: 6px 0px 0px 10px ;
+		}
+		.rowdiv{ 
+			width: 100%;
+			height: 40px;
+			border-radius: 4px;
+			margin: 0px auto;
+		}
+		.input-group{
+			text-align: right;
+			color: #5a5d66;
+			float: left;
+			width: 90%;
+		}
+		.row_row{
+			font-size: 20px;
+			height: auto;
+			line-height: 60px;
+			margin: 30px auto;
+
+		}
+		.rowdiv-12{
+			height: 65px;
+			border: 2px solid #CCCCCC;
+			border-radius: 6px;
+			background-color: #fff;
+		}
+		.row_row_no{
+			font-size: 1em;
+			text-align: left;
+			color: #6a6f75;
+		}
+		.roe-md-bababa{
+			color: #bababa;
+			height: 30px;
+			position:relative;
+		}
+		.roe_ul{
+			position: absolute;
+			width: 100%;
+			background: #fff;
+		}
+		.roe_ul ul li{
+			list-style: none;
+		}
+		.roe_ul_no1{
+			width: 72%;
+			float: left;
+			margin: 0px;
+			padding: 0px;
+		}
+		.roe_ul_no2{
+			width: 28%;
+			float: left;
+			height: 220px;
+			margin-left: -3px;
+			border-top:1px solid #e1e1e1;
+			border-left: 1px solid #e1e1e1;
+		}
+		.roe_ul_no1 li{
+			float: left;
+			border: 1px solid #e1e1e1;
+			width: 33%;
+			height:2em;
+			text-align: center;
+			line-height:2em;
+			
+		}
+		.roe_ul_no2 ul li{
+			width: 100%;
+			height:100%;
+			text-align: center;
+			line-height:3em;
+			margin-top: 2px;;
+		}
+		.ul_no2{
+			margin: 0px; padding: 0px;
+			height: 53px;
+			border-bottom: 2px solid #EFEFEF;
+			margin-bottom: 0px;
+		}
+		.ul_no2_del img{
+			margin: 0px auto;
+			margin-top: 13px;
+		}
+		.roe_ul_no2_aff{
+			background: #bcbcbc;
+			height:168px;
+		}
+		.roe_ul_no2_aff p{
+			font-size:1.8em;
+			width: 60%;
+			text-align: center;
+			margin: 0px auto;
+			color: #fdfdfd;
+		}
+
+		.roe_ul_no2_aff2{
+			background: #fe9b20;
+			height:168px;
+		}
+		.roe_ul_no2_aff2 p{
+			font-size:1.8em;
+			width: 60%;
+			text-align: center;
+			margin: 0px auto;
+			color: #fdfdfd;
+		}
+
+		.left{
+			float: left;
+		}
+		.bababa-d1{
+			width: 18%;
+			overflow: hidden;
+			height: 20px;
+		}
+		.bababa-dc{
+			width: 64%;
+			color: #b8b8b8;
+			font-size: 1.2em;
+		}
+		.coldiv_no1{
+			color: #293036;
+			font-size: 1.4em;
+		}
+		  .coldiv_no2{
+			  color: #5c5e6a;
+			  font-size: 1.2em;
+		  }
+		.texts{
+			 color: #000;
+			 font-weight:bold;
+			 font-size: 2em;
+		}
+		.hide_input-group{
+			font-size: 2em;
+		}
