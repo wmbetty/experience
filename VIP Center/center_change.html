@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>会员中心</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="css/p_vip_card.css">
+    <link rel="stylesheet" href="css/vip_relative.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/center_changes.css">
+
+</head>
+<body class="center_bd">
+
+<div class="hd_tb" style="display: none;">
+    <i class="fa fa-refresh"></i>
+    <a>同步到微信卡包</a>
+    <i class="weui_icon_clear"></i>
+</div>
+
+<div class="get_card_cont center_hd">
+    <div class="card_container" style="background-color: {:$member_card->get('base_info')->get('color')->getValue()}; background-image: url(/wxres.php?uri={:$card_pic});background-size:100% 100%;">
+        <img class="logo_img" src="images/stores.png" alt="logo">
+        <div>
+            <p class="card_tle">天河大厦</p>
+            <p class="sec_tle">中国银行</p>
+        </div>
+        <div class="center_code_box">
+            <a href="javascript:;">
+                <img src="images/qrcode.png" alt="qrcode">
+            </a>
+        </div>
+
+        <p class="card_no">1234567890</p>
+    </div>
+    <div>
+        <ul class="credit_ul">
+            <li class="credit_li">积分：<span>0</span></li>
+            <li class="credit_li">优惠券：<span>0</span></li>
+            <li class="credit_li">等级：<span>0</span></li>
+        </ul>
+    </div>
+</div>
+
+<div class="big_icon_box">
+    <a href="sign_in.html" class="big_icons">
+        <img src="images/center_change/credit_icon.png" alt="签到赚积分">
+        <p>签到赚积分</p>
+    </a>
+    <a href="javascript:;" class="big_icons">
+        <img src="images/center_change/getcd_icon.png" alt="领优惠券">
+        <p>领优惠券</p>
+    </a>
+    <a href="javascript:;" class="big_icons">
+        <img src="images/center_change/cost_listicon.png" alt="消费清单">
+        <p>消费清单</p>
+    </a>
+    <a href="javascript:;" class="big_icons">
+        <img src="images/center_change/my_cupponicon.png" alt="我的优惠券">
+        <p>我的优惠券</p>
+    </a>
+    <a href="javascript:;" class="big_icons">
+        <img src="images/center_change/my_teqicon.png" alt="我的特权">
+        <p>我的特权</p>
+    </a>
+    <a href="javascript:;" class="big_icons">
+        <img src="images/center_change/vip_infoicon.png" alt="会员消息">
+        <p>会员消息</p>
+        <span class="notice_icon">1</span>
+    </a>
+    <a href="javascript:;" class="big_icons">
+        <img src="images/center_change/my_infos.png" alt="我的资料">
+        <p>我的资料</p>
+    </a>
+    <a href="javascript:;" class="big_icons">
+        <img src="images/center_change/my_crediticon.png" alt="我的积分">
+        <p>我的积分</p>
+    </a>
+    <a href="javascript:;" class="big_icons">
+        <img src="images/center_change/credit_exchangeicon.png" alt="积分兑礼">
+        <p>积分兑礼</p>
+    </a>
+
+</div>
+
+<div class="weui_cells weui_cells_access low_box">
+    <a class="weui_cell" href="javascript:;">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="enter_brand">人气优惠券</p>
+        </div>
+        <div class="weui_cell_ft">查看全部</div>
+    </a>
+
+</div>
+
+<div class="weui_panel_bd">
+
+    <!--列表-->
+    <!--<php>-->
+        <!--foreach($coupons['data'] as $coupon) {-->
+    <!--</php>-->
+    <div class="weui_media_box weui_media_appmsg vip_center_inner">
+        <div style="width: 100%;">
+            <div style="float: left;" class="weui_media_hd c_shop_logos">
+                <img class="weui_media_appmsg_thumb full_img" src="images/stores.png" alt="">
+            </div>
+            <div class="weui_media_bd rt_info_cont">
+                <h3 class="weui_media_title center_in_title">50元优惠券</h3>
+                <p class="gray_font">适用店：<span>优衣库</span></p>
+                <div>
+                    <p class="egt_font">数量剩余：<span>0</span></p>
+                    <a href="javascript:;" class="get_cuppon_btn"><span>领优惠券</span><span class="rt_arrow"></span></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--<php> } </php>-->
+</div>
+
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<!--<php>-->
+    <!--if (!$membership_card->get('in_wx_wallet')) {-->
+<!--</php>-->
+<script>
+    $('.hd_tb').show();
+</script>
+<!--<php>-->
+    <!--}-->
+<!--</php>-->
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<!--<script type="text/javascript">-->
+    <!--$(function(){-->
+        <!--wx.config({-->
+            <!--debug: false,-->
+            <!--appId: "{:$jsapi['appId']}",-->
+            <!--timestamp: {:$jsapi['timestamp']},-->
+        <!--nonceStr: "{:$jsapi['nonceStr']}",-->
+                <!--signature: "{:$jsapi['signature']}",-->
+                <!--jsApiList: [-->
+            <!--'checkJsApi',-->
+            <!--'onMenuShareTimeline',-->
+            <!--'onMenuShareAppMessage',-->
+            <!--'onMenuShareQQ',-->
+            <!--'onMenuShareWeibo',-->
+            <!--'onMenuShareQZone',-->
+            <!--'hideMenuItems',-->
+            <!--'showMenuItems',-->
+            <!--'hideAllNonBaseMenuItem',-->
+            <!--'showAllNonBaseMenuItem',-->
+            <!--'translateVoice',-->
+            <!--'startRecord',-->
+            <!--'stopRecord',-->
+            <!--'onVoiceRecordEnd',-->
+            <!--'playVoice',-->
+            <!--'onVoicePlayEnd',-->
+            <!--'pauseVoice',-->
+            <!--'stopVoice',-->
+            <!--'uploadVoice',-->
+            <!--'downloadVoice',-->
+            <!--'chooseImage',-->
+            <!--'previewImage',-->
+            <!--'uploadImage',-->
+            <!--'downloadImage',-->
+            <!--'getNetworkType',-->
+            <!--'openLocation',-->
+            <!--'getLocation',-->
+            <!--'hideOptionMenu',-->
+            <!--'showOptionMenu',-->
+            <!--'closeWindow',-->
+            <!--'scanQRCode',-->
+            <!--'chooseWXPay',-->
+            <!--'openProductSpecificView',-->
+            <!--'addCard',-->
+            <!--'chooseCard',-->
+            <!--'openCard'-->
+        <!--]-->
+    <!--});-->
+
+        <!--wx.ready(function(){-->
+            <!--$(".hd_tb").off("click").on("click", function(e){-->
+                <!--// 只有一张卡时适用-->
+                <!--wx.addCard({-->
+                    <!--cardList: [{-->
+                        <!--cardId: "{:$card_id}",-->
+                        <!--cardExt: '{:$cardExt}'-->
+                    <!--}],-->
+                    <!--success: function (res) {-->
+                        <!--var cardList = res.cardList;-->
+                        <!--// 跳转个人中心-->
+                        <!--window.location.href = "{:U('Card/UserCenter/center')}";-->
+                    <!--},-->
+                    <!--fail: function (res) {-->
+                        <!--// 跳转其它-->
+                        <!--var cardList = res.cardList;-->
+                        <!--window.location.href = "{:U('Card/UserCenter/center')}";-->
+                    <!--}-->
+                <!--});-->
+            <!--});-->
+        <!--});-->
+
+    <!--});-->
+
+    <!--var msgcount;-->
+    <!--msgcount = localStorage.getItem('msgcount');-->
+
+    <!--if(msgcount == null){-->
+        <!--$('.notice_icon').hide();-->
+    <!--}else {-->
+        <!--$('.notice_icon').show();-->
+        <!--$('.notice_icon').text(msgcount);-->
+    <!--}-->
+
+<!--</script>-->
+
+</body>
+</html>

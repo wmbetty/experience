@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>消息中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="css/example.css">
+    <link rel="stylesheet" href="css/vip_relative.css">
+
+    <link rel="stylesheet" href="css/mui.min.css">
+
+    <style>
+        .mui-content.messages_ct{top:10%;}
+    </style>
+
+</head>
+<body class="activate_bd">
+<div class="navbar">
+    <div class="bd" style="height: 100%;">
+        <div class="weui_tab">
+            <div class="weui_navbar">
+                <div class="weui_navbar_item bg_bot">
+                    已读的
+                </div>
+                <div class="weui_navbar_item weui_bar_item_on">
+                    未读的
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="weui_tab_bd">
+    <div id="pullrefresh" class="mui-content mui-scroll-wrapper messages_ct">
+        <div class="mui-scroll">
+            <div class="weui_panel_bd center_main_conts">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script>
+    var readed = 0;
+    var record_total = 0;
+    var current_total = 0;
+    var count = 0;
+
+    $(function(){
+        $(".weui_navbar_item").each(function(index){
+            $(this).click(function(){
+
+                if (readed == 0) readed = 1;
+                else readed = 0;
+
+                record_total = 0;
+                current_total = 0;
+
+                    $(this).toggleClass("weui_bar_item_on").siblings().toggleClass("weui_bar_item_on");
+                $(this).toggleClass("bg_bot").siblings().toggleClass("bg_bot");
+
+
+//                $(this).addClass("weui_bar_item_on").siblings().removeClass("weui_bar_item_on");
+                $(".my_conts").eq(index).show().siblings(".my_conts").hide();
+
+                pullupRefresh();
+            });
+        });
+
+//        pullupRefresh();
+    });
+
+    mui.init({
+        pullRefresh : {
+            container:"#pullrefresh",
+            up : {
+                height:50,
+                contentrefresh : "正在加载...",
+                contentnomore:'没有更多数据了',
+                callback :pullupRefresh ,
+            },
+        }
+    });
+
+    function pullupRefresh() {
+        setTimeout(function() {
+
+            mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count>2)); //参数为true代表没有更多数据了。
+            for(var i=0;i<20;i++){
+                count++;
+                var box = $("<a target='_blank' class='weui_media_box weui_media_appmsg recenter_inner record_inner'></div>");
+                var child = '<div class="shop_outers"><div  class="weui_media_hd shop_img_cont lt"><img class="weui_media_appmsg_thumb full_img" ' +
+                        'src="images/stores.png" alt=""></div>' +
+                        '<div class="weui_media_bd"><h3 class="weui_media_title record_title"><span class="consume_shop">阿拉山口的飞机啊</span></h3>' +
+                        '<p class="weui_media_desc"><span class="consume_time">255145</span>' +
+                        '</p></div></div>';
+                box.html(child);
+
+                $(".center_main_conts").append(box);
+
+
+
+            }
+
+        }, 1500);
+    }
+
+    if (mui.os.plus) {
+        mui.plusReady(function() {
+            setTimeout(function() {
+                mui('#pullrefresh').pullRefresh().pullupLoading();
+            }, 1000);
+
+        });
+    } else {
+        mui.ready(function() {
+            mui('#pullrefresh').pullRefresh().pullupLoading();
+        });
+    }
+
+//    页面跳转
+    function getDetails(){
+        location.href="/index.php?s=/Card/UserCenter/card_details.html";
+    }
+
+</script>
+</body>
+</html>

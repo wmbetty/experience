@@ -3,6 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<!--关闭电话号码的自动识别-->
+	<meta name="format-detection" content="telephone=no" />
+	<meta content="email=no" name="format-detection" /> <!--关闭邮箱的自动识别-->
+
 	<title>微信收款</title>
 	<link rel="stylesheet" type="text/css" href="css/api.css"/>
 	<link rel="stylesheet" type="text/css" href="css/aui.css"/>
@@ -10,8 +14,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style_pay.css"/>
 	<style>
-		body {
-		}
+
 		.coldiv_right img {
 			width: 55%;
 		}
@@ -115,7 +118,7 @@
 		 alert(h);*/
 		if (w <= 320 && h <= 420) {
 			var con = h * 0.5;
-			$(".container-fluid").height('atuo');
+			$(".container-fluid").height('auto');
 			$(".coldiv").height(con * 0.3);
 			$(".coldiv").css('margin-top', '5px')
 			$(".coldiv_right img").width((h * 0.6) * 0.25);
