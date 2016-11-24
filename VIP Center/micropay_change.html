@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<title>微信收款</title>
+	<link rel="stylesheet" type="text/css" href="css/aui.css"/>
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style_pays.css"/>
+	<link rel="stylesheet" href="css/mpay.css">
+
+
+</head>
+<body>
+	<div class="main-container">
+
+		<div class="head-cont">
+			<div class="">
+				<div class="col-xs-12 coldiv">
+					<div class="">
+						<img src="images/youzhifu.png" alt="" class="pull-left y-logo">
+						<div class="pull-left mchant">
+							<p class="coldiv_no1" id="pay_shop_name">天河大厦</p>
+							<p class="coldiv_no2">微信支付特约商户</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="rowdiv row_row">
+				<div class="rowdiv rowdiv-12 rowdiv12" data-id="1">
+					<div contenteditable="false" class="input-group row_row_no">请输入消费总金额</div>
+					<div style="float: right; padding-right: 15px; width: 5px; height: 100%;  text-align: right">
+						<span class="" id="sa"></span>
+					</div>
+					<div style="float: right;  width: 30%; height: 100%; text-align: right">
+						<span>￥</span><span id="conts"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="main-cont">
+			<div class="youhui-infos" >
+				<ul class="aui-list-view">
+					<li class="aui-list-view-cell rowdiv12" data-id="2">
+						<a class="pull-left" href="javascript:;">不参与折扣金额:(如<span>酒水</span>)</a>
+						<!--<span class="pull-right gray-font">0</span>-->
+						<div style="float: right; padding-right: 0px; width: 5px; height: 100%; ">
+							<span class="spanplaceupay" style="margin-left:0px !important"></span>
+						</div>
+						<div style="float: right;  height: 100%; text-align: right">
+							<span class="row_upay_span"></span>
+						</div>
+
+					</li>
+					<li class="aui-list-view-cell chose-li">
+						<a class="pull-left" href="javascript:;">选择优惠券</a>
+						<span class="pull-right chose-arrow"></span>
+
+					</li>
+					<li class="aui-list-view-cell">
+						<a class="pull-left" href="javascript:;">合计金额</a>
+						<span class="pull-right gray-font totals">0</span>
+
+					</li>
+				</ul>
+
+				<ul class="aui-list-view choose-cont">
+					<li class="aui-list-view-cell dlddopay_card">
+						<a class="pull-left" href="javascript:;">满100减10</a>
+						<span class="pull-right grvi-font">0</span>
+					</li>
+					<li class="aui-list-view-cell dlddopay_card">
+						<a class="pull-left" href="javascript:;">满100减10</a>
+						<span class="pull-right gr</-font">0</span>
+					</li>
+					<li class="aui-list-view-cell dlddopay_card">
+						<a class="pull-left" href="javascript:;">满100减10</a>
+						<span class="pull-right gr</-font">0</span>
+					</li>
+					<li class="aui-list-view-cell dlddopay_card">
+						<a class="pull-left" href="javascript:;">满100减10</a>
+						<span class="pull-right gray-font">0</span>
+					</li>
+				</ul>
+
+			</div>
+
+			<div class="">
+				<div class="col-xs-12 col-md-12 roe-md-bababa">
+					<img class="img-responsive" src="images/w_title.png" alt="">
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+<div class="" id="input_div">
+	<div class="roe_ul">
+		<div class="roe_ul_no1">
+			<ul>
+				<li><a  class="texts Num_texts" href="javascript:;">1</a></li>
+				<li><a  class="texts Num_texts" href="javascript:;">2</a></li>
+				<li><a  class="texts Num_texts" href="javascript:;">3</a></li>
+				<li><a  class="texts ul_no2_del" href="javascript:;"><img src="images/delete-icon.png" alt="" class="board-img"></a></li>
+				<li><a  class="texts Num_texts" href="javascript:;">4</a></li>
+				<li><a  class="texts Num_texts" href="javascript:;">5</a></li>
+				<li><a  class="texts Num_texts" href="javascript:;">6</a></li>
+				<li class="green-bg gray-bg"><a  class="texts" href="javascript:;"></a></li>
+				<li><a  class="texts Num_texts" href="javascript:;">7</a></li>
+				<li><a  class="texts Num_texts" href="javascript:;">8</a></li>
+				<li><a  class="texts Num_texts" href="javascript:;">9</a></li>
+				<li class="green-bg gray-bg">
+					<a  class="texts pay-confirm" href="javascript:;">
+						<span>确认支付</span>
+					</a>
+				</li>
+				<li><img src="images/keyboard.png" alt="" class="board-img boards"></li>
+				<li><a href="javascript:;"  class="texts Num_texts">0</a></li>
+				<li><a href="javascript:;"  class="texts Num_texts">.</a></li>
+				<li class="green-bg gray-bg"><a  class="texts" href="javascript:;"></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!--收款成功提示-->
+<div class="aui-toast" style="display:none" id="default">
+	<i class="aui-iconfont aui-icon-check"></i>
+	<div class="aui-toast-content">收款成功</div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/forbid_fontsize.js"></script>
+
+</html>

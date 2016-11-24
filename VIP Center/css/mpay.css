@@ -1,0 +1,173 @@
+body{
+    /*background: red;*/
+    position: relative;
+
+/*.iphone手机禁止字体放大*/
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+    -moz-text-size-adjust: 100% !important;
+
+}
+
+.coldiv_no1{margin: 0;}
+#sa{
+    font-size: 1.3em;
+    color: #00c00a;
+    /*font-weight: bold;*/
+}
+#input_div{
+    background: #fff;
+}
+.roe_ul{
+    z-index: 10;
+    width: 100%;left:0; bottom:0;
+}
+.roe_ul_no1 ul{
+    margin: 0;
+    padding: 0;
+}
+.board-img{width: 45px;}
+.del-icon{width: 42px;margin-top:-0.2em;}
+.y-logo{
+    display: block;
+    width: 4em;
+}
+.coldiv{
+    width: 82%;
+   margin: 0 auto;
+    padding:0.8em 1.5em;
+}
+.mchant{
+    padding-left: 1em;
+    padding-top: 0.3em;
+}
+.rowdiv{width: 96%;}
+.row_row{margin: 3.5em auto 0;}
+.input-group{width: 56%;padding-left: 0.8em;}
+.head-cont{
+    background: #00c00a;
+    height: 10.5em;
+}
+.coldiv_no1{
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+}
+.coldiv_no2{
+    font-size: 0.9em;
+    color: #fff;
+    font-weight: bold;
+     margin-top: 0.5em;
+}
+.rowdiv-12{height: 2.8em;border: none;}
+.row_row_no{color: #000;font-size: 0.8em;line-height: 3.6em;}
+.aui-list-view{
+    width: 91%;
+    margin: 1em auto;
+}
+.gray-font{color: #999;}
+.aui-list-view-cell > a{font-size: 0.9em;}
+.chose-arrow{
+    width: 14px;
+    height: 7px;
+    background: url("../images/green_down_arrow.png") no-repeat;
+    background-size: 100%;
+    margin: 0.4em 0;
+}
+.chose-arrow.active{
+    background: url("../images/up_arrow.png") no-repeat;
+    background-size: 100%;
+}
+.youhui-infos{
+    position: relative;
+}
+.choose-cont{
+    display: none;
+    position: absolute;
+    top: 4.2em;
+    left: 0.9em;
+    z-index: 9;
+}
+.roe-md-bababa{
+    width: 91%;
+    margin: 0 auto;
+}
+.roe_ul_no1{
+    width: 100%;
+}
+.roe_ul{
+    position: fixed;
+    left: 0;
+}
+.roe_ul_no1 li{width: 25%;height: 3.5em;line-height: 3.5em;}
+.pay-confirm span{
+    display: block;
+    font-size: 0.5em;
+    width: 50%;
+    line-height: 1.2em;
+    margin: 0.7em auto;
+    color: #fff;
+}
+li.green-bg{
+    background: #00c00a;
+    border: none;
+}
+
+a:visited,a:active,a:focus,a:link{text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    color: #333;
+}
+.main-cont{
+    margin-bottom: 15em;
+    min-height: 15em;
+    overflow: auto;
+}
+li.gray-bg{
+    background: #bcbcbc;
+}
+.pad-rt{
+    line-height: 2.6em;
+    padding-right: 0.5em;
+}
+.pay-confirm span{
+    font-size: 0.7em;
+    width: 66%;
+    line-height:1em;
+    margin: 0.25em auto;
+}
+
+/*适应5屏幕*/
+@media screen and (min-width: 320px) {
+    .main-container{padding-bottom: 2em;}
+}
+
+/*适应6屏幕*/
+@media screen and (min-width: 375px){
+    .choose-cont{
+        top: 5.3em;
+        margin-top: 0;
+        left: 1.1em;
+    }
+
+}
+
+/*适应6s屏幕*/
+@media screen and (min-width: 414px){
+    .roe_ul_no1 li{height: 4.5em;line-height: 4.5em;}
+    .roe_ul{
+        height: 18em;
+    }
+    .roe-md-bababa{
+        margin: 2em auto 0;
+    }
+    .choose-cont{
+        left: 1.2em;
+    }
+    .pay-confirm span{
+        font-size: 0.8em;
+        width: 50%;
+        margin: 0.4em auto;
+    }
+}
