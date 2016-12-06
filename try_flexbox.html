@@ -112,6 +112,12 @@
 </head>
 <body>
 
+<select name="" id="">
+    <option value="">0</option>
+    <option value="">1</option>
+    <option value="">2</option>
+</select>
+
     <div class="first-face">
         <span class="pip"></span>
     </div>
@@ -159,6 +165,13 @@
             <span class="pip"></span>
         </div>
     </div>
+
+<script src="VIP%20Center/js/jquery-2.0.3.min.js"></script>
+<script>
+    $('select').on('change',function(){
+        alert($(this).find("option:selected").text()); //获取 select 当前值的文本值
+    });
+</script>
 
 </body>
 </html>
