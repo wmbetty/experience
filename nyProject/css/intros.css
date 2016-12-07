@@ -84,7 +84,7 @@
 }
 
 /*园区风采轮播图相关*/
-.carousel-inner{overflow: visible;}
+/*.carousel-inner{overflow: visible;}*/
 .carousel-caption{
     z-index: 2000;
     /* background: red; */
@@ -93,6 +93,9 @@
     bottom: -4em;
     text-shadow: none;
     color: #333;
+}
+.carousel-inner{
+    overflow: hidden;
 }
 
 @media screen and (max-width: 414px){

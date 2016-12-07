@@ -10,6 +10,13 @@ a,a:active,a:focus{
     width: 100%;
     left: 0;
 }
+.logo-cont{
+    display: block;
+}
+.ny-logo{
+    position: absolute;
+    top:2em;
+}
 .op-bg{position:absolute;top: 2em;height: 3em;background: #008cd6;width: 100%;left: 0;/* line-height: 0; */opacity: 0.4;}
 .banner-title{
     position: absolute;top: 2.8em;text-align: center;width: 100%;overflow: hidden;
@@ -98,18 +105,25 @@ a.banner-link{display: block;}
 .bord-botm{border-bottom: 1px solid #ccc;height: 26px;margin-bottom: 6px;}
 .fc-title{color: #008cd6;font-size: 17px;font-family: "宋体";font-weight: bold;}
 .yuan-img{width: 100%;margin-bottom: 8px;}
-.yuan-intro{line-height: 2;padding: 0 4px;height: 16em;overflow: hidden;}
+.yuan-intro{line-height: 2;padding: 0 4px;height: 6.5em;overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.yuan-intro a{color: #333;}
 .rules-cont{
     width: 72%;
 }
 .rules-li{
     width: 44px;
 }
-ul.rules-infos-ul{padding: 0 20px;}
+ul.rules-infos-ul{padding: 0 5px;}
 
 .rules-infos-ul span{display: inline-block;margin: 12px 4px 12px 0;}
 .rules-infos-ul li{height: 30px;line-height: 30px;overflow: hidden;}
 .rules-infos-ul li a{color: #333;}
+.mid-ul a{width: 96%;}
 /*.rules-infos-ul li a:hover{color: #008cd6;}*/
 .plus-icon{font-size: 16px;}
 .plus-icon:hover{text-decoration: none;}
@@ -180,7 +194,7 @@ a.white-color{color: #fff;line-height: 2;}
     height: 36em;
 }
 .ny-infos{
-    min-height: 26em;
+    min-height: 22em;
     overflow: hidden;
 }
 .mar-top{
@@ -295,6 +309,7 @@ a.white-color{color: #fff;line-height: 2;}
     .rules-cont{width: 56%;}
     .rules-li{width: 30px;}
     .s-hide{display: none;}
+    .ny-logo{top:1em;}
 
 }
 
@@ -320,6 +335,8 @@ a.white-color{color: #fff;line-height: 2;}
         background: url("../images/headbg.png") no-repeat 0 0;
         background-size: 100% 100%;
     }
+    .ny-logo{top: 4em;left: 1em;}
+    .navbar-collapse{margin-top: 2.5em;}
 }
 @media screen and (max-width: 735px){
     .carousel-indicators,.zs-cont{display: none;}
@@ -354,6 +371,7 @@ a.white-color{color: #fff;line-height: 2;}
 }
 @media screen and (max-width: 556px){
     /*.form-control{width: 78%;}*/
+    .ny-logo{width: 160px;}
 }
 @media screen and (max-width: 526px){
     .foot-main{width: 80%;padding: 0 10%;}
@@ -369,6 +387,7 @@ a.white-color{color: #fff;line-height: 2;}
 }
 
 @media screen and (max-width: 414px){
+    .ny-logo{width: 130px;}
     .navbar-toggle{margin-left: 8px;}
     .hd-ul{margin-bottom: 4px;}
     .navbar-form{margin: 0;padding: 0;}
