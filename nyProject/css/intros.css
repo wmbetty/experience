@@ -1,0 +1,110 @@
+/*公司介绍css*/
+
+
+.carousel-indicators img{
+    width: 23%;
+}
+.carousel-indicators .active{width: 23%;}
+.yuanqu-mainintros{
+    width: 94%;margin: 2em auto 0;padding: 2%;border: 1px solid #eee;height: 45em;
+}
+.carousel-indicators{border: 1px solid #eee;left: 30%;padding: 6px;}
+
+
+.had-border{
+    height: 3em;
+    line-height: 3em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0 8px;
+}
+.gray-color{color: #999;}
+.had-border a{color: #333;}
+.intro-main-container{
+    margin-top: 16px;
+}
+.siderbar{
+   width: 25%;
+    /*border: 1px solid #ddd;*/
+}
+.has-border{
+    border: 1px solid #ddd;
+}
+.has-border a{color: #333;}
+.mag-top{
+    margin-top: 3em;
+}
+.main-intro-cont{width: 74%;margin-left: 1%;border: 1px solid #ddd;overflow-y: auto;overflow-x: hidden;}
+.thd-width{width: 30%;}
+.sen-width{width: 70%;}
+.had-bd-botom{border-bottom: 3px solid #008cd6;}
+.intro-title{
+    height: 3em;line-height: 3em;padding: 0 10px;font-size: 15px;
+    background: -moz-linear-gradient(top, #fff 0%, #eee 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#eee));
+    background: -webkit-linear-gradient(top, #fff 0%,#eee 100%);
+    background: -o-linear-gradient(top, #fff 0%,#eee 100%);
+    background: -ms-linear-gradient(top, #fff 0%,#eee 100%);
+    background: linear-gradient(to bottom, #fff 0%,#eee 100%);
+}
+.rtmain-title{
+    height: 3em;line-height: 3em;padding: 0 36px;font-size: 15px;background: #eee;color: #008cd6;
+}
+.li-icon{display: inline-block;margin: 2px 8px 2px 0;}
+.intros-ul{
+    margin: 12px 8px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+.intros-ul li{
+    height: 2.5em;line-height: 2.5em;
+}
+.note-ul{
+    padding: 12px 10px;
+}
+.note-ul li{
+    overflow: hidden;
+    height: 2em;line-height: 2em;
+}
+.ny-main{padding-bottom: 10em;}
+.ny-mainintros{width: 86%;margin: 2em auto 0;}
+.ny-cimg{width: 100%;margin: 2em 0;}
+.ny-mainintros p{line-height: 2;}
+.act-cont{height: 10em;padding: 0 2em;border-bottom: 1px dashed #ddd;}
+/*.ny-mainintros{margin: 2em auto 0;}*/
+.lt-cont{width: 26%;border: 1px solid #eee;padding: 4px 0;overflow: hidden;}
+.lt-img{
+    width: 96%;
+    display: block;
+    margin: 0 auto;
+}
+.rt-cont{width: 72%;}
+.act-mains{
+    width: 100%;margin: 2em 0 0;
+}
+
+/*园区风采轮播图相关*/
+.carousel-inner{overflow: visible;}
+.carousel-caption{
+    z-index: 2000;
+    /* background: red; */
+    height: 3em;
+    line-height: 1em;
+    bottom: -4em;
+    text-shadow: none;
+    color: #333;
+}
+
+@media screen and (max-width: 414px){
+    .siderbar,.main-intro-cont{float: none !important;width: 100%;}
+    .main-intro-cont{margin-top: 1em;}
+    .mag-top{margin-top: 1em;}
+    .ny-mainintros{margin: 1em auto 0;}
+    .ny-cimg{margin: 1em 0;}
+    .main-intro-cont{margin-left: 0;}
+    .yuanqu-mainintros{height: 26em;}
+}
+
+@media screen and (min-width: 768px){
+    .carousel-indicators{bottom: -180px;}
+}

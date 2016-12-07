@@ -1,0 +1,144 @@
+/*园区服务css*/
+.y-infos{
+    display: inline-block;
+    width: 80px;
+}
+.y-info-put{
+    display: inline-block;
+    width: 210px;
+    height: 32px;
+}
+.ny-mainintros{padding: 1.5em;}
+.y-info-cont{
+    margin-bottom: 2em;
+}
+.check-cont{
+    /*display: inline-block;*/
+    width: 36em;
+}
+.check-container{
+    display: inline-block;
+    width: 32%;
+    margin-bottom: 2em;
+}
+.check-container input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    margin: 0 8px 0 0;
+}
+.y-info-cont textarea{
+    width: 40em;
+    height: 12em;
+}
+.subm-btn{
+    display: block;
+    border: 1px solid #ddd;
+    height: 2em;line-height: 2em;padding: 0 10px;font-size: 15px;
+    background: -moz-linear-gradient(top, #fff 0%, #eee 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#eee));
+    background: -webkit-linear-gradient(top, #fff 0%,#eee 100%);
+    background: -o-linear-gradient(top, #fff 0%,#eee 100%);
+    background: -ms-linear-gradient(top, #fff 0%,#eee 100%);
+    background: linear-gradient(to bottom, #fff 0%,#eee 100%);
+    border-radius: 4px;
+    width: 8em;
+    margin: 13em 5em 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .check-cont,.y-info-cont textarea{width: 32em;}
+}
+@media screen and (max-width: 992px) {
+    .check-cont,.y-info-cont textarea{width: 23em;}
+    .check-container{width: 40%;}
+}
+@media screen and (max-width: 748px) {
+    .check-cont,.y-info-cont textarea{width: 22em;}
+
+}
+@media screen and (max-width: 726px) {
+    .check-cont,.y-info-cont textarea{width: 21em;}
+
+}
+@media screen and (max-width: 704px) {
+    .check-cont,.y-info-cont textarea{width: 20em;}
+
+}
+@media screen and (max-width: 682px) {
+    .check-cont,.y-info-cont textarea{width: 19em;}
+    .check-container{width: 43%;}
+
+
+}
+@media screen and (max-width: 660px) {
+    .check-cont,.y-info-cont textarea{width: 18em;}
+    .check-container{width: 45%;}
+
+
+}
+@media screen and (max-width: 638px) {
+    .check-cont,.y-info-cont textarea{width: 17em;}
+    .check-container{width: 48%;}
+
+
+}
+@media screen and (max-width: 616px) {
+    .check-cont,.y-info-cont textarea{width: 16em;}
+    .check-container{width: 50%;}
+    .y-info-cont textarea{height: 11em;}
+    .subm-btn{margin: 11em 5em 0;}
+
+
+}
+@media screen and (max-width: 594px) {
+    .check-cont,.y-info-cont textarea{width: 15em;}
+    .check-container{width: 54%;}
+    .y-info-cont textarea{height: 11em;}
+    .subm-btn{margin: 11em 5em 0;}
+
+
+}
+@media screen and (max-width: 572px) {
+    .check-cont,.y-info-cont textarea{width: 14em;}
+    .check-container{width: 58%;}
+    /*.y-info-cont textarea{height: 11em;}*/
+    /*.subm-btn{margin: 11em 5em 0;}*/
+    .y-info-put{width: 68%;}
+
+}
+@media screen and (max-width: 550px) {
+    .check-cont,.y-info-cont textarea{width: 13em;}
+    .check-container{width: 62%;}
+    /*.y-info-cont textarea{height: 11em;}*/
+    /*.subm-btn{margin: 11em 5em 0;}*/
+    /*.y-info-put{width: 68%;}*/
+
+}
+@media screen and (max-width: 528px) {
+    .check-cont,.y-info-cont textarea{width: 12em;}
+    .check-container{width: 68%;}
+
+
+}
+@media screen and (max-width: 509px) {
+    .y-info-put{width: 60%;}
+
+}
+
+/*手机*/
+
+@media screen and (min-width: 360px) and (max-width: 414px){
+    .check-cont, .y-info-cont textarea{width: 11em;}
+    .check-container{width: 74%;}
+}
+
+@media screen and (max-width: 414px) {
+    .y-info-cont{margin-bottom: 1em;}
+
+}
+@media screen and (max-width: 320px) {
+    .check-cont{width: 8em;}
+    .check-container{width: 100%;}
+    .y-info-cont textarea{width: 60%;}
+}

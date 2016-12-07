@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>首页</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <!--引入less:css预编译语言-->
+    <!--<script src="../js/less.min.js"></script>-->
+
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+<body>
+    <div class="container">
+        <!--头部-->
+        <div class="ny-head">
+
+            <div class="pull-right head-right">
+                <ul class="pull-right list-unstyled hd-ul">
+                    <li class="pull-left"><a href="javascript:;" onclick="SetHome();">设为首页</a>&nbsp;<span>|</span>&nbsp;</li>
+                    <li class="pull-left"><a href="javascript:;" onclick="AddFavorite();">加入收藏</a></li>
+                </ul>
+                <div class="clear pull-right">
+                    <img src="../images/qrcode.png" alt="" class="ny-qrcode">
+                </div>
+
+                <form class="clear navbar-form navbar-right" action="">
+                    <div class="form-group has-feedback">
+                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                        <input type="text" class="pull-left form-control" id="search"/>
+                        <label class="sr-only" for="search">搜索</label>
+
+                        <button type="button" class="pull-right btn btn-default btn-sm">搜索</button>
+
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="navbar-header">
+                <button data-toggle="collapse" data-target="#navbar-collapse" class="navbar-toggle" type="button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar-collapse" class="collapse navbar-collapse">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="text-center active less-width"><a class="active" href="javascript:;">首页</a></li>
+                    <li role="presentation" class="text-center more-width"><a href="ny_intros.html">公司介绍</a></li>
+                    <li role="presentation" class="text-center more-width"><a href="ny_policy.html">政策法规</a></li>
+                    <li role="presentation" class="text-center more-width"><a href="ny_notice.html">公告通知</a></li>
+                    <li role="presentation" class="text-center more-width"><a href="area_center.html">园区介绍</a></li>
+                    <li role="presentation" class="text-center more-width"><a href="ny_service.html">园区服务</a></li>
+                    <li role="presentation" class="text-center more-width"><a href="ny_elegance.html">园区风采</a></li>
+                    <li role="presentation" class="text-center more-width"><a href="ny_contact.html">联系我们</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!--中间-->
+        <div class="ny-main">
+            <div class="mid-left pull-left">
+
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- 轮播（Carousel）项目 -->
+                    <div class="carousel-inner" id="carouselInner">
+                        <div class="item active">
+                            <a href="#" class="banner-link">
+                                <img class="img-responsive" src="../images/banner2.png" alt="First slide">
+                                <div class="carousel-caption">
+                                    <div class="op-bg"></div>
+                                    <p class="banner-title">1Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="banner-link">
+                                <img class="img-responsive" src="../images/banner.png" alt="Second slide">
+                                <div class="carousel-caption">
+                                    <div class="op-bg"></div>
+                                    <p class="banner-title">12223Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="banner-link">
+                                <img class="img-responsive" src="../images/banner2.png" alt="Third slide">
+                                <div class="carousel-caption">
+                                    <div class="op-bg"></div>
+                                    <p class="banner-title">1Praese333nt commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="banner-link">
+                                <img class="img-responsive" src="../images/banner.png" alt="Second slide">
+                                <div class="carousel-caption">
+                                    <div class="op-bg"></div>
+                                    <p class="banner-title">1P334raese333nt commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="banner-link">
+                                <img class="img-responsive" src="../images/banner2.png" alt="Third slide">
+                                <div class="carousel-caption">
+                                    <div class="op-bg"></div>
+                                    <p class="banner-title">123234Praese333nt commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 轮播（Carousel）指标 -->
+                    <div class="carousel-indicators">
+                        <img data-target="#myCarousel" class="active" data-slide-to="0" src="../images/s_bann1.png" alt="">
+                        <img data-target="#myCarousel" data-slide-to="1" src="../images/s_banner.png" alt="">
+                        <img data-target="#myCarousel" data-slide-to="2" src="../images/s_bann1.png" alt="">
+                        <img data-target="#myCarousel" data-slide-to="3" src="../images/s_banner.png" alt="">
+                        <img data-target="#myCarousel" data-slide-to="4" src="../images/s_bann1.png" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="mid-right pull-right">
+                <div class="hot-topic-cont">
+                    <div class="hot-topic">
+                        <p class="pull-left sixth-font">热点</p>
+                        <a class="pull-right glyphicon glyphicon-plus plus-icon white-color" href="#"></a>
+                    </div>
+                    <ul class="clear list-unstyled rules-infos-ul notice-ul">
+                        <li>
+                            <span class="li-icon"></span>
+                            <a href="#" class=" n-infos">国务院关于深化制造业与互联网融合发展的指导</a>
+                            <span class="pull-right time-sp">10-13</span>
+                        </li>
+                        <li>
+                            <span class="li-icon"></span>
+                            <a href="#" class=" n-infos">国务院关于深化制造业与互联网融合发展的指导</a>
+                            <span class="pull-right time-sp">10-13</span>
+                        </li>
+                        <li>
+                            <span class="li-icon"></span>
+                            <a href="#" class=" n-infos">国务院关于深化制造业与互联网融合发展的指导</a>
+                            <span class="pull-right time-sp">10-13</span>
+                        </li>
+                        <li>
+                            <span class="li-icon"></span>
+                            <a href="#" class=" n-infos">国务院关于深化制造业与互联网融合发展的指导</a>
+                            <span class="pull-right time-sp">10-13</span>
+                        </li>
+                        <li>
+                            <span class="li-icon"></span>
+                            <a href="#" class=" n-infos">国务院关于深化制造业与互联网融合发展的指导</a>
+                            <span class="pull-right time-sp">10-13</span>
+                        </li>
+                        <li>
+                            <span class="li-icon"></span>
+                            <a href="#" class=" n-infos">国务院关于深化制造业与互联网融合发展的指导</a>
+                            <span class="pull-right time-sp">10-13</span>
+                        </li>
+                        <li>
+                            <span class="li-icon"></span>
+                            <a href="#" class=" n-infos">国务院关于深化制造业与互联网融合发展的指导</a>
+                            <span class="pull-right time-sp">10-13</span>
+                        </li>
+                        <li>
+                            <span class="li-icon"></span>
+                            <a href="#" class=" n-infos">国务院关于55542sdfsdjkfsjfhdfjgldfjhslgjsdlsdfkgjdf深化制造业与互联网融合发展的指导</a>
+                            <span class="pull-right time-sp">10-13</span>
+                        </li>
+                        <li>
+                            <span class="li-icon"></span>
+                            <a href="#" class=" n-infos">国务院关于深化制造业与互联网融合发展的指导</a>
+                            <span class="pull-right time-sp">10-13</span>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="zs-cont">
+                    <a href="#"><img class="img-responsive" src="../images/zhaoshang.png" alt=""></a>
+                </div>
+
+            </div>
+
+            <div class="clear mar-top">
+
+                <div class="col-xs-4 ny-infos rg-dashed">
+                    <div class="bord-botm">
+                        <p class="pull-left fc-title">园区风采</p>
+                        <a class="pull-right" href="#">more></a>
+                    </div>
+
+                    <div>
+                        <img class="img-responsive yuan-img" src="../images/yuanqu1.png" alt="">
+                        <p class="yuan-intro">
+                            广州广电物业管理有限公司是广州市国资委属下
+                            国有企业广州无线电集团成员企业之一，于1998
+                            年成立，具备国家物业管理一级资质，是国内首
+                            家加入物业管理国际金钥匙联盟的企业。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-xs-4 ny-infos">
+                    <div class="bord-botm">
+                        <p class="pull-left fc-title">政策法规</p>&nbsp;&nbsp;|&nbsp;
+                        <div class="pull-right rules-cont">
+                            <ul class="list-unstyled pull-left">
+                                <li class="pull-left rules-li"><a href="#">国家</a></li>
+                                <li class="pull-left rules-li"><a href="#">省级</a></li>
+                                <li class="pull-left rules-li"><a href="#">地区</a></li>
+                            </ul>
+                            <a class="pull-right s-hide" href="#">more></a>
+                        </div>
+                    </div>
+
+                    <div class="clear">
+                        <ul class="list-unstyled rules-infos-ul">
+                            <li><span class="li-icon"></span><a href="#" class="n-infos">国务院关于深化制造业与互联网融合发展的指导</a></li>
+                            <li><span class="li-icon"></span><a href="#" class="n-infos">国务院关于深化制造业与互联网融合发展的指导</a></li>
+                            <li><span class="li-icon"></span><a href="#" class="n-infos">国务院关于深化制造业与互联网融合发展的指导</a></li>
+                            <li><span class="li-icon"></span><a href="#" class="n-infos">国务院关于深化制造业与互联网融合发展的指导</a></li>
+                            <li><span class="li-icon"></span><a href="#" class="n-infos">国务院关于深化制造业与互联网融合发展的指导</a></li>
+                            <li><span class="li-icon"></span><a href="#" class="n-infos">国务院关于深化制造业与互联网融合发展的指导</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <div class="col-xs-4 ny-infos">
+                    <div class="bord-botm">
+                        <p class="pull-left fc-title">公告通知</p>
+                        <a class="pull-right glyphicon glyphicon-plus plus-icon" href="#"></a>
+                    </div>
+
+                    <div class="clear">
+                        <ul class="list-unstyled rules-infos-ul notice-ul" id="noul">
+                            <li>
+                                <span class="li-icon"></span><a href="#" class=" n-infos">国务院关于深化制造业与互联网融合发展的指导</a>
+                                <span class="pull-right time-sp">10-13</span>
+                            </li>
+                            <li>
+                                <span class="li-icon"></span><a href="#" class=" n-infos">国务院关于深化制造业与互联网融合发展的指导</a>
+                                <span class="pull-right time-sp">10-13</span>
+                            </li>
+                            <li>
+                                <span class="li-icon"></span><a href="#" class=" n-infos">国务院关于深化制造业与互联网融合发展的指导</a>
+                                <span class="pull-right time-sp">10-13</span>
+                            </li>
+                            <li>
+                                <span class="li-icon"></span><a href="#" class=" n-infos">国务院关于深化制造业与互联网融合发展的指导</a>
+                                <span class="pull-right time-sp">10-13</span>
+                            </li>
+                            <li>
+                                <span class="li-icon"></span><a href="#" class=" n-infos">国务院关于深化制造业与互联网融合发展的指导</a>
+                                <span class="pull-right time-sp">10-13</span>
+                            </li>
+                            <li>
+                                <span class="li-icon"></span><a href="#" class=" n-infos">国务院关于深化制造业与互联网融合发展的指导</a>
+                                <span class="pull-right time-sp">10-13</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+           <div class="clear mar-top">
+               <div class="foot-nav">
+
+                   <ul class="list-unstyled">
+                       <li class="pull-left text-center ft-nav-li active"><a href="#">政府网页</a></li>
+                       <li class="pull-left text-center ft-nav-li"><a href="#">行业组织</a></li>
+                       <li class="pull-left text-center ft-nav-li"><a href="#">推荐企业</a></li>
+                   </ul>
+
+               </div>
+
+               <ul class="list-unstyled mess-ul">
+                   <li class="pull-left"><a href="#" class="banner-link">中华人民共和国商务ertert3545454444444333333333655</a></li>
+                   <li class="pull-left"><a href="#" class="banner-link">中华人民共和国商务7848rgf</a></li>
+                   <li class="pull-left"><a href="#" class="banner-link">中华人民共和国商务2155dfgd2125</a></li>
+                   <li class="pull-left"><a href="#" class="banner-link">中华人民共和国商务21dfgd552125</a></li>
+                   <li class="pull-left"><a href="#" class="banner-link">中华人民共和国商务21552455555555555555555555555555555555555555125</a></li>
+                   <li class="pull-left"><a href="#" class="banner-link">中华人民共和国商务21552125</a></li>
+                   <li class="pull-left"><a href="#" class="banner-link">中华人民共和国商务2155cbcvb2125</a></li>
+
+
+               </ul>
+
+           </div>
+        </div>
+
+    </div>
+
+    <!--底部-->
+    <div class="foot text-center">
+       <div class="foot-main">
+           <ul class="list-unstyled">
+               <li class="pull-left text-center foot-nav-li less-li-wd"><a href="#">首页</a>&nbsp;|</li>
+               <li class="pull-left text-center foot-nav-li"><a href="#">关于我们</a>&nbsp;|</li>
+               <li class="pull-left text-center foot-nav-li"><a href="#">联系我们</a>&nbsp;|</li>
+               <li class="pull-left text-center foot-nav-li"><a href="#">法律声明</a>&nbsp;</li>
+           </ul>
+       </div>
+        <div>
+            <p class="ft-title">
+                广州广电南洋资产运营有限公司版权所有 <a href="#">备案/许可证号：粤ICP备09208143号</a>
+            </p>
+            <div class="ft-title-phone text-center">
+                <p>广州广电南洋资产运营有限公司版权所有</p>
+                <p><a href="#">备案/许可证号：粤ICP备09208143号</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mask"></div>
+    <div class="modal bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content text-center">
+              <p class="alert-text">请选择</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).on('click','.nav-tabs li',function(){
+            $(this).addClass('active');
+            $(this).find('a').addClass('active');
+
+            $(this).siblings().removeClass('active');
+            $(this).siblings().find('a').addClass('active');
+
+        });
+
+        $(document).on('click','.foot-nav li',function(){
+            $(this).addClass('active');
+
+            $(this).siblings().removeClass('active');
+
+        });
+
+//        $('.modal').show();
+
+    </script>
+
+</body>
+</html>

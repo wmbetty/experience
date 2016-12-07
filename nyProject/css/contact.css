@@ -1,0 +1,39 @@
+/*联系我们css*/
+.rtmain-title{padding: 0;}
+.contact-cont{border: 1px solid #eee;margin: 1em;}
+.geo-container{width: 100%;height: 40em;overflow: hidden;}
+.geo-img{display: block;max-width: 100%;margin: 0 auto;}
+.our-infos{
+    padding: 1.5em 3em;
+    height: 16em;
+    border: 1px solid #eee;
+    width: 94%;
+    margin: 0 auto 1.5em;
+}
+.infos-inner{
+    width: 25%;
+}
+.contact-img{
+    display: block;
+    width: 5em;
+    height: 5em;
+    margin: 0 auto 1em;
+}
+p.no-botom{
+    margin-bottom: 0;
+}
+.ny-main{padding-bottom: 3em;}
+
+@media screen and (max-width: 414px){
+    .our-infos{
+        height: 46em;
+        /*overflow: auto;*/
+    }
+    .geo-container{
+        height: 16em;
+    }
+    .infos-inner{
+        float: none;
+        width: 100%;
+    }
+}
