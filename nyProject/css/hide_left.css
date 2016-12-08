@@ -1,0 +1,7 @@
+/*手机页面隐藏左边*/
+
+@media screen and (max-width: 414px){
+    .siderbar{
+        display: none;
+    }
+}
