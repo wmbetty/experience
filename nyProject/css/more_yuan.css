@@ -5,10 +5,13 @@
     overflow: auto;
 }
 .img-thumbnail.col-xs-3{
+    display: block;
+    height: 8em;
     width: 24%;
     cursor: pointer;
     padding: 4px 6px;
     margin:0 6px 6px 0;
+    overflow: hidden;
 }
 .img-cont{
     width: 46%;
