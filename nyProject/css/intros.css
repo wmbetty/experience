@@ -105,7 +105,8 @@
     .ny-mainintros{margin: 1em auto 0;}
     .ny-cimg{margin: 1em 0;}
     .main-intro-cont{margin-left: 0;}
-    .yuanqu-mainintros{height: 26em;}
+    .yuanqu-mainintros{height: 18em;margin-bottom: 1em;}
+    .ny-main{padding-bottom: 4em;}
 }
 
 @media screen and (min-width: 768px){
