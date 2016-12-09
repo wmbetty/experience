@@ -217,23 +217,22 @@
 
 <script> 
     var mySwiper = new Swiper('.swiper-container',{
-    pagination: '.my-pagination-ul',
-    paginationClickable: true,
-    paginationBulletRender: function (index, className) {
-    switch (index) {
-      case 0: name='手机';break;
-      case 1: name='固话';break;
-      case 2: name='你好';break;
-      case 3: name='我好';break;
-        case 4: name='哈哈';break;
-        case 5: name='嘿嘿';break;
-        case 6: name='呵呵';break;
-
-        default: name='';
-    }
+        pagination: '.my-pagination-ul',
+        paginationClickable: true,
+        paginationBulletRender: function (index, className) {
+            switch (index) {
+                case 0: name='手机';break;
+                case 1: name='固话';break;
+                case 2: name='你好';break;
+                case 3: name='我好';break;
+                case 4: name='哈哈';break;
+                case 5: name='嘿嘿';break;
+                case 6: name='呵呵';break;
+                default: name='';
+        }
           return '<li class="' + className + '">' + name + '</li>';
       }
-    })
+    });
 </script>
 
 
