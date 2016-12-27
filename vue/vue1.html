@@ -1,0 +1,152 @@
+
+<!--首页-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <title>缤果空间商家</title>
+    <link rel="stylesheet" href="css/aui.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mindex.css">
+
+
+    <script src="//cdn.bootcss.com/vue/2.1.6/vue.js"></script>
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+
+</head>
+<body>
+
+
+<div class="aui-content my-header">
+    <div class="my-info">
+        <div class="logo-box" id="m_info">
+            <img src="images/mslogo.png" />
+            <p class="nickname">
+                <span>商家: {{name}}</span>
+                <span>商户号: {{mno}}</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="title-box aui-text-center white-font m-titles">
+    <span class="bold-font">扫付派</span> | <span>支付+会员营销领先者</span>
+</div>
+
+<!--活动通知-->
+<div class="aui-content notice-box" id="notice_content">
+    <ul>
+        <li><a href="#" class="red-font block-item"><span class="n_icon aui-pull-left"></span>促销活动通知 </a></li>
+        <li v-for="todo in notes">
+            <a href="#" class="red-font block-item">{{ todo.text }}</a>
+        </li>
+
+    </ul>
+</div>
+
+
+<div class="center_main">
+    <div class="aui-content aui-text-center amount-info">
+        <div class="aui-col-xs-4">
+            <a href="#" class="block-item">
+                <img class="micon" src="images/white_tally.png" alt="">
+                <p>买单记账</p>
+            </a>
+        </div>
+        <div class="aui-col-xs-4">
+            <a href="#" class="block-item">
+                <img class="micon" src="images/white_vip.png" alt="">
+                <p>会员管理</p>
+            </a>
+        </div>
+        <div class="aui-col-xs-4 no-border-rt">
+            <a href="#" class="block-item">
+                <img class="micon" src="images/white_finan.png" alt="">
+                <p>财务管理</p>
+            </a>
+        </div>
+        <div class="aui-col-xs-4">
+            <a href="#" class="block-item">
+                <img class="micon" src="images/white_write.png" alt="">
+                <p>评价管理</p>
+            </a>
+        </div>
+        <div class="aui-col-xs-4">
+            <a href="#" class="block-item">
+                <img class="micon" src="images/white_note.png" alt="">
+                <p>公告设置</p>
+            </a>
+        </div>
+        <div class="aui-col-xs-4">
+            <a href="#" class="block-item no-border-rt">
+                <img class="micon" src="images/white_qrcode.png" alt="">
+                <p>生成二维码</p>
+            </a>
+        </div>
+        <div class="aui-col-xs-4">
+            <a href="#" class="block-item">
+                <img class="micon" src="images/white_verify.png" alt="">
+                <p>兑换验证</p>
+            </a>
+        </div>
+        <div class="aui-col-xs-4 no-border-rt">
+
+            <a href="#" class="block-item">
+                <img class="micon" src="images/white_waiting.png" alt="">
+                <p>敬请期待</p>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="aui-clearfix">
+
+    <div class="foot_cont">
+        <a class="block-item" href="#">
+            <img class="block-item foot-img" src="images/ft_shop.png" alt="">
+        </a>
+    </div>
+
+    <!--<include file="foot"/>-->
+
+</div>
+
+
+
+<script src="js/api.js"></script>
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<!--<script src="__PUBLIC__/mobile/js/forbid_fontsize.js"></script>-->
+
+<script src="js/mindex.js"></script>
+
+<script type="application/javascript">
+    var napp = new Vue({
+        el: '#notice_content',
+        data: {
+            notes: [
+                { text: '你是我的小丫小苹果' },
+                { text: 'Learn Vue' },
+                { text: 'Build something awesome' }
+            ]
+        }
+    });
+
+    var mapp = new Vue({
+        el: '#m_info',
+        data: {
+            name:'酸菜鱼',
+            mno:"007"
+
+        }
+    });
+
+</script>
+</body>
+</html>
