@@ -1,0 +1,70 @@
+body{
+    padding-bottom: 30px;
+}
+.aui-card {
+    margin: 0 0 15px;
+    border-radius: 0;
+    background: none;
+}
+.aui-input-addon.aui-iconfont {
+    font-size: 20px !important;
+}
+.aui-input-row {
+    background: #fff;
+    width: 100% !important;
+    padding: 10px 6px 0;
+}
+.aui-input-row:after,.aui-card:after{border: none;}
+.user-icon{
+    width: 22px;
+    height: 26px;
+    background: url(../images/user_icon.png) no-repeat;
+    background-size: 100% 100%;
+    margin: 7px 0 0 18px;
+}
+.pwd-icon{
+    width: 20px;
+    background: url(../images/pwd_icon.png) no-repeat;
+    background-size: 100% 100%;
+}
+.aui-input.aui-input{
+    width: 82%;
+    border-bottom: 1px solid #eee;
+    font-size: 1em;
+    padding: 10px 0 18px;
+    margin: 0 15px;
+}
+.no-border.no-border{border: none;}
+input::-webkit-input-placeholder{
+    color: #999;
+}
+.find-pwd-btn.find-pwd-btn{
+    display: inline-block;
+    padding: 14px 18px 0;
+    color: #999;
+}
+
+.aui-toast,.aui-dialog{
+    display: none;
+}
+.aui-toast{
+    top: 204px;
+    background: none;
+}
+.aui-dialog{
+    top: 28%;
+}
+.logingray-btn.logingray-btn{
+    background: #ccc !important;
+    border: 1px solid #ccc !important;
+}
+
+@media screen and (max-width: 400px){
+    .aui-input.aui-input{width: 80%;}
+}
+@media screen and (max-width: 360px){
+    .aui-input.aui-input{width: 78%;}
+}
+@media screen and (max-width: 320px){
+    .aui-input.aui-input{width: 76%;}
+}

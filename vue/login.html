@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="css/aui.css" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mlogin.css">
+
+
+    <script src="//cdn.bootcss.com/vue/2.1.6/vue.js"></script>
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+
+</head>
+<body>
+
+<header class="aui-bar aui-bar-nav aui-bar-warning">
+
+    <div class="aui-title">登录</div>
+
+</header>
+
+    <div class="aui-content aui-card">
+
+        <div class="aui-form">
+            <div class="aui-input-row">
+                <i class="aui-pull-left user-icon"></i>
+                <input type="text" class="aui-pull-left aui-input" id="pno" placeholder="请输入手机号"/>
+            </div>
+
+            <div class="aui-input-row">
+                <i class="aui-pull-left user-icon pwd-icon"></i>
+                <input type="password" class="aui-pull-left aui-input no-border" id="pwd" placeholder="请输入密码"/>
+            </div>
+
+            <div class="aui-text-right">
+                <a href="#" class="find-pwd-btn">找回密码</a>
+            </div>
+            
+            <div class="aui-btn-row" id="login">
+                <a @click="login" href="javascript:;" class="aui-btn aui-btn-block aui-btn-warning login-btn">立即登录</a>
+            </div>
+        </div>
+    </div>
+
+<!--登录提示-->
+<div class="aui-mask"></div>
+<div class="aui-dialog" id="dialog">
+    <div class="aui-dialog-header">登录提示</div>
+    <div class="aui-dialog-body aui-text-center dark-gray">
+
+    </div>
+	<div class="aui-dialog-btn can_btn">关闭</div>
+</div>
+
+<!--loading-->
+<!--<include file="loading" />-->
+
+</body>
+<script type="text/javascript">
+    var example2 = new Vue({
+        el: '#login',
+        data: {
+            name: 'Vue.js'
+        },
+        // 在 `methods` 对象中定义方法
+        methods: {
+            login: function (event) {
+                // `this` 在方法里指当前 Vue 实例
+                alert('Hello ' + this.name + '!')
+                // `event` 是原生 DOM 事件
+                alert(event.target.tagName);
+            }
+        }
+    })
+
+
+//    //登录提示
+//    function show_tips(hinttext){
+//		$('.aui-dialog-body').text(hinttext); //登录提示信息
+//        $('.aui-mask').show();
+//        $('.aui-dialog').show();
+//    }
+//
+//    function hide_tips(){
+//        $('.aui-mask').hide();
+//        $('.aui-dialog').hide();
+//    }
+//
+//	$(document).on('touchend','.can_btn',function(e){
+//		e.preventDefault();
+//		hide_tips();
+//	});
+//
+//    //loading
+//    function show_load(){
+//        $('.aui-toast').show();
+//    }
+//
+//    function hide_load(){
+//        $('.aui-toast').hide();
+//    }
+//
+//	var islogining = 0;
+//	//正在登录
+//    function login(){
+//        var pno = $('#pno').val();
+//        var pwd = $('#pwd').val();
+//		if(pno == '') {
+//			show_tips('请输入手机号码！');
+//			return;
+//		}
+//		if(pwd == ''){
+//			show_tips('请输入密码！');
+//			return;
+//        }
+//
+//		var curtoken = "{$_GET['token']}";
+//		var posturl = "{:U('login')}";
+//
+//		if( islogining == 1) {
+//			return;
+//		}
+//		islogining = 1;
+//
+//		$('.login-btn').addClass('logingray-btn');
+//		show_load();//loading显示
+//
+//		$.ajax({
+//            url: posturl,
+//            dataType: "json",
+//            async: true,
+//            data: {
+//                "token": curtoken,
+//				"account": pno,
+//				"pawdd": pwd
+//            },
+//            type: "POST",
+//            success: function (data, textStatus) {
+//				islogining = 0;
+//				if( data.result == 0 ) {	//登录成功
+//					show_tips(data.msg);
+//					setTimeout(function(){
+//						hide_tips();
+//						var jumpurl = "{:U('index', array('token'=>$_GET['token']) )}";
+//						window.location.href = jumpurl;
+//					},1000);
+//				}
+//				else {
+//					hide_load();//loading隐藏
+//					$('.login-btn').removeClass('logingray-btn');
+//					show_tips(data.msg);
+//				}
+//            },
+//            complete: function (XMLHttpRequest, textStatus) {
+//				islogining = 0;
+//            },
+//            error: function (XMLHttpRequest, textStatus, errorThrown) {
+//				islogining = 0;
+//				hide_load();//loading隐藏
+//				$('.login-btn').removeClass('logingray-btn');
+//				show_tips('登录失败，请稍候重试！');
+//            }
+//        });
+//
+//
+//
+//            /*setTimeout(function(){
+//
+//
+//            },2000);  //可设置2秒后loading消失，按钮回复原样，跳转页面*/
+//
+//    }
+
+
+
+</script>
+</html>
