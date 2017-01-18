@@ -13,6 +13,9 @@
     <script src="//cdn.bootcss.com/vue/2.1.6/vue.js"></script>
     <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
 
+    <style>
+        .active.active{color: yellow;}
+    </style>
 </head>
 <body>
 
@@ -35,8 +38,8 @@
                 <input type="password" class="aui-pull-left aui-input no-border" id="pwd" placeholder="请输入密码"/>
             </div>
 
-            <div class="aui-text-right">
-                <a href="#" class="find-pwd-btn">找回密码</a>
+            <div class="aui-text-right" id="style">
+                <a href="#" class="find-pwd-btn" v-bind:class="{ active: isActive }">找回密码</a>
             </div>
             
             <div class="aui-btn-row" id="login">
@@ -63,7 +66,9 @@
     var example2 = new Vue({
         el: '#login',
         data: {
-            name: 'Vue.js'
+            name: 'Vue.js',
+            isActive: true,
+            hasError: false
         },
         // 在 `methods` 对象中定义方法
         methods: {
@@ -76,6 +81,17 @@
         }
     })
 
+    var example3 = new Vue({
+        el: '#style',
+        data: {
+            isActive: true,
+            hasError: false
+        },
+        // 在 `methods` 对象中定义方法
+        methods: {
+
+        }
+    })
 
 //    //登录提示
 //    function show_tips(hinttext){
