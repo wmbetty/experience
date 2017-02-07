@@ -1,0 +1,100 @@
+
+<!--首页-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>-->
+    <!--<meta name="apple-mobile-web-app-capable" content="yes"/>-->
+    <!--<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>-->
+    <!--<meta name="format-detection" content="telephone=no"/>-->
+    <!--<meta name="msapplication-tap-highlight" content="no"/>-->
+    <title>vue2.0-组件</title>
+
+    <script src="//cdn.bootcss.com/vue/2.1.6/vue.js"></script>
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+
+</head>
+<body>
+
+<div id="example">
+    <!--web组件的定义脱离了一般的dom元素的写法,相当于自定义了元素-->
+    <my-component></my-component>
+    <my-component></my-component>
+
+</div>
+
+
+<div id="example-2">
+    <simple-counter></simple-counter>
+    <simple-counter></simple-counter>
+    <simple-counter></simple-counter>
+</div>
+
+<div id="example-3">
+    <!--向这个组件传入一个字符串-->
+    <child message="hello!"></child>
+</div>
+
+<div id="example-4">
+    <!--使用v-modal实现双向绑定-->
+    <input v-model="parentMsg">
+    <br>
+    <!--需要注意这里使用短横线的变量,因为在html下是使用短横线变量的,但是在vue下使用驼峰变量-->
+    <!--将父组件的parentMsg和子组件的my-message进行绑定-->
+    <child v-bind:my-message="parentMsg"></child>
+</div>
+
+<script src="js/api.js"></script>
+
+<script type="application/javascript">
+    // 注册全局组件,指定之前设定的元素名,然后传入对象
+    Vue.component('my-component', {
+        template: '<div>A custom component!</div>'
+    });
+    // 创建根实例
+    new Vue({
+        el: '#example'
+    });
+
+    var data = { counter: 0 }
+    Vue.component('simple-counter', {
+        template: '<button v-on:click="counter += 1">{{ counter }}</button>',
+        // data 是一个函数，因此 Vue 不会警告，
+        //返回一个新的对象,而不是返回同一个data对象引用
+        data: function () {
+            return { //字面量写法会创建新对象
+                counter: 0
+            }
+        }
+    });
+    new Vue({
+        el: '#example-2'
+    });
+
+    Vue.component('child', {
+        // 声明 props,用数组形式的对象
+        props: ['message'],
+        // 就像 data 一样，prop 可以用在模板内
+        // 同样也可以在 vm 实例中像 “this.message” 这样使用
+        template: '<span>{{ message }}</span>'
+    });
+    new Vue({
+        el: '#example-3'
+    });
+
+    Vue.component('child', {
+        // 声明 props
+        props: ['my-message'],
+        template: '<span>{{ myMessage }}</span>' //如果写my-message会报错,需要转换为驼峰写法
+    });
+    new Vue({
+        el: '#example-4',
+        data: {
+            parentMsg: ''
+        }
+    })
+
+</script>
+</body>
+</html>
