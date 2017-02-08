@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>forEach例子</title>
+    <script src="js/angular.min.js"></script>
+    <script type="text/javascript">
+        var each = angular.module("eachdemo", []);
+        var log = [];
+        each.controller("eachd", ["$scope", function ($scope) {
+            var values = { name: 'misko', gender: 'male' ,ages: 18};
+            angular.forEach(values, function (value, key) {
+                this.push(key + ': ' + value);
+            }, log);
+            $scope.dd = log.join(",");
+        }])
+    </script>
+</head>
+<body ng-app="eachdemo">
+<div ng-controller="eachd">
+    <span ng-bind="dd"></span>
+</div>
+</body>
+</html>
