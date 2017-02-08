@@ -1,0 +1,31 @@
+/*loading*/
+#loading {
+    position: static;
+    margin: 0 auto 40px;
+    font-size: 0.8rem;
+}
+.aui-toast{background: none;}
+.aui-toast.loading_toast {
+    background: transparent;
+    color: #333;
+    font-size: 0.4rem;
+}
+.aui-toast .aui-toast_loading {
+    display: block;
+    height: 34px;
+    width: 34px;
+    background: url(../img/loading.gif) no-repeat;
+    background-size: 100%;
+    margin: 0 auto;
+}
+.dark-gray{color: #333;}
+p.nodata {
+    font-size: 0.8rem;
+}
+#nodata {
+    background: none;
+    color: #333;
+}
+.aui-toast-content.nodata{
+    margin: 0 0 110px;
+}

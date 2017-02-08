@@ -1,0 +1,122 @@
+/*公用css*/
+body{
+    /*background: red;*/
+    position: relative;
+    font-family: "Microsoft YaHei";
+
+    /*.iphone手机禁止字体放大*/
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+    -moz-text-size-adjust: 100% !important;
+}
+.block-item{
+    display: block;
+}
+.white-body{
+    background: #fff;
+}
+.aui-bar-warning,.weui_btn_primary{
+    background-color: #f43885;
+}
+.aui-content{
+    margin-bottom: 10px;
+}
+
+/*脚部css*/
+.foot_cont{
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 0.6em 0 0;
+    border-top: 1px solid #eee;
+    z-index: 4;
+}
+.foot_cont a{
+    color: #333;
+    font-size: 0.9em;
+    margin-top: 6px;
+}
+.foot_cont a.active,.red-font,.foot_cont ul li.active a,.red-font,a.red-font{
+    color: #f43885;
+}
+.flex-wrap{ display: -webkit-box;	display: -webkit-flex;	display: flex; }
+.flex-con{     -webkit-box-flex: 1;     -webkit-flex: 1;    flex: 1;}
+.flex-vertical{ -webkit-box-orient: vertical;-webkit-flex-flow: column;flex-flow: column;}
+.foot_cont ul li{  padding-top: 20px; padding-bottom: 4px; background: url('') no-repeat center 0; background-size: auto 22px; text-align: center; list-style-type: none;}
+.foot_cont ul li.home{ background-image: url(../img/ohome.png);}
+.foot_cont ul li.my{ background-image: url(../img/my.png); }
+.foot_cont ul li.home.active{ background-image: url(../img/home.png); }
+.foot_cont ul li.my.active{ background-image: url(../img/my_active.png); }
+.nopad-top{
+    padding-top: 0;
+}
+.foot-img{
+    width: 5em;
+    margin: -52px auto 0;
+}
+.orange-font{color: #ff3c00;}
+.fourfont{font-size: 14px;}
+.aui-content > .aui-list-view:last-child,.aui-list-view{margin-bottom: 8px;}
+.aui-btn-warning{
+    background: #f43885!important;
+    border: 1px solid #f43885!important;
+}
+a:visited,a:active,a:focus,a:link{text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+.origin-price{
+    text-decoration:line-through;font-size: 12px;color: #999;
+}
+.had-border-bottom{
+    border-bottom: 1px solid #eee;
+}
+.gray-font{color: #999;}
+.no-border{border: none;}
+
+.btn-cont{
+    padding: 16px 18px;
+}
+
+.center_main{
+
+    margin-bottom: 40px;
+    min-height: 40em;
+    /*overflow: auto;*/
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.mui-scroll-wrapper{
+    bottom: 30px;
+}
+.white-font{
+    color: #fff;
+}
+.bold-font{
+    font-weight: bold;
+}
+p.dark-gray,.dark-gray{color: #333;}
+
+@media screen and (max-width: 360px){
+    .center_main{ padding-bottom: 60px;}
+    .big_icons{
+        font-size: 0.8rem;
+    }
+    .my_cards_ct{
+        top:20%;
+    }
+    .center_main{
+        margin-bottom: 70px;
+        padding-bottom: 60px;
+    }
+
+}
+.aui-checkbox:checked, .aui-checkbox.aui-checked,.aui-radio:checked, .aui-radio.aui-checked{
+    background-color: #f43885;
+    border: solid 1px #f43885;
+}
+.inline-bk{display: inline-block;}
+img{max-width: 100%;}

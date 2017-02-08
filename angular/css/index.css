@@ -1,0 +1,172 @@
+/*首页css*/
+body{
+    position: relative;
+}
+.swidth{width: 20%;}
+.aui-searchbar-wrap{
+    width: 80%;
+    background-color: #f43885;
+    padding-right: 0;
+}
+.aui-searchbar{border-radius: 30px;}
+.aui-grid-sixteen div:after{border: none;}
+.theme-icon{
+    display: block;
+    width: 3em;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.aui-grid-sixteen div{padding: 10px 10px 0;}
+.aui-grid-sixteen div p{color: #333;font-size: 0.8em;margin: 0.2em 0 0;}
+.icons{padding-bottom: 10px;background: #fff;}
+.aui-searchbar{
+    -webkit-box-pack:initial;
+    -webkit-box-align:initial;
+}
+.aui-searchbar input{margin-left: 0.6em;}
+
+/*textarea::-webkit-input-placeholder*/
+input::-webkit-input-placeholder{
+    color: #333;
+}
+
+.aui-icon-searched{
+    /*float: right;*/
+    width: 18px;
+    height: 18px;
+    margin: 8px 8px;
+    background-image: url("../img/search_icon.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.aui-searchbar-text{width: 85%;}
+.banner-cont{height: 9em;}
+.aui-slide-page-active{background: #f43885;}
+.down-arrow{
+    display: inline-block;
+    width: 12px;
+    height: 6px;
+    background: url("../img/down_arrow.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+p.dark-gray,a.dark-gray{color: #333;}
+.lt-cont{
+    width: 70%;
+}
+.rt-cont{
+    width: 30%;
+}
+.like-btn{
+    height: 2.2em;
+    width: 4.5em;
+    border: 1px solid #f43885;
+    border-radius: 20px;
+    /*background-size: 100%;*/
+}
+.cart-img{
+    display: inline-block;
+    height: 2.2em;
+    margin: -2px -2px 0;
+}
+.pay-word{
+    font-size: 0.8em;
+    line-height: 3em;
+    margin-right: 8px;
+}
+.border-botom{
+    height: 1.5em;
+    border-bottom: 1px solid #eee;
+}
+.sfont{
+    font-size: 0.8em;
+    margin-left: 4px;
+}
+.yhui{
+    display: inline-block;
+    margin-right: 6px;
+}
+.sicon{
+    width: 18px;
+}
+.y-outer{
+    padding-top: 6px;
+}
+.main-cont{
+    min-height: 20em;
+    height: auto;
+    background: #fff;
+    /*overflow: auto;*/
+    margin-bottom: 5em;
+}
+.aui-list-view-cell{
+    padding: 12px 15px 4px;
+}
+.star-icon{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+}
+.shop-icon{
+    /*display: inline-block;*/
+    width: 20px;
+    height: 20px;
+    margin: 4px 0 0 10px;
+}
+.main-head{
+    padding: 8px 0;
+}
+.aui-slide-page-wrap{z-index: 9;}
+.hide,.aui-mask{display: none;}
+.choose-cont{
+    width: 100%;
+    position: absolute;
+    top:0;
+    z-index: 12;
+    background: #f4f4f4;
+}
+.aui-searchbar-wrap.inner{width: 72%;}
+.close-win{
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url("../img/tip_close.png") no-repeat;
+    background-size: 100%;
+    margin: 20px 4px 0;
+}
+.cities-block{
+    background: #fff;
+    padding: 12px;
+}
+.cities-block span{font-size: 0.9em;color: #999;}
+.white-bg{background: #fff;}
+.chose-main{
+    padding: 8px;
+}
+.city-tile{background: #f4f4f4;padding: 6px 0 6px 10px;}
+.cities-cont{
+    padding: 8px 16px 14px;
+    min-height: 8em;
+}
+.city-tag{
+    font-size: 0.9em;
+    padding: 6px 4px;
+    border: 1px solid #ccc;
+    width: 5em;
+    display: block;
+    color: #333;
+    margin: 0 auto 10px;
+}
+.aui-list-view-cell > a{
+    margin: 0;padding: 0;overflow: visible;
+}
+
+@media screen and (max-width: 375px){
+    .aui-bar .aui-pull-left{font-size: 12px;}
+}
+
+@media screen and (max-width: 360px){
+    .aui-bar .aui-pull-right{
+        padding-right: 4px;
+    }
+}

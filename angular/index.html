@@ -1,0 +1,168 @@
+<!--首页--><!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="msapplication-tap-highlight" content="no"/>
+	<title>首页</title>
+	<link rel="stylesheet" href="css/aui.css">
+	<link rel="stylesheet" href="css/aui-slide.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/loading.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+	<!--<script src="__PUBLIC__/js/jquery.js"></script>-->
+	<!--<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+	<style>
+		.main-cont{background: none;}
+		.main-head,.shops_ul{background: #fff;}
+		.little-pad.little-pad{
+			padding: 15px 10px 22px;
+		}
+	</style>
+</head>
+<body ng-app="bgApp">
+<!--头部-->
+<header class="aui-bar aui-bar-nav aui-bar-warning">
+	<a class="aui-pull-left swidth chose-city" href="javascript:;">
+		<span class="city-name" id="location">广州</span>
+	</a>
+	<div class="aui-searchbar-wrap demo aui-pull-right" id="search">
+		<div class="aui-searchbar aui-border-radius">
+			<div class="aui-searchbar-text">
+				<input type="text" placeholder="请输入商家名搜索" id="search-input">
+			</div>
+			<i class="aui-pull-right aui-iconfont aui-icon-searched"></i>
+		</div>
+	</div>
+</header>
+<div class="aui-clearfix" ng-controller="myCtrl">
+	<!--轮播图-->
+	<div id="aui-slide3" class="banner-cont">
+		<div class="aui-slide-wrap">
+			<!--banner数据-->
+			<div class="aui-slide-node bg-dark" ng-repeat="burl in urls">
+				<a href="#"><img src="{{burl}}"/></a>
+			</div>
+			<!--<volist name="banner" id="bn">-->
+				<!--<div class="aui-slide-node bg-dark">-->
+					<!--<a href="{:U('banner_detail',array('token'=>$_GET['token'],'bid'=>$bn['id']))}"><img src="{$bn.pic}"/></a>-->
+				<!--</div>-->
+			<!--</volist>-->
+		</div>
+		<div class="aui-slide-page-wrap"><!--分页容器--></div>
+	</div>
+	<!--8个主题图标-->
+	<div class="aui-content icons">
+		<div class="aui-grid-sixteen">
+			<!--<volist name="typeList" id="tl">-->
+				<!--<div class="aui-col-xs-3 aui-text-center">-->
+					<!--<a class="block-item" href="{:U('store_list',array('tid'=>$tl['id'],'token'=>$_GET['token']))}">-->
+						<!--<img class="theme-icon" src="{$tl.pic}" alt="">-->
+						<!--<p>{$tl.title}</p>-->
+					<!--</a>-->
+				<!--</div>-->
+			<!--</volist>-->
+		</div>
+	</div>
+
+	<!--附近商家列表-->
+	<div class="aui-content main-cont">
+		<div class="main-head">
+			<img class="aui-pull-left shop-icon" src="img/shop_icon.png" alt="">
+			<span class="sfont">附近商家</span>
+		</div>
+		<ul class="aui-list-view shops_ul">
+			<li class="aui-list-view-cell aui-img" ng-repeat="store in shops">
+				<a href="#" class="block-item dark-gray">
+					<img class="aui-img-object aui-pull-left" src="{{store.simg}}">
+					<div class="aui-img-body">
+						<div class="aui-pull-left lt-cont">
+							<p class="dark-gray">{{store.name}}</p>
+							<div>
+								<span class=" sfont">{{store.title}}</span>
+							</div>
+						</div>
+						<div class="aui-pull-right rt-cont">
+							<a class="aui-pull-right like-btn dark-gray" href="#">
+								<img class="aui-pull-left cart-img" src="img/cart.png" alt="">
+								<span class="aui-pull-right pay-word">付款</span>
+							</a>
+						</div>
+						<div class="aui-clearfix">
+							<p class="aui-pull-left sfont">{{store.rules}}</p>
+							<p class="aui-pull-right">{{store.distant}}</p>
+						</div>
+
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="footer" class="foot_cont">
+		<ul class="flex-wrap" >
+			<li id="mobile_bottom_index" class="flex-con home active"><a class="block-item" href="#">首页</a></li>
+			<li class="flex-con nopad-top" >
+				<a class="block-item" href="#">
+					<img class="block-item foot-img" src="img/fli.png" alt="">
+				</a>
+			</li>
+			<li id="mobile_bottom_usercenter" class="flex-con my" ><a class="block-item" href="#">我的</a></li>
+
+		</ul>
+
+	</div>
+
+
+</div>
+
+<!--选择城市弹窗-->
+<div class="aui-mask"></div>
+<!--<include file="choose_city"/>-->
+
+<!--加载数据loading-->
+<!--<include file="loading"/>-->
+<!--错误提示-->
+<div class="aui-dialog" id="dialog" style="display: none;">
+	<div class="aui-dialog-header"></div>
+	<div class="aui-dialog-body aui-text-center little-pad"></div>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/aui-slide.js"></script>
+
+<script>
+	//轮播图
+	var slide3 = new auiSlide({
+		container: document.getElementById("aui-slide3"),
+		"speed": 800,
+		"autoPlay": 3800,
+		"loop": true,
+		"pageShow": true,
+		"pageStyle": 'dot',
+		'dotPosition': 'right'
+	});
+
+	var app = angular.module('bgApp', []);
+	app.controller('myCtrl', function($scope) {
+		$scope.urls = [
+			"img/shop1.png",
+			"img/banner.png",
+			"img/banner_one.png"
+		];
+		$scope.shops = [
+			{name: "1号店", simg: "img/food.png", star: 5,title:"你好",distant:"50m",rules:"aaaaaasadsa"},
+			{name: "2号店", simg: "img/drink.png", star: 4,title:"你好12",distant:"150m",rules:"sadfsfsdf"},
+			{name: "3号店", simg: "img/cloth.png", star: 3.5,title:"你好123",distant:"60m",rules:"cxbcbcxbc"}
+		];
+	});
+
+</script>
+
+</body>
+</html>
