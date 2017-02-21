@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>轮播图练习</title>
+    <!--<link rel="stylesheet" href="css/css.css" type="text/css"/>-->
+    <style>
+        *{margin:0; padding: 0;}
+        ul li{list-style: none;}
+        .back{height: 400px; overflow: hidden; margin-top:100px;}
+        .back li{width: 100%; height: 400px; margin:0 auto;}
+        .back li.l1{background: red;}
+        .back li.l2{background: yellow;}
+        .back li.l3{background: blue;}
+        .back li.l4{background: black;}
+        .back li.l5{background: green;}
+        .point{text-align: center; margin-top: -30px;}
+        .point li{ width: 20px; height: 20px; border:2px solid #fff; border-radius: 10px; box-sizing:border-box; display: inline-block;}
+        .point li.active{background: #fff;}
+        .btn{ position: relative;}
+        .btn span{ display: inline-block; vertical-align: top; width: 100px; height: 100px; background: rgba(0,0,0,.5); position: absolute; top:-235px; cursor: pointer;}
+        .btn .prev{left: 0}
+        .btn .next{ right: 0;}
+    </style>
+</head>
+<body>
+<ul class="back"> <!-- 背景图片 -->
+    　　<li class="l1"></li>
+    　　<li class="l2"></li>
+    　　<li class="l3"></li>
+    　　<li class="l4"></li>
+    　　<li class="l5"></li>
+</ul>
+<ul class="point"> <!-- 控制按钮 -->
+    　　<li class="active"></li>
+    　　<li></li>
+    　　<li></li>
+    　　<li></li>
+    　　<li></li>
+</ul>
+<div class="btn"> <!-- 左右控制按钮 -->
+    　　<span class="prev"></span>
+    　　<span class="next"></span>
+</div>
+</body>
+<script src="nyProject/js/jquery-2.0.3.min.js"></script>
+<!--<script src="js/jq.js"></script>-->
+<script>
+    $(function(){
+        function banner(a,b,c,d,e){ //  a是背景图，b是active，c是背景对应按钮，d是上一页，e是下一页
+            index=0;
+            len=$(a).length-1;
+            function teb(index){
+                $(c).eq(index).addClass(b).siblings('').removeClass(b);
+                $(a).eq(index).fadeIn(300).addClass('curr').siblings('').fadeOut(300).removeClass('curr');
+            };
+            $(c).click(function(){
+                index=$(this).index();
+                teb(index);
+            });
+            $(d).click(function(){
+                index--;
+                if(index<0){
+                    index=len;
+                };
+                teb(index);
+            });
+            $(e).click(function(){
+                index++;
+                if(index>len){
+                    index=0;
+                };
+                teb(index);
+            });
+            function timeRun(){
+                time=setInterval(function(){
+                    index++;
+                    if(index>len){
+                        index=0;
+                    };
+                    teb(index);
+                },3000);
+            };
+            timeRun();
+        };
+        banner('.back>li','active','.point>li','.prev','.next');
+    });
+</script>
+</html>
