@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用Bootstrap + Vue.js实现添加删除数据</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdn.bootcss.com/vue/2.1.6/vue.js"></script>
+</head>
+<body>
+
+<div class="container" id="box">
+    <form role="form">
+        <div class="form-group">
+            <label for="username">用户名：</label>
+            <input type="text" id="username" class="form-control" placeholder="请输入用户名" v-model="username" />
+        </div>
+        <div class="form-group">
+            <label for="age">年龄：</label>
+            <input type="text" id="age" class="form-control" placeholder="请输入年龄" v-model="age" />
+        </div>
+        <div class="form-group">
+            <input type="button" value="添加" class="btn btn-primary" v-on:click="add()" />
+            <input type="reset" value="重置" class="btn btn-danger" />
+        </div>
+    </form>
+    <hr>
+    <table class="table table-bordered table-hover">
+        <caption class="text-center">用户信息表</caption>
+        <tr class="text-danger">
+            <th class="text-center">序号</th>
+            <th class="text-center">名字</th>
+            <th class="text-center">年龄</th>
+            <th class="text-center">操作</th>
+        </tr>
+        <tr class="text-center" v-for="(item, index) in myData">
+            <td>{{index+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>
+                <button class="btn btn-primary btn-sm" v-on:click="deleteMsg()">删除</button>
+            </td>
+        </tr>
+        <tr v-show="myData.length!==0">
+            <td colspan="4" class="text-right">
+                <button class="btn btn-danger" v-on:click="all()">删除全部</button>
+            </td>
+        </tr>
+        <tr v-show="myData.length==0">
+            <td colspan="4" class="text-center text-muted">
+                <p>暂无数据……</p>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    window.onload = function(){
+        new Vue({
+            el:"#box",
+            data:{
+                myData:[],
+                username:'',
+                age:'',
+                nowIndex:-100
+            },
+            methods:{
+                add:function(){
+                    this.myData.push({
+                        name:this.username,
+                        age:this.age
+                    });
+                    this.username='';
+                    this.age='';
+                },
+                deleteMsg:function(){
+                    this.myData.splice(0,1)
+                },
+                all:function(){
+                    this.myData = [];
+                }
+            }
+        })
+    }
+</script>
+
+</body>
+</html>
