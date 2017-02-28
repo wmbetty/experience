@@ -1,0 +1,11 @@
+1. 优化图像
+2. 去掉不必要的插件
+3. 减少DNS查询(DNS lookups)
+4. 最小化重定向
+5. 使用内容分发网络（Content Delivery Network CDN）
+6. 把CSS文件放在页面顶部，而JS文件放在底部
+7. 利用浏览器缓存
+8. 使用 CSS Sprites 整合图像
+9. 压缩CSS和JavaScript
+10. 启用GZIP压缩
+
