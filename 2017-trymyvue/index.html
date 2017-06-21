@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>APP</title>
+    <link rel="stylesheet" type="text/css" href="css/aui.css" />
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        .my-header {
+            background: #3bafda;
+            position: relative;
+        }
+        #header {
+            position: relative;
+            padding: 30px 0;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+            vertical-align: center;
+            margin-bottom: 0;
+        }
+        #header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .my-info p.nickname {
+            margin-top: 5px;
+            color: #ffffff;
+            font-size: 18px;
+        }
+        .aui-list-view-cell {
+            line-height: 26px;
+        }
+    </style>
+</head>
+<body>
+<div id="mypage">
+    <section class="aui-content my-header" id="header">
+        <div class="my-info">
+            <img :src="pimage" id="avatar" />
+            <p class="nickname" id="nickname">{{nickname}}</p>
+        </div>
+    </section>
+    <section class="aui-content">
+        <ul class="aui-list-view">
+            <li class="aui-list-view-cell" v-for="myinfos in infos">
+                <!---->
+                <a class="aui-arrow-right" :href="myinfos.p_href">{{myinfos.message}}</a>
+            </li>
+            <!--<li class="aui-list-view-cell">-->
+                <!--<a class="aui-arrow-right">我的回答</a>-->
+            <!--</li>-->
+            <!--<li class="aui-list-view-cell">-->
+                <!--<a class="aui-arrow-right">我的预约</a>-->
+            <!--</li>-->
+            <!--<li class="aui-list-view-cell">-->
+                <!--<a class="aui-arrow-right">成为帮主</a>-->
+            <!--</li>-->
+        </ul>
+    </section>
+    <section class="aui-content">
+        <ul class="aui-list-view">
+            <li class="aui-list-view-cell" v-for="mystate in pstates">
+                <a class="aui-arrow-right" :href="mystate.s_href">{{mystate.message}}</a>
+            </li>
+        </ul>
+    </section>
+</div>
+
+<script>
+    var vm = new Vue({
+        el: '#mypage',
+        data: {
+            pimage: './images/noavatar.gif',
+            nickname: 'maozi',
+            infos: [
+                {message: '个人资料',p_href: 'infos.html' },
+                {message: '我的问答',p_href: 'ques.html' },
+                {message: '我的预约',p_href: 'interv.html' },
+                {message: '成为帮主',p_href: 'bang.html' }
+            ],
+            pstates: [
+                {message: '登录',s_href: 'login.html' },
+                {message: '注册',s_href: 'regs.html' }
+            ]
+        },
+        methods: {
+
+        }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>APP</title>
+    <link rel="stylesheet" type="text/css" href="css/aui.css" />
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        body {
+            background: url('images/logo-bg.png') no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        .aui-content {
+            margin-bottom: 0;
+        }
+        .content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .info {
+            position: relative;
+            padding: 20px 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            vertical-align: center;
+        }
+        .info p.title {
+            margin-bottom: 15px;
+            color: #ffffff;
+            font-size: 18px;
+        }
+        .logo {
+            width: 100%;
+            text-align: center;
+            color: #ffffff;
+            font-size: 36px;
+            padding-top: 30px;
+        }
+        .box {
+            position: absolute;
+            top: 30%;
+            margin: 45px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .box .input-group {
+            background: #ffffff;
+            background: rgba(255,255,255,0.4) !important;
+            color: #ff9900;
+            position: relative;
+            display: table;
+            border-collapse: separate;
+            padding: 6px 0;
+        }
+        .box .btn-group {
+            color: #ffffff;
+            position: relative;
+            display: table;
+            border-collapse: separate;
+            width: 100%;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            overflow: hidden;
+        }
+        .box .btn-group .aui-btn {
+            border-radius: 0;
+            margin: 0;
+        }
+        .box .input-group:after {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            content: '';
+            background-color: #ffffff;
+            -webkit-transform: scaleY(.3);
+            transform: scaleY(.3);
+        }
+        .box .input-group:last-child:after {
+            height: 0;
+        }
+        .box .input-group .input-group-addon {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1;
+            color: #ffffff;
+            text-align: center;
+            display: table-cell;
+            width: 1%;
+            white-space: nowrap;
+            vertical-align: middle;
+            padding: 6px 12px;
+        }
+        i.aui-iconfont {
+            font-size: 18px;
+        }
+        .box .input-group .form-control {
+            background: none;
+            margin: 0;
+            padding: 5px 0;
+            display: table-cell;
+            position: relative;
+            z-index: 2;
+            float: left;
+            width: 100%;
+            margin-bottom: 0;
+            border:none;
+            border-radius: 0;
+            color: #ffffff;
+        }
+
+        input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+            color: #ffffff;
+        }
+        .register {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="aui-content content" id="loginPage">
+    <div class="info">
+        <div class="logo">{{title}}</div>
+        <div class="box">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="aui-iconfont aui-icon-mobile"></i></span>
+                <input type="number" name="mobile" id="mobile" class="form-control" v-model="user.mobile" placeholder="手机号"/>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="aui-iconfont aui-icon-lock"></i></span>
+                <input type="password" name="password" id="password" class="form-control" v-model="user.password" placeholder="密码"
+                       />
+            </div>
+            <div class="btn-group">
+                <div class="aui-btn aui-btn-block aui-btn-warning" v-on:click="login">登录</div>
+            </div>
+            <a class="aui-text-center register" href="register_one.html">注册加入</a>
+        </div>
+    </div>
+</div>
+
+<script>
+//    var vm = new Vue({
+//        el: '#loginPage',
+//        data: {
+//            title: 'LOGO',
+//            user: {
+//                mobile: '',
+//                password: ''
+//            }
+//        },
+//        methods: {
+//            login: function () {
+//                var formData = JSON.stringify(this.user); // 这里才是你的表单数据
+////                this.$http.post('/path/to', formData).then((response) => {
+////                    // success callback
+////                }, (response) => {
+////                    // error callback
+////                });
+////                alert(111);
+//            }
+//        }
+//    })
+
+export default {
+    data () {
+        // 验证名字
+        let validatorMobile = function (rule, value, callback) {
+            if (!value) {
+                callback(new Error('请输入手机号'))
+            } else if (!/^[A-Za-z0-9_\-\u4e00-\u9fa5]+$/.test(value) || value.length < 6) {
+                callback(new Error('账号只能是6位以上中英文或者数字'))
+            } else {
+                callback()
+            }
+        }
+        // 验证密码
+        let validatorPass = (rule, value, callback) => {
+            if (!value) {
+                callback(new Error('请输入密码'))
+            } else if (!/^[A-Za-z0-9]+$/.test(value) || value.length < 6) {
+                callback(new Error('密码只能是6位以上英文或者数字'))
+            } else {
+                callback()
+            }
+        }
+        return {
+            ruleForm: {
+                name: '',
+                password: ''
+            },
+            rules: {
+                name: [
+                    { validator: validatorName, trigger: 'blur' }
+                ],
+                password: [
+                    { validator: validatorPass, trigger: 'blur' }
+                ]
+            }
+        }
+    },
+    methods: {
+        // 表单提交
+        handleSubmit () {
+            // 验证表单
+            this.$refs.ruleForm.validate(valid => {
+                if (valid) {
+                    console.log('验证通过')
+                    // 调用SDK登录方法，执行登录过程
+                    this.$AV.User.logIn(this.ruleForm.name, this.ruleForm.password).then(loginedUser => {
+                        console.log(loginedUser)
+                    this.$message('成功登录')
+                    // 登录成功跳转到首页
+                    this.$router.push('/')
+                }, error => {
+                        console.log(error)
+                        this.$message('登录失败，请重试')
+                        // 登录失败清空表单
+                        this.handleReset()
+                    })
+                } else {
+                    console.log('验证不通过')
+            }
+        })
+        },
+        // 重置表单
+        handleReset () {
+            this.$refs.ruleForm.resetFields()
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>
