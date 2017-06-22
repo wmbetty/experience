@@ -1,0 +1,148 @@
+*{margin: 0;padding: 0;}
+.clearfix{clear: both;}
+.main{height: 100%;}
+body{font-family: "Microsoft YaHei", "simsun", "Helvetica Neue", Arial, Helvetica, sans-serif;position: relative;}
+a,a:hover,a:visited,a:link{text-decoration: none;}
+.p-t-12{padding-top: 12px;}
+.black-bg{background: #000;color: #fff;}
+.navbar-collapse.black-bg{background: #000;color: #fff;}
+.m-b-0{margin-bottom: 0;}
+.navbar{min-height: inherit;}
+.head-title{
+    float: left;
+    line-height: 40px;
+    margin: 0 22px;
+}
+.navbar-default .navbar-nav > li > a,.navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:link,
+.navbar-default .navbar-nav > li > a:visited{color: #fff;}
+.ylogo{width: 130px;height: 33px;margin: 0 26px;}
+.m-r-40{margin-right: 40px;}
+.tel-icon{margin: 6px 0;}
+.line{
+    margin: 8px 0;
+    padding: 0 14px;
+}
+.btn-box{margin: 4px 0;}
+.btn-box a{color: #333;}
+.vhidden{visibility: hidden;}
+.regs-btn{
+    display: inline-block;
+    width: 66px;
+    height: 30px;
+    border: 1px solid #333;
+    text-align: center;
+    line-height: 28px;
+    -o-border-radius: 30px;
+    -moz-border-radius: 30px; /* Firefox */
+    -webkit-border-radius: 30px; /* Safari 和 Chrome */
+    border-radius: 30px;
+    margin: 0 0 0 18px;
+}
+.w-30{width: 28%;padding-left: 40px;}
+.w-40{width: 40%;}
+.foot-main{padding: 36px 0;line-height: 24px;}
+.inline-block{display: inline-block;}
+.footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.font-gray,.font-gray a{
+    color: #838383;
+}
+.yintro{
+    width: 296px;
+    padding: 0 14px;
+    border-left: 1px solid #838383;
+    margin-left: 14px;
+}
+.copyright-box{letter-spacing: 2px;}
+
+/*首页轮播图*/
+.back{ overflow: hidden;}
+.back li{width: 100%;height: 100%;}
+.point{text-align: center; margin-top: -50px;}
+.point li{ width: 40px; height: 4px; background: #ea5404; box-sizing:border-box; display: inline-block;cursor: pointer;margin: 0 4px;}
+.point li.active{background: #ffbe83;}
+.back img{display: block;width: 100%;height: 100%;}
+
+.m-t-20{margin-top: 20px;}
+.fsize-16{font-size: 16px;}
+.p-b-20{padding-bottom: 20px;}
+.border-rt{border-right: 1px solid #eee;}
+.p-lr-30{padding:0 30px;}
+.p-ud-12{padding: 12px 0;}
+.p-ud-20{padding: 20px 0;}
+
+.copyright-box {
+    height: 70px;
+    line-height: 70px;
+}
+.ju-title{
+    width: 160px;
+    height: 34px;
+    background: url("../images/juzhifu.png") no-repeat;
+    margin: 0 auto;
+}
+.jucontent{padding: 70px 0 56px;letter-spacing: 2px;}
+.juimg{display: block;width:139px;height:160px;margin: 0 auto 6px;}
+.ailpay{background: url("../images/zhifubpay.png") no-repeat;background-size: 100%;}
+.ailpay:hover{
+    transition: background ease-in 1s;
+    -moz-transition:background ease-in 1s;
+    -webkit-transition:background ease-in 1s;
+    -o-transition:background ease-in 1s;
+    background: url("../images/zhifubpay_active.png") no-repeat;background-size: 100%;
+}
+.wxpay{background: url("../images/wxpay.png") no-repeat;background-size: 100%;}
+.wxpay:hover{
+    transition: background ease-in 1s;
+    -moz-transition:background ease-in 1s;
+    -webkit-transition:background ease-in 1s;
+    -o-transition:background ease-in 1s;
+    background: url("../images/wxactive.png") no-repeat;background-size: 100%;
+}
+.bankpay{background: url("../images/bankpay.png") no-repeat;background-size: 100%;}
+.bankpay:hover{
+    transition: background ease-in 1s;
+    -moz-transition:background ease-in 1s;
+    -webkit-transition:background ease-in 1s;
+    -o-transition:background ease-in 1s;
+    background: url("../images/bankactive.png") no-repeat;background-size: 100%;
+}
+.QQpay{background: url("../images/QQpay.png") no-repeat;background-size: 100%;}
+.QQpay:hover{
+    transition: background ease-in 1s;
+    -moz-transition:background ease-in 1s;
+    -webkit-transition:background ease-in 1s;
+    -o-transition:background ease-in 1s;
+    background: url("../images/QQactive.png") no-repeat;background-size: 100%;
+}
+.JDpay{background: url("../images/JDpay.png") no-repeat;background-size: 100%;}
+.JDpay:hover{
+    transition: background ease-in 1s;
+    -moz-transition:background ease-in 1s;
+    -webkit-transition:background ease-in 1s;
+    -o-transition:background ease-in 1s;
+    background: url("../images/JDactive.png") no-repeat;background-size: 100%;
+}
+.w-20{display: inline-block;width: 18%;}
+.jumbotron{height:auto;background: url("../images/pay_bg_02.png") no-repeat;background-size: 100% 100%;}
+.mpay-title{background: url("../images/movepay.png") no-repeat;background-size: 100%;width: 268px;}
+.jumbotron p{font-size: 16px;letter-spacing: 2px;}
+.block{display: block;}
+.moveimg{width: 70px;height: 70px;}
+.media-body p,.media-heading{letter-spacing: 2px;}
+.media-heading{margin-bottom: 12px;}
+.media-body p{margin-bottom: 6px;}
+.m-34{margin: 34px 0;}
+.m-20{margin: 20px 0;}
+.partener-content{height: auto;margin-bottom: 30px;}
+.ypartener{background: url("../images/partener.png") no-repeat;background-size: 100%;margin-bottom: 20px;}
+.partener-content img{margin: 0 auto;}
+.p-ud-30{padding: 30px 0;}
+.m-40{margin: 40px 0 50px;}
+.w-per20{width: 20%;}
+.w-per14{width: 14%;}
+.phone-show{display: none;}
