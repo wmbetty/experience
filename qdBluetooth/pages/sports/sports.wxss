@@ -1,0 +1,17 @@
+/* pages/sports/sports.wxss */
+page{
+  background: #e0e0e0;
+}
+.flex-wrp{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction:row;
+}
+.flex-item{
+  width: 33%;
+  text-align: center;
+  padding: 36rpx 0;
+}
+.orange-text{margin: 8rpx  0 12rpx;color: #f5921a;}
+.grey-text{color: #848484;}
+.border-right{border-right: 4rpx solid #999;}

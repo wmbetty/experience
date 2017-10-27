@@ -1,0 +1,21 @@
+<!--pages/sports/sports.wxml-->
+<view class="flex-wrp">
+    <view class="flex-item">
+      <view class="border-right">
+        <view>
+          <icon type="success" size="25"/>
+        </view>
+        <view class='orange-text'>
+          <text>- -</text>
+        </view>
+      </view>
+      <view>
+        <text class='grey-text'>心率</text>
+      </view>
+    </view>
+    <view class="flex-item">2</view>
+    <view class="flex-item">3</view>
+</view>
+<view>
+    <button type="default" size="small" style='width:50%;' bindtap="goOpenBluetooth">开始运动</button>
+</view>
